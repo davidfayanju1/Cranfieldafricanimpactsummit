@@ -38,6 +38,19 @@ const Nav = () => {
     return location.pathname.startsWith(href) && href !== "/";
   };
 
+  // Determine which logo to show
+  const getLogoPath = (isMobileMenu: boolean = false) => {
+    // In mobile menu, always show colored logo
+    if (isMobileMenu) {
+      return "/images/company_logo.png";
+    }
+
+    // In desktop: white logo when not scrolled, colored logo when scrolled
+    return scrolled
+      ? "/images/company_logo.png"
+      : "/images/company_logo_white.png";
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -57,9 +70,16 @@ const Nav = () => {
                 } overflow-hidden flex items-center justify-center`}
               >
                 <img
-                  src="/images/company_logo.png"
+                  src={getLogoPath()}
                   alt="Cranfield Africa Impact Summit"
                   className="w-full h-auto object-contain"
+                  onError={(e) => {
+                    // Fallback in case the logo doesn't exist
+                    const img = e.target as HTMLImageElement;
+                    if (img.src.includes("_white")) {
+                      img.src = "/images/company_logo.png";
+                    }
+                  }}
                 />
               </div>
             </NavLink>
@@ -100,7 +120,7 @@ const Nav = () => {
 
           {/* Register Button - Desktop */}
           <div className="hidden md:block">
-            <button className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-full transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-[-1px] active:translate-y-[0]">
+            <button className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-full transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0">
               Register Now
             </button>
           </div>
@@ -180,7 +200,7 @@ const Nav = () => {
                 </button>
               </div>
 
-              {/* Logo in mobile menu */}
+              {/* Logo in mobile menu - Always use colored logo */}
               <div className="px-4 py-6 mt-4 border-t border-gray-100 flex justify-center">
                 <NavLink to="/" onClick={() => setIsOpen(false)}>
                   <div className="w-48 overflow-hidden flex items-center justify-center">
@@ -188,6 +208,11 @@ const Nav = () => {
                       src="/images/company_logo.png"
                       alt="Cranfield Africa Impact Summit"
                       className="w-full h-auto object-contain"
+                      onError={(e) => {
+                        // Fallback in case colored logo doesn't exist
+                        const img = e.target as HTMLImageElement;
+                        img.src = "/images/company_logo_white.png";
+                      }}
                     />
                   </div>
                 </NavLink>

@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       <DefaultLayout>
-        <div className="item-container"></div>
+        <div className="item-container min-h-screen"></div>
       </DefaultLayout>
     </div>
   );
