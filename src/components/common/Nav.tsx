@@ -12,6 +12,9 @@ const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Your WhatsApp group link - REPLACE THIS WITH YOUR ACTUAL LINK
+  const whatsappGroupLink = "https://chat.whatsapp.com/B7gWbAkEL3gLYSi89tHVrZ";
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +28,9 @@ const Nav = () => {
   const navItems: NavItem[] = [
     { label: "Home", href: "/", exact: true },
     { label: "About", href: "/about" },
-    { label: "Speakers", href: "/speakers" },
+    { label: "Advisory", href: "/speakers" },
     { label: "Agenda", href: "/agenda" },
+    { label: "Events", href: "/events" },
     { label: "Sponsors", href: "/sponsors" },
   ];
 
@@ -118,11 +122,16 @@ const Nav = () => {
             })}
           </div>
 
-          {/* Register Button - Desktop */}
+          {/* WhatsApp Group Button - Desktop */}
           <div className="hidden md:block">
-            <button className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-full transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0">
-              Register Now
-            </button>
+            <a
+              href={whatsappGroupLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-full transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0 inline-block"
+            >
+              Join Our Community
+            </a>
           </div>
 
           {/* Mobile menu button with animated hamburger */}
@@ -193,11 +202,16 @@ const Nav = () => {
                 );
               })}
 
-              {/* Register Button Mobile */}
+              {/* WhatsApp Group Button Mobile */}
               <div className="px-4 py-3 mt-4">
-                <button className="w-full py-3 bg-[#2E6932] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-emerald-800">
-                  Register Now
-                </button>
+                <a
+                  href={whatsappGroupLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-3 bg-[#2E6932] text-white font-semibold text-center rounded-lg transition-all duration-300 hover:bg-emerald-800"
+                >
+                  Join Our Community
+                </a>
               </div>
 
               {/* Logo in mobile menu - Always use colored logo */}

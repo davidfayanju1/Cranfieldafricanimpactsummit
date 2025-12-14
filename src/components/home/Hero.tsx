@@ -9,19 +9,19 @@ const Hero = () => {
     {
       id: 1,
       imageUrl:
-        "https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80&sat=-30&blur=20",
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       overlay: "from-gray-900/80 via-gray-900/40 to-emerald-900/20",
     },
     {
       id: 2,
       imageUrl:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80&sat=-30&blur=20",
+        "https://images.unsplash.com/photo-1597245083280-607579e14c58?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       overlay: "from-gray-900/70 via-gray-900/30 to-emerald-900/25",
     },
     {
       id: 3,
       imageUrl:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80&sat=-30&blur=20",
+        "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
     },
   ];
