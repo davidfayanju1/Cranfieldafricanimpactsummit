@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AboutHero = () => {
   const [, setHasMounted] = useState(false);
@@ -7,6 +8,8 @@ const AboutHero = () => {
     const timer = setTimeout(() => setHasMounted(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -56,8 +59,15 @@ const AboutHero = () => {
 
           {/* Simple CTA - Centered */}
           <div className="flex justify-center gap-4">
-            <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300">
-              Register Now
+            <button
+              onClick={() =>
+                navigate(
+                  "https://www.mycsa.org.uk/groups/africa-impact-summit-society/join"
+                )
+              }
+              className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300"
+            >
+              Register As A Student
             </button>
             <button className="px-8 py-3 bg-transparent border border-white/30 hover:border-white text-white font-medium rounded-lg transition-all duration-300">
               View Agenda
