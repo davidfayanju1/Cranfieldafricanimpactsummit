@@ -28,7 +28,7 @@ const Nav = () => {
   const navItems: NavItem[] = [
     { label: "Home", href: "/", exact: true },
     { label: "About", href: "/about" },
-    { label: "Advisory", href: "/speakers" },
+    { label: "Advisory", href: "/advisory" },
     { label: "Agenda", href: "/agenda" },
     { label: "Events", href: "/events" },
     { label: "Sponsors", href: "/sponsors" },
