@@ -6,10 +6,13 @@ import AdvisoryCommittee from "./pages/advisory";
 import Sponsors from "./pages/sponsors";
 import Agenda from "./pages/agenda";
 import Events from "./pages/events";
+import AdvisoryDetails from "./pages/detailsPage/advisory-details";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -17,6 +20,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
       </Routes>
     </>
   );

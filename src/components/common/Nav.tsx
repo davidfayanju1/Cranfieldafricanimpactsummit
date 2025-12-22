@@ -41,6 +41,7 @@ const Nav = () => {
     }
     return location.pathname.startsWith(href) && href !== "/";
   };
+  const isAdvisoryPage = location.pathname === "/advisory";
 
   // Determine which logo to show
   const getLogoPath = (isMobileMenu: boolean = false) => {
@@ -50,7 +51,7 @@ const Nav = () => {
     }
 
     // In desktop: white logo when not scrolled, colored logo when scrolled
-    return scrolled
+    return scrolled || isAdvisoryPage
       ? "/images/company_logo.png"
       : "/images/company_logo_white.png";
   };
@@ -103,7 +104,7 @@ const Nav = () => {
                     className={`transition-colors duration-300 ${
                       active
                         ? "text-emerald-800 font-semibold"
-                        : scrolled
+                        : scrolled || isAdvisoryPage
                         ? "text-gray-700 hover:text-emerald-700"
                         : "text-white hover:text-emerald-200"
                     }`}
@@ -149,7 +150,7 @@ const Nav = () => {
                 className={`absolute h-0.5 w-6 transform transition-all duration-300 ${
                   isOpen
                     ? "rotate-45 translate-y-0 bg-gray-700"
-                    : scrolled
+                    : scrolled || isAdvisoryPage
                     ? "-translate-y-2 bg-gray-700"
                     : "-translate-y-2 bg-white"
                 }`}
@@ -158,7 +159,7 @@ const Nav = () => {
                 className={`absolute h-0.5 transform transition-all duration-300 ${
                   isOpen
                     ? "opacity-0 w-0"
-                    : scrolled
+                    : scrolled || isAdvisoryPage
                     ? "opacity-100 w-6 bg-gray-700"
                     : "opacity-100 w-6 bg-white"
                 }`}
@@ -167,7 +168,7 @@ const Nav = () => {
                 className={`absolute h-0.5 w-6 transform transition-all duration-300 ${
                   isOpen
                     ? "-rotate-45 translate-y-0 bg-gray-700"
-                    : scrolled
+                    : scrolled || isAdvisoryPage
                     ? "translate-y-2 bg-gray-700"
                     : "translate-y-2 bg-white"
                 }`}
