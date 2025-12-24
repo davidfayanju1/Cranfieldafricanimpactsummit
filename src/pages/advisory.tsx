@@ -245,16 +245,28 @@ const AdvisoryCommittee = () => {
           {/* Hero Content - Moved Down */}
           <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
             {/* Main Title Section */}
+            {/* Main Title Section */}
             <div className="mb-12">
-              <div className="inline-flex items-center justify-center gap-4 mb-10">
-                <div className="w-20 h-px bg-linear-to-r from-transparent via-emerald-400 to-transparent" />
-                <div className="flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-emerald-100">
-                  <Users className="w-5 h-5 text-emerald-600" />
-                  <span className="text-emerald-700 text-sm font-medium tracking-[0.2em]">
-                    ADVISORY COMMITTEE
-                  </span>
+              {/* Add the image badge here */}
+              <div className="relative inline-block mb-8">
+                <div className="absolute -top-2 -right-2 w-24 h-24 z-10">
+                  <img
+                    src={"/images/strategic_advisory_circle.png"}
+                    alt="Strategic Advisory Circle"
+                    className="w-full h-full object-contain opacity-90"
+                  />
                 </div>
-                <div className="w-20 h-px bg-linear-to-r from-transparent via-emerald-400 to-transparent" />
+
+                <div className="inline-flex items-center justify-center gap-4 mb-10 relative">
+                  <div className="w-20 h-px bg-linear-to-r from-transparent via-emerald-400 to-transparent" />
+                  <div className="flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-emerald-100 relative z-20">
+                    <Users className="w-5 h-5 text-emerald-600" />
+                    <span className="text-emerald-700 text-sm font-medium tracking-[0.2em]">
+                      ADVISORY COMMITTEE
+                    </span>
+                  </div>
+                  <div className="w-20 h-px bg-linear-to-r from-transparent via-emerald-400 to-transparent" />
+                </div>
               </div>
 
               <h1 className="text-5xl md:text-8xl lg:text-7xl font-light text-gray-900 mb-6 tracking-tighter leading-[0.85]">
@@ -652,6 +664,13 @@ const AdvisoryCommittee = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="image-container mx-auto">
+            <img
+              src={"/images/strategic_advisory_circle.png"}
+              alt="Strategic Advisory Circle"
+              className="w-[25rem] h-[25rem] mx-auto object-cover"
+            />
           </div>
         </div>
       </div>
