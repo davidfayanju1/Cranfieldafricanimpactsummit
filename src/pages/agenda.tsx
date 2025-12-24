@@ -22,7 +22,7 @@ import {
   Rocket,
 } from "lucide-react";
 
-const StrategicBody = () => {
+const Agenda = () => {
   const [activePillar, setActivePillar] = useState<string>("economic");
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -786,10 +786,6 @@ const StrategicBody = () => {
                 {" • "}A continental body driving systemic transformation since
                 2025
               </p>
-              <p className="mt-2 text-xs">
-                Headquartered in Johannesburg with presence across 15 African
-                countries
-              </p>
             </div>
           </div>
         </div>
@@ -798,4 +794,4 @@ const StrategicBody = () => {
   );
 };
 
-export default StrategicBody;
+export default Agenda;
