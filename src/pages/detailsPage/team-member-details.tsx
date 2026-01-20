@@ -6,7 +6,6 @@ import {
   Linkedin,
   MapPin,
   Calendar,
-  Award,
   BookOpen,
   Briefcase,
   Users,
