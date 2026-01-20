@@ -18,7 +18,7 @@ const AboutHero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1755705152396-4b719047af56?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+            backgroundImage: `url("/images/event9.jpeg")`,
             filter: "brightness(0.7) contrast(1.1)",
           }}
         >
@@ -62,7 +62,7 @@ const AboutHero = () => {
             <button
               onClick={() =>
                 navigate(
-                  "https://www.mycsa.org.uk/groups/africa-impact-summit-society/join"
+                  "https://www.mycsa.org.uk/groups/africa-impact-summit-society/join",
                 )
               }
               className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300"
