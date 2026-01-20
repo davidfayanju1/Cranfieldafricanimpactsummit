@@ -8,6 +8,7 @@ import Agenda from "./pages/agenda";
 import Events from "./pages/events";
 import AdvisoryDetails from "./pages/detailsPage/advisory-details";
 import ScrollToTop from "./components/common/ScrollToTop";
+import TeamMemberDetails from "./pages/detailsPage/team-member-details";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/events" element={<Events />} />
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
+        <Route
+          path="/team-member-details/:id"
+          element={<TeamMemberDetails />}
+        />
       </Routes>
     </>
   );

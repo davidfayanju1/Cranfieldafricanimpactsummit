@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Team = () => {
   const [hasMounted, setHasMounted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => setHasMounted(true), 100);
@@ -87,6 +89,10 @@ const Team = () => {
     },
   ];
 
+  const handleMemberClick = (id: number) => {
+    navigate(`/team-member-details/${id}`);
+  };
+
   return (
     <div className="relative overflow-hidden">
       {/* Background */}
@@ -113,12 +119,13 @@ const Team = () => {
             </p>
           </div>
 
-          {/* Team Grid */}
+          {/* Team Grid - Updated with click functionality */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {teamMembers.map((member, index) => (
               <div
                 key={member.id}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${
+                onClick={() => handleMemberClick(member.id)}
+                className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group ${
                   hasMounted ? "opacity-100" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -128,14 +135,22 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
+                  {/* Click Hint Overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-gray-700">
+                        View Profile →
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Profile Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-emerald-700 transition-colors">
                     {member.name}
                   </h3>
                   <div className="text-emerald-600 font-medium mb-3">
@@ -145,10 +160,13 @@ const Team = () => {
                     {member.bio}
                   </p>
 
-                  {/* Social Links */}
+                  {/* Social Links - Both Twitter and LinkedIn */}
                   <div className="flex gap-3">
                     <a
                       href={member.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-400 hover:text-emerald-600 transition-colors"
                       aria-label={`${member.name}'s LinkedIn`}
                     >
@@ -162,6 +180,9 @@ const Team = () => {
                     </a>
                     <a
                       href={member.social.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-400 hover:text-emerald-600 transition-colors"
                       aria-label={`${member.name}'s Twitter`}
                     >
@@ -204,7 +225,7 @@ const Team = () => {
               ].map((advisor, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 p-6 rounded-xl border border-gray-200"
+                  className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-emerald-200 transition-colors"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
                     {advisor.name}
