@@ -397,7 +397,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
         {/* Back to Team Button */}
         <div className="mt-12 text-center">
           <button
-            onClick={() => navigate("/team")}
+            onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 px-8 py-3 bg-gray-100 text-gray-700 rounded-full hover:bg-emerald-50 hover:text-emerald-700 transition-colors group"
           >
             <Users className="w-5 h-5" />
