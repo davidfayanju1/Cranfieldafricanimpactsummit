@@ -11,21 +11,25 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Dr. Amina Okoro",
-      role: "Founder & Executive Director",
-      bio: "Former UN Development Advisor with 15+ years experience in African economic policy.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
+      name: "Nseobong Umoh",
+      role: "Vice President",
+      bio: "Nseobong Umoh is the Vice President of the Cranfield Africa Impact Society. He is an MBA alumnus (Class of 2025) of the Cranfield University School of Management and is currently completing an MSc in Systems Engineering (part-time), with a focus on applying systems engineering and systems thinking to complex, real-world challenges.",
+      image: "/images/Obong.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/nseobong-umoh-9830257a/ ",
+      },
     },
     {
       id: 2,
-      name: "Kwame Mensah",
-      role: "Director of Strategy",
-      bio: "Ex-McKinsey Partner specializing in African market growth strategies.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
+      name: "Obed Oduro Asamoah",
+      role: "Media & Digital Relations Lead",
+      bio: "Obed Oduro Asamoah is the Media & Digital Relations Lead of the Cranfield Africa Impact Society. He is a current MSc student at Cranfield University, Faculty of Environmental and Applied Science, offering Environmental Engineering (full-time).",
+      image: "/images/obed.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/obed-asamoah-4b2249385/",
+      },
     },
     {
       id: 3,
@@ -126,7 +130,7 @@ const Team = () => {
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
                 </div>
 
                 {/* Profile Info */}
@@ -137,7 +141,9 @@ const Team = () => {
                   <div className="text-emerald-600 font-medium mb-3">
                     {member.role}
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-4">
+                    {member.bio}
+                  </p>
 
                   {/* Social Links */}
                   <div className="flex gap-3">
@@ -213,7 +219,7 @@ const Team = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 md:p-12 text-center">
+          <div className="bg-linear-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Want to Join Our Team?
             </h2>

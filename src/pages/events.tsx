@@ -1,7 +1,62 @@
 import DefaultLayout from "../layout/DefaultLayout";
-import { Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 
 const Events = () => {
+  // Event images array
+  const eventImages = [
+    "/images/event1.jpeg",
+    "/images/event2.jpeg",
+    "/images/event3.jpeg",
+    "/images/event4.jpeg",
+    "/images/event5.jpeg",
+    "/images/event6.jpeg",
+    "/images/event7.jpeg",
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto slide functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % eventImages.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, eventImages.length]);
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+
+    // Resume auto play after 10 seconds of inactivity
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  }, []);
+
+  const goToPrevSlide = useCallback(() => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + eventImages.length) % eventImages.length,
+    );
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  }, [eventImages.length]);
+
+  const goToNextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % eventImages.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  }, [eventImages.length]);
+
   const pastEvents = [
     {
       id: 1,
@@ -13,7 +68,6 @@ const Events = () => {
         "A high-energy session designed to identify real challenges across African countries, map existing solutions, and spark innovation through collective brainstorming.",
       organizedBy: "Cranfield Africa Impact Summit Society",
       tagline: "Mapping Problems → Connecting Solutions → Inspiring Impact",
-      image: "/images/flyer.png",
       highlights: [
         "Identify real challenges faced across African countries",
         "Map solutions that exist in other regions",
@@ -118,14 +172,43 @@ const Events = () => {
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200"
               >
                 <div className="md:flex">
-                  {/* Event Image - Updated to green gradient */}
-                  <div className="md:w-2/5 relative">
-                    <div className="h-64 md:h-full bg-gradient-to-r from-emerald-800 to-emerald-600 relative">
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Event Image Carousel - Updated with slider */}
+                  <div className="md:w-2/5 relative group">
+                    {/* Carousel Container */}
+                    <div className="relative h-64 md:h-full overflow-hidden">
+                      {/* Gradient Overlays */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/40 to-transparent z-10"></div>
+
+                      {/* Slides Container */}
+                      <div
+                        className="flex h-full transition-transform duration-700 ease-in-out"
+                        style={{
+                          transform: `translateX(-${currentSlide * 100}%)`,
+                        }}
+                      >
+                        {eventImages.map((image, index) => (
+                          <div
+                            key={index}
+                            className="w-full h-full flex-shrink-0"
+                          >
+                            <img
+                              src={image}
+                              alt={`Event image ${index + 1}`}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.currentTarget.src =
+                                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+                              }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Content Overlay */}
+                      <div className="absolute inset-0 z-20 flex items-center justify-center">
                         <div className="text-center p-8">
-                          <div className="inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg mb-4 font-semibold">
+                          <div className="inline-block bg-emerald-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-lg mb-4 font-semibold">
                             Event Completed
                           </div>
                           <h3 className="text-3xl font-bold text-white mb-2">
@@ -134,6 +217,55 @@ const Events = () => {
                           <p className="text-emerald-100">
                             Ideas Mapping Session
                           </p>
+                        </div>
+                      </div>
+
+                      {/* Navigation Buttons */}
+                      <button
+                        onClick={goToPrevSlide}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 bg-black/30 hover:bg-black/50 rounded-full backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
+                        aria-label="Previous slide"
+                      >
+                        <ChevronLeft className="w-6 h-6 text-white" />
+                      </button>
+                      <button
+                        onClick={goToNextSlide}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 bg-black/30 hover:bg-black/50 rounded-full backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
+                        aria-label="Next slide"
+                      >
+                        <ChevronRight className="w-6 h-6 text-white" />
+                      </button>
+
+                      {/* Slide Indicators */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-3">
+                        {eventImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`transition-all duration-300 rounded-full ${
+                              index === currentSlide
+                                ? "w-8 h-2 bg-emerald-400"
+                                : "w-2 h-2 bg-white/60 hover:bg-white"
+                            }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                          />
+                        ))}
+                      </div>
+
+                      {/* Slide Counter */}
+                      <div className="absolute bottom-4 right-4 z-30 bg-black/40 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
+                        {currentSlide + 1} / {eventImages.length}
+                      </div>
+
+                      {/* Auto-play Indicator */}
+                      <div className="absolute top-4 right-4 z-30">
+                        <div className="flex items-center space-x-2">
+                          <div
+                            className={`w-3 h-3 rounded-full ${isAutoPlaying ? "bg-emerald-400 animate-pulse" : "bg-gray-400"}`}
+                          />
+                          <span className="text-xs text-white/80 bg-black/30 px-2 py-1 rounded">
+                            {isAutoPlaying ? "Auto" : "Manual"}
+                          </span>
                         </div>
                       </div>
                     </div>
