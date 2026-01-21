@@ -12,6 +12,17 @@ const Team = () => {
 
   const teamMembers = [
     {
+      id: 3,
+      name: "Ayodele Oluwaropo",
+      role: "President/Chair of the Summit",
+      bio: "Ayodele Oluwaropo is a PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University.",
+      image: "/images/ayodele.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/ayodeleoluwaropo/",
+      },
+    },
+    {
       id: 1,
       name: "Nseobong Umoh",
       role: "Vice President",
@@ -33,15 +44,7 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/obed-asamoah-4b2249385/",
       },
     },
-    {
-      id: 3,
-      name: "Fatima Diallo",
-      role: "Head of Partnerships",
-      bio: "Former Director of African Development Bank's private sector division.",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
-    },
+
     {
       id: 4,
       name: "Samuel Chukwu",

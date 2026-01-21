@@ -54,7 +54,7 @@ At Cranfield, Nseobong has been instrumental in building cross-cultural connecti
       image: "/images/Obong.jpeg",
       linkedin: "https://www.linkedin.com/in/nseobong-umoh-9830257a/",
       email: "nseobong.umoh@example.com",
-      location: "London, UK",
+      location: "MiltonKeynes, UK",
       yearsAtCranfield: 2,
       education: [
         "MBA, Cranfield University School of Management (2025)",
@@ -92,7 +92,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
       image: "/images/obed.jpeg",
       linkedin: "https://www.linkedin.com/in/obed-asamoah-4b2249385/",
       email: "obed.asamoah@example.com",
-      location: "Accra, Ghana",
+      location: "Cranfield, UK",
       yearsAtCranfield: 1,
       education: [
         "MSc in Environmental Engineering, Cranfield University (Ongoing)",
@@ -111,7 +111,35 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
         "Managed successful digital campaign reaching 50,000+ people",
       ],
     },
-    // Add other team members similarly
+    {
+      id: 3,
+      name: "Ayodele Oluwaropo",
+      role: "President",
+      bio: "Ayodele Oluwaropo is a PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University.",
+      fullBio: `He earned a bachelor’s degree in Economics and Finance as well as an MSc in Finance and Investment Management from the University of Hertfordshire. Ayodele is committed to advancing Africa’s sustainable development through policy, finance, and private sector innovation. With experience spanning climate finance consulting, impact investment, SME advisory, and youth development, Ayodele has supported initiatives focused on climate policy implementation, access to sustainable finance, and SME Growth. His work bridges academia and practice, with research centred on how improved access to finance can enable African SMEs to scale, create jobs, and contribute meaningfully to the SDGs and Africa Agenda 2063. Driven by a passion for convening ideas and people, Ayodele founded the Cranfield Africa Impact Summit Society to create a platform for dialogue, mentorship, collaboration, and action among African change-makers within and beyond Cranfield University. His work reflects a deep commitment to building inclusive, resilient, and investment-ready pathways for Africa’s future. `,
+      image: "/images/ayodele.jpeg",
+      linkedin: "https://www.linkedin.com/in/ayodeleoluwaropo/",
+      email: "ayodele.oluwaporpo@example.com",
+      location: "Cranfield, UK",
+      yearsAtCranfield: 2,
+      education: [
+        "PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University.(Ongoing)",
+        "MSc in Finance and Investment Management from the University of Hertfordshire",
+        "BSc in Economics and Finance from the University of Hertfordshire",
+      ],
+      expertise: [
+        "Digital Media Strategy",
+        "Content Creation",
+        "Environmental Communication",
+        "Social Media Management",
+        "Public Relations",
+      ],
+      achievements: [
+        "Grew social media following by 300% in 6 months",
+        "Produced award-winning documentary on African environmental initiatives",
+        "Managed successful digital campaign reaching 50,000+ people",
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -147,7 +175,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
   if (!member) {
     return (
       <DefaultLayout>
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-6 py-32 text-center">
             <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Users className="w-12 h-12 text-gray-400" />
@@ -159,7 +187,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
               The team member you're looking for doesn't exist.
             </p>
             <button
-              onClick={() => navigate("/team")}
+              onClick={() => navigate(-1)}
               className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
