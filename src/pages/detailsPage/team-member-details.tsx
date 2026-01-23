@@ -29,7 +29,7 @@ interface TeamMember {
   location: string;
   yearsAtCranfield: number;
   education: string[];
-  expertise: string[];
+  expertise?: string[];
   achievements?: string[];
   publications?: string[];
 }
@@ -46,11 +46,11 @@ const TeamMemberDetails = () => {
       name: "Nseobong Umoh",
       role: "Vice President",
       bio: "Nseobong Umoh is the Vice President of the Cranfield Africa Impact Society. He is an MBA alumnus (Class of 2025) of the Cranfield University School of Management and is currently completing an MSc in Systems Engineering (part-time), with a focus on applying systems engineering and systems thinking to complex, real-world challenges.",
-      fullBio: `Nseobong Umoh is the Vice President of the Cranfield Africa Impact Society. He is an MBA alumnus (Class of 2025) of the Cranfield University School of Management and is currently completing an MSc in Systems Engineering (part-time), with a focus on applying systems engineering and systems thinking to complex, real-world challenges.
+      fullBio: `Nseobong Umoh is the Vice President of the Cranfield Africa Impact Society. He is an MBA alumnus (Class of 2025) of the Cranfield University School of Management and is currently completing an MSc in Systems Engineering (part-time), with a focus on applying systems engineering and systems thinking to complex, real-world challenges. 
 
-With over 8 years of experience in project management and strategic planning, Nseobong has worked across multiple sectors including technology, education, and social impact initiatives. He is passionate about driving sustainable development in Africa through innovative solutions and collaborative partnerships.
+With an engineering background and over a decade of industry experience, Nseobong operates at the intersection of technology, engineering, and commercial decision-making, bridging technical depth with business insight. He is an Incorporated Engineer (IEng) registered with the Engineering Council and a member of the Nigerian Society of Engineers. 
 
-At Cranfield, Nseobong has been instrumental in building cross-cultural connections and fostering meaningful dialogue around Africa's development agenda. His leadership style emphasizes inclusivity, data-driven decision making, and sustainable impact.`,
+His interests centre on translating technical innovation into commercially viable and scalable solutions, particularly within emerging markets, where the effective integration of technology, systems, and business models is critical to achieving sustainable impact. `,
       image: "/images/Obong.jpeg",
       linkedin: "https://www.linkedin.com/in/nseobong-umoh-9830257a/",
       email: "nseobong.umoh@example.com",
@@ -61,22 +61,18 @@ At Cranfield, Nseobong has been instrumental in building cross-cultural connecti
         "MSc in Systems Engineering, Cranfield University (Ongoing)",
         "BEng in Mechanical Engineering, University of Lagos",
       ],
-      expertise: [
-        "Strategic Planning",
-        "Project Management",
-        "Systems Thinking",
-        "Stakeholder Engagement",
-        "Cross-cultural Leadership",
-      ],
+      // expertise: [
+      //   "Strategic Planning",
+      //   "Project Management",
+      //   "Systems Thinking",
+      //   "Stakeholder Engagement",
+      //   "Cross-cultural Leadership",
+      // ],
       achievements: [
         "Led the organization of the 2023 Africa Impact Summit",
         "Increased society membership by 40% in 2024",
         "Established partnerships with 3 major African organizations",
         "Received the Cranfield Leadership Excellence Award (2023)",
-      ],
-      publications: [
-        "Systems Thinking for Sustainable Development in Africa",
-        "The Role of Education in African Innovation Ecosystems",
       ],
     },
     {
@@ -231,7 +227,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
                   alt={member.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
                 {/* Role Badge */}
                 <div className="absolute bottom-4 left-4">
                   <span className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gray-700">
@@ -321,22 +317,24 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
             </div>
 
             {/* Expertise */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
-                <Target className="w-5 h-5 text-emerald-600" />
-                Areas of Expertise
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {member.expertise.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm rounded-full border border-emerald-100"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            {member.expertise && (
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+                <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
+                  <Target className="w-5 h-5 text-emerald-600" />
+                  Areas of Expertise
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {member?.expertise?.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm rounded-full border border-emerald-100"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Right Column - Detailed Info */}

@@ -48,23 +48,18 @@ const AdvisoryCommittee = () => {
   const committeeMembers: CommitteeMember[] = [
     {
       id: "1",
-      name: "Dr. Sarah Johnson",
-      title: "Chief Investment Officer",
-      organization: "Africa Growth Fund",
-      role: "Chairperson",
-      expertise: [
-        "Investment Strategy",
-        "Economic Development",
-        "Private Equity",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "DR. Inyene Nkanta",
+      title: "Lecturer in Business & Creative Industries",
+      organization: "University of the West of Scotland",
+      role: "Lecturer",
+      expertise: ["Entrepreneurship", "Sustainability", "Circular Economy"],
+      image: "/images/INYENE.jpeg",
       email: "sarah.johnson@example.com",
-      linkedin: "sarah-johnson",
+      linkedin: "inyene-nkanta-1a9b5590/",
       website: "https://africagrowthfund.com",
-      bio: "Over 20 years of experience in African markets, specializing in infrastructure investment and economic policy advising for multiple African governments. Sarah has led investments totaling over $5 billion across the continent.",
-      yearsOfExperience: 22,
-      location: "Johannesburg, South Africa",
+      bio: "Dr. Inyene is a Lecturer in Business and the Creative Industries at the University of the West of Scotland, United Kingdom. She holds a Doctorate degree from the University of Wolverhampton and is a specialist in Entrepreneurship, Sustainability, and the Circular Economy.",
+      yearsOfExperience: 10,
+      location: "West of Scotland, United Kingdom",
       featuredQuote:
         "Sustainable investment is not just about returns—it's about building legacies.",
       accentColor: "emerald",
@@ -182,7 +177,7 @@ const AdvisoryCommittee = () => {
   ];
 
   const expertiseAreas = Array.from(
-    new Set(committeeMembers.flatMap((member) => member.expertise))
+    new Set(committeeMembers.flatMap((member) => member.expertise)),
   );
 
   const filteredMembers = committeeMembers.filter((member) => {
@@ -190,7 +185,7 @@ const AdvisoryCommittee = () => {
       member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       member.organization.toLowerCase().includes(searchTerm.toLowerCase()) ||
       member.expertise.some((exp) =>
-        exp.toLowerCase().includes(searchTerm.toLowerCase())
+        exp.toLowerCase().includes(searchTerm.toLowerCase()),
       ) ||
       member.bio.toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -226,7 +221,7 @@ const AdvisoryCommittee = () => {
         <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-gray-50 via-white to-emerald-50">
           {/* Subtle Background Pattern */}
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(16,185,129,0.03)_25%,rgba(16,185,129,0.03)_50%,transparent_50%,transparent_75%,rgba(16,185,129,0.03)_75%)] bg-[length:4px_4px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(16,185,129,0.03)_25%,rgba(16,185,129,0.03)_50%,transparent_50%,transparent_75%,rgba(16,185,129,0.03)_75%)] bg-size-[4px_4px]" />
 
             {/* Very Subtle Background Image */}
             <div className="absolute inset-0 opacity-5">
@@ -499,14 +494,14 @@ const AdvisoryCommittee = () => {
                     member.accentColor === "emerald"
                       ? "bg-emerald-500"
                       : member.accentColor === "amber"
-                      ? "bg-amber-500"
-                      : member.accentColor === "indigo"
-                      ? "bg-indigo-500"
-                      : member.accentColor === "blue"
-                      ? "bg-blue-500"
-                      : member.accentColor === "rose"
-                      ? "bg-rose-500"
-                      : "bg-violet-500"
+                        ? "bg-amber-500"
+                        : member.accentColor === "indigo"
+                          ? "bg-indigo-500"
+                          : member.accentColor === "blue"
+                            ? "bg-blue-500"
+                            : member.accentColor === "rose"
+                              ? "bg-rose-500"
+                              : "bg-violet-500"
                   }`}
                 />
 
@@ -562,7 +557,7 @@ const AdvisoryCommittee = () => {
                       <span
                         key={index}
                         className={`px-3 py-1.5 text-xs rounded-full border ${getAccentColor(
-                          member.accentColor
+                          member.accentColor,
                         )}`}
                       >
                         {exp}
@@ -669,7 +664,7 @@ const AdvisoryCommittee = () => {
             <img
               src={"/images/strategic_advisory_circle.png"}
               alt="Strategic Advisory Circle"
-              className="w-[25rem] h-[25rem] mx-auto object-cover"
+              className="w-100 h-100 mx-auto object-cover"
             />
           </div>
         </div>

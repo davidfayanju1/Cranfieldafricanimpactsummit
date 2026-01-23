@@ -51,27 +51,18 @@ const AdvisoryDetails = () => {
   const navigate = useNavigate();
   const [member, setMember] = useState<CommitteeMember | null>(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("overview");
 
   const mockMembers: CommitteeMember[] = [
     {
       id: "1",
-      name: "Dr. Sarah Johnson",
-      title: "Chief Investment Officer",
-      organization: "Africa Growth Fund",
-      role: "Chairperson",
-      expertise: [
-        "Investment Strategy",
-        "Economic Development",
-        "Private Equity",
-        "Infrastructure Finance",
-        "Sustainable Development",
-        "Risk Management",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "DR. Inyene Nkanta",
+      title: "Lecturer in Business & Creative Industries",
+      organization: "University of the West of Scotland",
+      role: "Lecturer",
+      expertise: ["Entrepreneurship", "Sustainability", "Circular Economy"],
+      image: "/images/INYENE.jpeg",
       email: "sarah.johnson@africagrowthfund.com",
-      linkedin: "sarah-johnson-africa-investment",
+      linkedin: "inyene-nkanta-1a9b5590/",
       website: "https://africagrowthfund.com/leadership/sarah-johnson",
       bio: "Dr. Sarah Johnson is a visionary leader with over 22 years of experience in African financial markets and infrastructure development. As Chief Investment Officer at Africa Growth Fund, she oversees a $5 billion portfolio dedicated to sustainable development across the continent. Her strategic leadership has facilitated transformative investments in renewable energy, transportation, and digital infrastructure that have created over 50,000 jobs and connected millions to essential services.\n\nSarah pioneered the 'Impact-First Investment Framework' that has become a benchmark for sustainable investing in emerging markets. She serves on the board of the African Development Bank's Private Sector Investment Committee and has advised multiple African governments on economic policy formulation. Her work focuses on creating resilient, inclusive economies through strategic capital allocation and public-private partnerships.",
       yearsOfExperience: 22,
@@ -265,7 +256,7 @@ const AdvisoryDetails = () => {
 
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
-              {/* Profile Image */}
+              {/* Left Column - Profile Image & Info */}
               <div className="lg:w-2/5">
                 <div className="relative">
                   <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
@@ -278,7 +269,7 @@ const AdvisoryDetails = () => {
                   {/* Accent Bar */}
                   <div
                     className={`absolute -bottom-3 left-6 right-6 h-2 rounded-full ${getAccentColor(
-                      member.accentColor
+                      member.accentColor,
                     )}`}
                   />
 
@@ -390,13 +381,13 @@ const AdvisoryDetails = () => {
                 </div>
               </div>
 
-              {/* Profile Details */}
+              {/* Right Column - Profile Details */}
               <div className="lg:w-3/5">
                 <div className="mb-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div
                       className={`w-2 h-8 rounded-full ${getAccentColor(
-                        member.accentColor
+                        member.accentColor,
                       )}`}
                     />
                     <span className="text-sm font-medium text-gray-500 uppercase tracking-wider">
@@ -424,225 +415,177 @@ const AdvisoryDetails = () => {
                   )}
                 </div>
 
-                {/* Tabs */}
-                <div className="mb-8 border-b border-gray-200">
-                  <div className="flex space-x-8">
-                    {[
-                      "overview",
-                      "expertise",
-                      "background",
-                      "contributions",
-                    ].map((tab) => (
-                      <button
-                        key={tab}
-                        onClick={() => setActiveTab(tab)}
-                        className={`pb-3 text-sm font-medium transition-all duration-300 ${
-                          activeTab === tab
-                            ? "text-emerald-700 border-b-2 border-emerald-600"
-                            : "text-gray-500 hover:text-gray-700"
-                        }`}
-                      >
-                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Tab Content */}
-                <div className="min-h-[400px]">
-                  {activeTab === "overview" && (
-                    <div className="space-y-8">
-                      {/* Biography */}
-                      <div>
-                        <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
-                          <BookOpen className="w-5 h-5 text-emerald-600" />
-                          Biography
-                        </h3>
-                        <div className="bg-white rounded-2xl p-6 border border-gray-100">
-                          {formatBio(member.bio)}
-                        </div>
-                      </div>
-
-                      {/* Committee History */}
-                      {member.committeeHistory && (
-                        <div>
-                          <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
-                            <Award className="w-5 h-5 text-emerald-600" />
-                            Committee Contributions
-                          </h3>
-                          <div className="bg-gradient-to-r from-emerald-50/50 to-white rounded-2xl p-6 border border-emerald-100">
-                            <p className="text-gray-600 leading-relaxed">
-                              {member.committeeHistory}
-                            </p>
-                          </div>
-                        </div>
-                      )}
+                {/* Content Sections (No Tabs) */}
+                <div className="space-y-8">
+                  {/* Expertise Section */}
+                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                      <Target className="w-5 h-5 text-emerald-600" />
+                      Areas of Expertise
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {member.expertise.map((exp, index) => (
+                        <span
+                          key={index}
+                          className={`px-4 py-2.5 rounded-full text-sm border ${getLightAccentColor(
+                            member.accentColor,
+                          )}`}
+                        >
+                          {exp}
+                        </span>
+                      ))}
                     </div>
-                  )}
+                  </div>
 
-                  {activeTab === "expertise" && (
-                    <div className="space-y-8">
-                      <div className="bg-white rounded-2xl p-6 border border-gray-100">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
-                          <Target className="w-5 h-5 text-emerald-600" />
-                          Areas of Expertise
-                        </h3>
-                        <div className="flex flex-wrap gap-3">
-                          {member.expertise.map((exp, index) => (
-                            <span
-                              key={index}
-                              className={`px-4 py-2.5 rounded-full text-sm border ${getLightAccentColor(
-                                member.accentColor
+                  {/* Biography Section */}
+                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                      <BookOpen className="w-5 h-5 text-emerald-600" />
+                      Biography
+                    </h3>
+                    <div className="text-gray-600 space-y-4">
+                      {formatBio(member.bio)}
+                    </div>
+                  </div>
+
+                  {/* Education Section */}
+                  {member.education && (
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                      <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                        <Award className="w-5 h-5 text-emerald-600" />
+                        Education & Credentials
+                      </h3>
+                      <div className="space-y-4">
+                        {member.education.map((edu, index) => (
+                          <div
+                            key={index}
+                            className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"
+                          >
+                            <div
+                              className={`w-6 h-6 rounded-full flex items-center justify-center ${getAccentColor(
+                                member.accentColor,
                               )}`}
                             >
-                              {exp}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Achievements */}
-                      {member.achievements && (
-                        <div>
-                          <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-emerald-600" />
-                            Key Achievements
-                          </h3>
-                          <div className="space-y-3">
-                            {member.achievements.map((achievement, index) => (
-                              <div
-                                key={index}
-                                className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100"
-                              >
-                                <div
-                                  className={`w-2 h-2 rounded-full mt-2 ${getAccentColor(
-                                    member.accentColor
-                                  )}`}
-                                />
-                                <span className="text-gray-700">
-                                  {achievement}
-                                </span>
-                              </div>
-                            ))}
+                              <span className="text-xs font-medium text-white">
+                                {index + 1}
+                              </span>
+                            </div>
+                            <span className="text-gray-700">{edu}</span>
                           </div>
-                        </div>
-                      )}
+                        ))}
+                      </div>
                     </div>
                   )}
 
-                  {activeTab === "background" && (
-                    <div className="space-y-8">
-                      {/* Education */}
-                      {member.education && (
-                        <div className="bg-white rounded-2xl p-6 border border-gray-100">
-                          <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
-                            <BookOpen className="w-5 h-5 text-emerald-600" />
-                            Education & Credentials
-                          </h3>
-                          <div className="space-y-4">
-                            {member.education.map((edu, index) => (
-                              <div
-                                key={index}
-                                className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"
-                              >
-                                <div
-                                  className={`w-6 h-6 rounded-full flex items-center justify-center ${getAccentColor(
-                                    member.accentColor
-                                  )}`}
-                                >
-                                  <span className="text-xs font-medium text-white">
-                                    {index + 1}
-                                  </span>
-                                </div>
-                                <span className="text-gray-700">{edu}</span>
-                              </div>
-                            ))}
+                  {/* Achievements Section */}
+                  {member.achievements && (
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                      <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                        <Sparkles className="w-5 h-5 text-emerald-600" />
+                        Key Achievements
+                      </h3>
+                      <div className="space-y-3">
+                        {member.achievements.map((achievement, index) => (
+                          <div
+                            key={index}
+                            className="flex items-start gap-3 p-4 bg-gradient-to-r from-gray-50/50 to-white rounded-xl border border-gray-100 hover:border-emerald-200 transition-colors"
+                          >
+                            <div
+                              className={`w-2 h-2 rounded-full mt-2 ${getAccentColor(
+                                member.accentColor,
+                              )}`}
+                            />
+                            <span className="text-gray-700">{achievement}</span>
                           </div>
-                        </div>
-                      )}
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
-                      {/* Publications */}
-                      {member.publications &&
-                        member.publications.length > 0 && (
-                          <div>
-                            <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
-                              <Briefcase className="w-5 h-5 text-emerald-600" />
-                              Selected Publications
-                            </h3>
-                            <div className="space-y-3">
-                              {member.publications.map((pub, index) => (
-                                <div
-                                  key={index}
-                                  className="p-4 bg-white rounded-xl border border-gray-100 hover:border-emerald-200 transition-colors"
-                                >
-                                  <div className="flex items-center gap-3">
-                                    <div
-                                      className={`w-2 h-2 rounded-full ${getAccentColor(
-                                        member.accentColor
-                                      )}`}
-                                    />
-                                    <span className="text-gray-700">{pub}</span>
-                                  </div>
-                                </div>
-                              ))}
+                  {/* Publications Section */}
+                  {member.publications && member.publications.length > 0 && (
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                      <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                        <Briefcase className="w-5 h-5 text-emerald-600" />
+                        Selected Publications
+                      </h3>
+                      <div className="space-y-3">
+                        {member.publications.map((pub, index) => (
+                          <div
+                            key={index}
+                            className="p-4 bg-white rounded-xl border border-gray-100 hover:border-emerald-200 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`w-2 h-2 rounded-full ${getAccentColor(
+                                  member.accentColor,
+                                )}`}
+                              />
+                              <span className="text-gray-700">{pub}</span>
                             </div>
                           </div>
-                        )}
-                    </div>
-                  )}
-
-                  {activeTab === "contributions" && (
-                    <div className="space-y-8">
-                      {/* Speaking Engagements */}
-                      {member.speakingEngagements && (
-                        <div className="bg-white rounded-2xl p-6 border border-gray-100">
-                          <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
-                            <Zap className="w-5 h-5 text-emerald-600" />
-                            Recent Speaking Engagements
-                          </h3>
-                          <div className="space-y-4">
-                            {member.speakingEngagements.map(
-                              (engagement, index) => (
-                                <div
-                                  key={index}
-                                  className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-50/50 to-white rounded-xl border border-gray-100"
-                                >
-                                  <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                                    <span className="text-sm font-medium text-emerald-700">
-                                      {new Date().getFullYear() - index}
-                                    </span>
-                                  </div>
-                                  <span className="text-gray-700">
-                                    {engagement}
-                                  </span>
-                                </div>
-                              )
-                            )}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Contribution Metrics */}
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-gradient-to-br from-emerald-50/80 to-white p-6 rounded-2xl border border-emerald-100">
-                          <div className="text-3xl font-light text-emerald-700 mb-2">
-                            {member.yearsOfExperience}+
-                          </div>
-                          <div className="text-sm font-medium text-emerald-600">
-                            Years of Experience
-                          </div>
-                        </div>
-                        <div className="bg-gradient-to-br from-amber-50/80 to-white p-6 rounded-2xl border border-amber-100">
-                          <div className="text-3xl font-light text-amber-700 mb-2">
-                            10+
-                          </div>
-                          <div className="text-sm font-medium text-amber-600">
-                            Committee Initiatives Led
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   )}
+
+                  {/* Speaking Engagements Section */}
+                  {member.speakingEngagements && (
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                      <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                        <Zap className="w-5 h-5 text-emerald-600" />
+                        Recent Speaking Engagements
+                      </h3>
+                      <div className="space-y-4">
+                        {member.speakingEngagements.map((engagement, index) => (
+                          <div
+                            key={index}
+                            className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-50/50 to-white rounded-xl border border-gray-100"
+                          >
+                            <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                              <span className="text-sm font-medium text-emerald-700">
+                                {new Date().getFullYear() - index}
+                              </span>
+                            </div>
+                            <span className="text-gray-700">{engagement}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Committee History Section */}
+                  {member.committeeHistory && (
+                    <div className="bg-gradient-to-r from-emerald-50/80 to-white rounded-2xl p-6 border border-emerald-100 shadow-sm">
+                      <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-emerald-600" />
+                        Committee Contributions
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {member.committeeHistory}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Contribution Metrics */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gradient-to-br from-emerald-50/80 to-white p-6 rounded-2xl border border-emerald-100 shadow-sm">
+                      <div className="text-3xl font-light text-emerald-700 mb-2">
+                        {member.yearsOfExperience}+
+                      </div>
+                      <div className="text-sm font-medium text-emerald-600">
+                        Years of Experience
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-br from-amber-50/80 to-white p-6 rounded-2xl border border-amber-100 shadow-sm">
+                      <div className="text-3xl font-light text-amber-700 mb-2">
+                        10+
+                      </div>
+                      <div className="text-sm font-medium text-amber-600">
+                        Committee Initiatives Led
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
