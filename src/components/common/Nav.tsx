@@ -31,6 +31,7 @@ const Nav = () => {
     { label: "Advisory", href: "/advisory" },
     { label: "Agenda", href: "/agenda" },
     { label: "Events", href: "/events" },
+    { label: "Blogs", href: "/blogs" },
     { label: "Sponsors", href: "/sponsors" },
   ];
 
@@ -105,8 +106,8 @@ const Nav = () => {
                       active
                         ? "text-emerald-800 font-semibold"
                         : scrolled || isAdvisoryPage
-                        ? "text-gray-700 hover:text-emerald-700"
-                        : "text-white hover:text-emerald-200"
+                          ? "text-gray-700 hover:text-emerald-700"
+                          : "text-white hover:text-emerald-200"
                     }`}
                   >
                     {item.label}
@@ -151,8 +152,8 @@ const Nav = () => {
                   isOpen
                     ? "rotate-45 translate-y-0 bg-gray-700"
                     : scrolled || isAdvisoryPage
-                    ? "-translate-y-2 bg-gray-700"
-                    : "-translate-y-2 bg-white"
+                      ? "-translate-y-2 bg-gray-700"
+                      : "-translate-y-2 bg-white"
                 }`}
               ></span>
               <span
@@ -160,8 +161,8 @@ const Nav = () => {
                   isOpen
                     ? "opacity-0 w-0"
                     : scrolled || isAdvisoryPage
-                    ? "opacity-100 w-6 bg-gray-700"
-                    : "opacity-100 w-6 bg-white"
+                      ? "opacity-100 w-6 bg-gray-700"
+                      : "opacity-100 w-6 bg-white"
                 }`}
               ></span>
               <span
@@ -169,8 +170,8 @@ const Nav = () => {
                   isOpen
                     ? "-rotate-45 translate-y-0 bg-gray-700"
                     : scrolled || isAdvisoryPage
-                    ? "translate-y-2 bg-gray-700"
-                    : "translate-y-2 bg-white"
+                      ? "translate-y-2 bg-gray-700"
+                      : "translate-y-2 bg-white"
                 }`}
               ></span>
             </div>
