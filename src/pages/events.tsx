@@ -68,6 +68,7 @@ const Events = () => {
   };
 
   // All events data
+  // All events data
   const allEvents = [
     {
       id: 1,
@@ -105,13 +106,33 @@ const Events = () => {
         "Relaxed atmosphere with no formal agenda",
         "Connect with the Africa Impact community",
       ],
-      image: "/images/event2.jpeg",
+      image: "/images/event1.jpeg",
     },
     {
       id: 3,
+      title: "CRANFIELD-AFRICA IMPACT SUMMIT 2026 - Mentorship Circle",
+      date: "Friday, February 27, 2026",
+      dateObj: new Date("2026-02-27"),
+      time: "6:00 PM",
+      venue: "Lectureroom 3, Building 111, School of Management",
+      description:
+        "Developing Tech Solutions for Impact in Emerging Markets. Join us for an exclusive session with Lillian Awuro, Fintech & Payments Expert and Former Mastercard (EMEA) leader, currently a Tesco Technology Startup Founder. Explore strategies for designing tech solutions for payment access & inclusion in emerging markets.",
+      organizedBy: "Cranfield Africa Impact Summit Society",
+      tagline: "Investing in Impact, Transforming Africa • #CAIS2026",
+      highlights: [
+        "Design strategies for tech solutions in emerging markets",
+        "Learn about payment access and financial inclusion in Africa",
+        "Connect with Lillian Awuro, Fintech & Payments Expert",
+        "Explore intersection of finance, technology & social impact",
+        "Network with professionals in the African tech ecosystem",
+      ],
+      image: "/images/upcoming-3.jpeg",
+    },
+    {
+      id: 4,
       title: "CRANFIELD-AFRICA IMPACT SUMMIT 2026",
-      date: "TBD - Coming Soon", // Placeholder until actual date is confirmed
-      dateObj: new Date("2026-05-15"), // Set to end of year as placeholder
+      date: "TBD - Coming Soon",
+      dateObj: new Date("2026-05-15"),
       time: "TBD",
       venue: "Cranfield University",
       description:
@@ -126,7 +147,7 @@ const Events = () => {
         "Collaborative workshops on wicked problems in health and energy",
         "Networking opportunities with African innovation leaders",
       ],
-      image: "/images/upcoming-2.jpeg", // You'll need to add this image
+      image: "/images/upcoming-2.jpeg",
     },
   ];
 
@@ -201,6 +222,7 @@ const Events = () => {
                       src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      // style={{ objectPosition: "center 20%" }}
                       onError={(e) => {
                         e.currentTarget.src =
                           "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
