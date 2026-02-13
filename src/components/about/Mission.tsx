@@ -153,7 +153,7 @@ const Mission = () => {
                 >
                   <div className="relative">
                     {/* Vertical Line */}
-                    <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-emerald-200"></div>
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-emerald-200"></div>
 
                     {/* Timeline Items */}
                     <div className="space-y-12 relative">
@@ -171,7 +171,7 @@ const Mission = () => {
                         {
                           year: "2025",
                           title: "First Impact",
-                          desc: "$50M in committed investments and 15 partnerships formed",
+                          desc: "Grants in committed investments and partnerships formed",
                         },
                         {
                           year: "Present",
@@ -180,7 +180,7 @@ const Mission = () => {
                         },
                       ].map((item, index) => (
                         <div key={index} className="flex items-start gap-6">
-                          <div className="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10 flex-shrink-0">
+                          <div className="w-16 h-16 text-[.9rem] bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10 flex-shrink-0">
                             {item.year}
                           </div>
                           <div className="pt-1">
