@@ -47,49 +47,51 @@ const Team = () => {
 
     {
       id: 4,
-      name: "Samuel Chukwu",
+      name: "Gutema Mulatu",
       role: "Director of Programs",
-      bio: "Award-winning event producer with expertise in high-impact forums.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
+      bio: "Gutema is the Research and Insight Director of the Cranfield Africa Impact Summit Society. He is currently pursuing an MSc by research in Water at Cranfield University and holds MSc degrees in Water Engineering from IHE Delft Institute for Water Education and in Water Management (Water Supply and Sanitation) from Addis Ababa University.",
+      image: "/images/gutema.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/gutema-mulatu-shifera-435978151",
+      },
     },
-    {
-      id: 5,
-      name: "Nadia Bello",
-      role: "Head of Communications",
-      bio: "Former BBC Africa correspondent and media strategist.",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
-    },
-    {
-      id: 6,
-      name: "James Ofori",
-      role: "Logistics Director",
-      bio: "20+ years experience managing large-scale international events across Africa.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
-    },
-    {
-      id: 7,
-      name: "Leila Hassan",
-      role: "Digital Strategy Lead",
-      bio: "Tech entrepreneur focused on digital transformation in emerging markets.",
-      image:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
-    },
-    {
-      id: 8,
-      name: "David Kimani",
-      role: "Finance Director",
-      bio: "Chartered accountant with expertise in non-profit financial management.",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      social: { twitter: "#", linkedin: "#" },
-    },
+    // {
+    //   id: 5,
+    //   name: "Nadia Bello",
+    //   role: "Head of Communications",
+    //   bio: "Former BBC Africa correspondent and media strategist.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   social: { twitter: "#", linkedin: "#" },
+    // },
+    // {
+    //   id: 6,
+    //   name: "James Ofori",
+    //   role: "Logistics Director",
+    //   bio: "20+ years experience managing large-scale international events across Africa.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   social: { twitter: "#", linkedin: "#" },
+    // },
+    // {
+    //   id: 7,
+    //   name: "Leila Hassan",
+    //   role: "Digital Strategy Lead",
+    //   bio: "Tech entrepreneur focused on digital transformation in emerging markets.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   social: { twitter: "#", linkedin: "#" },
+    // },
+    // {
+    //   id: 8,
+    //   name: "David Kimani",
+    //   role: "Finance Director",
+    //   bio: "Chartered accountant with expertise in non-profit financial management.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   social: { twitter: "#", linkedin: "#" },
+    // },
   ];
 
   const handleMemberClick = (id: number) => {
@@ -204,7 +206,7 @@ const Team = () => {
           </div>
 
           {/* Advisory Board Section */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
               Advisory Board
             </h2>
@@ -240,7 +242,7 @@ const Team = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Call to Action */}
           <div className="bg-linear-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 md:p-12 text-center">

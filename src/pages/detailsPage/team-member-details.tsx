@@ -12,8 +12,8 @@ import {
   ChevronRight,
   ExternalLink,
   GraduationCap,
-  Target,
-  Sparkles,
+  // Target,
+  // Sparkles,
 } from "lucide-react";
 import DefaultLayout from "../../layout/DefaultLayout";
 
@@ -122,6 +122,35 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
         "PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University.(Ongoing)",
         "MSc in Finance and Investment Management from the University of Hertfordshire",
         "BSc in Economics and Finance from the University of Hertfordshire",
+      ],
+      expertise: [
+        "Digital Media Strategy",
+        "Content Creation",
+        "Environmental Communication",
+        "Social Media Management",
+        "Public Relations",
+      ],
+      achievements: [
+        "Grew social media following by 300% in 6 months",
+        "Produced award-winning documentary on African environmental initiatives",
+        "Managed successful digital campaign reaching 50,000+ people",
+      ],
+    },
+    {
+      id: 4,
+      name: "Gutema Mulatu Shifera (Gutu)",
+      role: "Director of Programs",
+      bio: "Gutema is the Research and Insight Director of the Cranfield Africa Impact Summit Society. He is currently pursuing an MSc by research in Water at Cranfield University and holds MSc degrees in Water Engineering from IHE Delft Institute for Water Education and in Water Management (Water Supply and Sanitation) from Addis Ababa University",
+      fullBio: `Gutema is the Research and Insight Director of the Cranfield Africa Impact Summit Society. He is currently pursuing an MSc by research in Water at Cranfield University and holds MSc degrees in Water Engineering from IHE Delft Institute for Water Education and in Water Management (Water Supply and Sanitation) from Addis Ababa University. His work focuses on applying research, technology, and evidence-based water engineering solutions to advance sustainable and inclusive water and sanitation systems.
+Committed to advancing sustainable and inclusive water services, Gutema actively contributes to the professional water community as Secretary of the Ethiopian International Water Association (IWA) Governing Member. As Research and Insight Director, he works to bridge research, technology, and practice supporting evidence-based solutions and scalable innovations.`,
+      image: "/images/gutema.jpeg",
+      linkedin: "https://www.linkedin.com/in/gutema-mulatu-shifera-435978151",
+      email: "g.g.shifera.770@cranfield.ac.uk",
+      location: "Cranfield, UK",
+      yearsAtCranfield: 2,
+      education: [
+        "MSc by research in Water at Cranfield University(Ongoing)",
+        "MSc degrees in Water Engineering from IHE Delft Institute for Water Education and in Water Management (Water Supply and Sanitation) from Addis Ababa University",
       ],
       expertise: [
         "Digital Media Strategy",
@@ -317,7 +346,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
             </div>
 
             {/* Expertise */}
-            {member.expertise && (
+            {/* {member.expertise && (
               <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
                 <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center gap-2">
                   <Target className="w-5 h-5 text-emerald-600" />
@@ -334,7 +363,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Right Column - Detailed Info */}
@@ -373,7 +402,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
             </div>
 
             {/* Achievements (if available) */}
-            {member.achievements && member.achievements.length > 0 && (
+            {/* {member.achievements && member.achievements.length > 0 && (
               <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <div className="w-8 h-1 bg-emerald-500 rounded-full"></div>
@@ -392,7 +421,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Publications (if available) */}
             {member.publications && member.publications.length > 0 && (
