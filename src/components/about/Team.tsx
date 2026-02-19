@@ -56,42 +56,14 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/gutema-mulatu-shifera-435978151",
       },
     },
-    // {
-    //   id: 5,
-    //   name: "Nadia Bello",
-    //   role: "Head of Communications",
-    //   bio: "Former BBC Africa correspondent and media strategist.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    //   social: { twitter: "#", linkedin: "#" },
-    // },
-    // {
-    //   id: 6,
-    //   name: "James Ofori",
-    //   role: "Logistics Director",
-    //   bio: "20+ years experience managing large-scale international events across Africa.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    //   social: { twitter: "#", linkedin: "#" },
-    // },
-    // {
-    //   id: 7,
-    //   name: "Leila Hassan",
-    //   role: "Digital Strategy Lead",
-    //   bio: "Tech entrepreneur focused on digital transformation in emerging markets.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    //   social: { twitter: "#", linkedin: "#" },
-    // },
-    // {
-    //   id: 8,
-    //   name: "David Kimani",
-    //   role: "Finance Director",
-    //   bio: "Chartered accountant with expertise in non-profit financial management.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    //   social: { twitter: "#", linkedin: "#" },
-    // },
+    {
+      id: 5,
+      name: "Chanda Karen",
+      role: "Treasurer",
+      bio: "Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master’s degree in Applied Artificial Intelligence at Cranfield University in the UK",
+      image: "/images/chanda.jpeg",
+      social: { twitter: "#", linkedin: "#" },
+    },
   ];
 
   const handleMemberClick = (id: number) => {

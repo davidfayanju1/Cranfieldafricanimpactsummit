@@ -165,6 +165,39 @@ Committed to advancing sustainable and inclusive water services, Gutema actively
         "Managed successful digital campaign reaching 50,000+ people",
       ],
     },
+    {
+      id: 5,
+      name: "Chanda Karen Chalwe",
+      role: "Treasurer",
+      bio: "Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master's degree in Applied Artificial Intelligence at Cranfield University in the UK",
+      fullBio: `Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master’s degree in Applied Artificial Intelligence at Cranfield University in the UK. Chanda also holds a Master’s in Energy Policy from the Pan African University (PAUWES) and a Bachelor’s degree in Electrical Engineering. She is driven by a commitment to equitable, inclusive, and sustainable energy transitions across Africa. 
+
+Previously, Chanda served as a Junior Energy Advisor at CIG Zambia, where she contributed to long‑term power system planning and supported national initiatives such as the development of Zambia’s Integrated Resource Plan. Her work focused on integrating renewable energy technologies and energy storage solutions into the country’s future energy mix. 
+
+Chanda brings a people‑centered approach to her work, valuing inclusion, collaboration, and cross‑sector engagement. She is a founding member of the Zambia Electric Mobility Innovation Alliance (ZEMIA), which promotes the growth of electric mobility in Zambia. Beyond engineering, she is an advocate for youth empowerment and is passionate about encouraging more young women to pursue careers in energy and STEM. She believes that energy access is not merely a development target, but a foundation for dignity and opportunity. `,
+      image: "/images/chanda.jpeg",
+      linkedin: "https://www.linkedin.com/in/chanda-karen-chalwe-7208501b4",
+      email: "Chanda.Chalwe.135@cranfield.ac.uk",
+      location: "Cranfield, UK",
+      yearsAtCranfield: 1,
+      education: [
+        "MSc in Applied Artificial Intelligence at Cranfield University (ongoing)",
+        "MSc in Energy Policy from the Pan African University (PAUWES)",
+        "Bachelor’s degree in Electrical Engineering",
+      ],
+      expertise: [
+        "Digital Media Strategy",
+        "Content Creation",
+        "Environmental Communication",
+        "Social Media Management",
+        "Public Relations",
+      ],
+      achievements: [
+        "Grew social media following by 300% in 6 months",
+        "Produced award-winning documentary on African environmental initiatives",
+        "Managed successful digital campaign reaching 50,000+ people",
+      ],
+    },
   ];
 
   useEffect(() => {
