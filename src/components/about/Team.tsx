@@ -14,7 +14,7 @@ const Team = () => {
     {
       id: 3,
       name: "Ayodele Oluwaropo",
-      role: "President/Chair of the Summit",
+      role: "President",
       bio: "Ayodele Oluwaropo is a PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University.",
       image: "/images/ayodele.jpeg",
       social: {
@@ -48,7 +48,7 @@ const Team = () => {
     {
       id: 4,
       name: "Gutema Mulatu",
-      role: "Director of Programs",
+      role: "Director of Research & Insights",
       bio: "Gutema is the Research and Insight Director of the Cranfield Africa Impact Summit Society. He is currently pursuing an MSc by research in Water at Cranfield University and holds MSc degrees in Water Engineering from IHE Delft Institute for Water Education and in Water Management (Water Supply and Sanitation) from Addis Ababa University.",
       image: "/images/gutema.jpeg",
       social: {
@@ -59,10 +59,24 @@ const Team = () => {
     {
       id: 5,
       name: "Chanda Karen",
-      role: "Treasurer",
+      role: "Secretary",
       bio: "Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master’s degree in Applied Artificial Intelligence at Cranfield University in the UK",
       image: "/images/chanda.jpeg",
-      social: { twitter: "#", linkedin: "#" },
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/chanda-karen-chalwe-229533102/",
+      },
+    },
+    {
+      id: 6,
+      name: "Oluwakemi Isinkaye",
+      role: "Sponsorship & Partnership Director",
+      bio: "Oluwakemi Isinkaye specializes in building high-quality business networks and in developing and evaluating businesses. This strength has been shaped by her experience in sales and management partnerships.",
+      image: "/images/kemi.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "#",
+      },
     },
   ];
 

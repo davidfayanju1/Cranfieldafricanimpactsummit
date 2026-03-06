@@ -168,7 +168,7 @@ Committed to advancing sustainable and inclusive water services, Gutema actively
     {
       id: 5,
       name: "Chanda Karen Chalwe",
-      role: "Treasurer",
+      role: "Secretary",
       bio: "Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master's degree in Applied Artificial Intelligence at Cranfield University in the UK",
       fullBio: `Chanda Karen Chalwe is an energy professional with a background in power systems and clean energy planning. She is a Commonwealth Shared Scholar currently pursuing a Master’s degree in Applied Artificial Intelligence at Cranfield University in the UK. Chanda also holds a Master’s in Energy Policy from the Pan African University (PAUWES) and a Bachelor’s degree in Electrical Engineering. She is driven by a commitment to equitable, inclusive, and sustainable energy transitions across Africa. 
 
@@ -185,6 +185,31 @@ Chanda brings a people‑centered approach to her work, valuing inclusion, colla
         "MSc in Energy Policy from the Pan African University (PAUWES)",
         "Bachelor’s degree in Electrical Engineering",
       ],
+      expertise: [
+        "Digital Media Strategy",
+        "Content Creation",
+        "Environmental Communication",
+        "Social Media Management",
+        "Public Relations",
+      ],
+      achievements: [
+        "Grew social media following by 300% in 6 months",
+        "Produced award-winning documentary on African environmental initiatives",
+        "Managed successful digital campaign reaching 50,000+ people",
+      ],
+    },
+    {
+      id: 6,
+      name: "Oluwakemi Isinkaye",
+      role: "Sponsorship & Partnership Director",
+      bio: " specializes in building high-quality business networks and in developing and evaluating businesses. This strength has been shaped by her experience in sales and management partnerships.",
+      fullBio: `Oluwakemi Isinkaye specializes in building high-quality business networks and in developing and evaluating businesses. This strength has been shaped by her experience in sales and management partnerships. She is highly skilled in financial analysis, particularly in analysing data and translating it into clear, compelling business insights. Her academic focus is finance, with a major in private equity and mergers & acquisitions. She enters every room with confidence, knowing she brings tangible value through strategic thinking, strong commercial judgement, and relationship-driven execution.`,
+      image: "/images/kemi.jpeg",
+      linkedin: "https://www.linkedin.com/in/chanda-karen-chalwe-7208501b4",
+      email: "O.G.isinkaye.505@cranfield.ac.uk",
+      location: "Cranfield, UK",
+      yearsAtCranfield: 1,
+      education: ["MSc Finance at Cranfield University (ongoing)"],
       expertise: [
         "Digital Media Strategy",
         "Content Creation",
