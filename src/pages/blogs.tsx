@@ -211,7 +211,7 @@ const Blogs = () => {
                   </div>
                 </div>
 
-                <div className="md:w-3/5 p-8">
+                <div className="md:w-3/5 md:p-8 p-8">
                   <div className="mb-4">
                     <span className="inline-block bg-emerald-100 text-emerald-800 text-sm font-semibold px-3 py-1 rounded-full mb-3">
                       {featuredPost.category.charAt(0).toUpperCase() +
@@ -223,25 +223,27 @@ const Blogs = () => {
                     <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-2 text-emerald-500" />
-                        <span>{featuredPost.author}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2 text-emerald-500" />
-                        <span>{featuredPost.date}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2 text-emerald-500" />
-                        <span>{featuredPost.readTime}</span>
-                      </div>
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-1 text-emerald-500" />
+                      <span className="truncate max-w-[120px]">
+                        {featuredPost.author}
+                      </span>
                     </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1 text-emerald-500" />
+                      <span>{featuredPost.date.split(",")[0]}</span>
+                    </div>
+                  </div>
 
-                    <button className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300">
-                      Read Article
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {featuredPost.readTime}
+                    </div>
+                    <button className="inline-flex items-center text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors duration-300 group/btn">
+                      Read more
+                      <ArrowRight className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </button>
                   </div>
                 </div>
