@@ -226,32 +226,32 @@ const WhyUs = () => {
     },
   };
 
-  const testimonials = [
-    {
-      quote:
-        "The summit provided unparalleled access to thought leadership and practical tools for sustainable development.",
-      author: "Dr. Amina Okoro",
-      role: "Minister of Sustainable Development, Nigeria",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
-    },
-    {
-      quote:
-        "A transformative experience that bridges academic excellence with on-the-ground implementation.",
-      author: "Prof. Kwame Mensah",
-      role: "Director, Pan-African Development Institute",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
-    },
-    {
-      quote:
-        "The connections forged here have led to tangible projects impacting millions across the continent.",
-      author: "Sarah Johnson",
-      role: "CEO, Sustainable Futures Foundation",
-      avatar:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     quote:
+  //       "The summit provided unparalleled access to thought leadership and practical tools for sustainable development.",
+  //     author: "Dr. Amina Okoro",
+  //     role: "Minister of Sustainable Development, Nigeria",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
+  //   },
+  //   {
+  //     quote:
+  //       "A transformative experience that bridges academic excellence with on-the-ground implementation.",
+  //     author: "Prof. Kwame Mensah",
+  //     role: "Director, Pan-African Development Institute",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
+  //   },
+  //   {
+  //     quote:
+  //       "The connections forged here have led to tangible projects impacting millions across the continent.",
+  //     author: "Sarah Johnson",
+  //     role: "CEO, Sustainable Futures Foundation",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=-30",
+  //   },
+  // ];
 
   return (
     <div className="min-h-[80vh] bg-linear-to-b from-gray-50 to-white py-24 relative overflow-hidden">
@@ -365,7 +365,7 @@ const WhyUs = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+        {/* <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
           <h3 className="text-xl font-normal text-gray-900 mb-8 text-center tracking-tight">
             Voices of Impact
           </h3>
@@ -404,7 +404,7 @@ const WhyUs = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Decorative Elements */}
         <div className="mt-16 text-center">

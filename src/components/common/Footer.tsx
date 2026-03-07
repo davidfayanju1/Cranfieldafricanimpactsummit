@@ -52,14 +52,14 @@ const Footer = () => {
   const contactInfo = [
     {
       label: "Email",
-      value: "info@cranfieldafricasummit.org",
-      href: "mailto:info@cranfieldafricasummit.org",
+      value: "Africaimpactsummit@cranfield.ac.uk",
+      href: "mailto:Africaimpactsummit@cranfield.ac.uk",
     },
-    {
-      label: "Phone",
-      value: "+44 (0)1234 567890",
-      href: "tel:+441234567890",
-    },
+    // {
+    //   label: "Phone",
+    //   value: "+44 (0)1234 567890",
+    //   href: "tel:+441234567890",
+    // },
     {
       label: "Location",
       value: "Cranfield University, Bedford, UK",
@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="">
             <h3 className="text-lg font-normal mb-6 text-white tracking-tight">
               Contact Us
             </h3>
@@ -120,7 +120,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-emerald-300 transition-colors duration-300 flex items-start space-x-2 text-sm font-light"
                   >
                     <span className="font-medium min-w-16">{info.label}:</span>
-                    <span className="flex-1">{info.value}</span>
+                    <span className="flex-1 truncate">{info.value}</span>
                   </a>
                 </li>
               ))}
