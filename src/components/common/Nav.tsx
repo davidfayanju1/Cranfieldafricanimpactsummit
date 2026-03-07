@@ -7,10 +7,28 @@ interface NavItem {
   exact?: boolean;
 }
 
+// Custom hook for media queries
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [matches, query]);
+
+  return matches;
+};
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   // Your WhatsApp group link - REPLACE THIS WITH YOUR ACTUAL LINK
   const whatsappGroupLink = "https://chat.whatsapp.com/B7gWbAkEL3gLYSi89tHVrZ";
@@ -46,12 +64,24 @@ const Nav = () => {
 
   // Determine which logo to show
   const getLogoPath = (isMobileMenu: boolean = false) => {
-    // In mobile menu, always show colored logo
+    // Case 1: This is the mobile slide-out menu - use colored logo
     if (isMobileMenu) {
       return "/images/company_logo.png";
     }
 
-    // In desktop: white logo when not scrolled, colored logo when scrolled
+    // Case 2: Mobile view with menu OPEN - use dark logo (for white background)
+    if (isMobile && isOpen) {
+      return "/images/company_logo.png"; // Dark logo when menu is open
+    }
+
+    // Case 3: Main navbar on mobile with menu CLOSED - use white/colored based on scroll
+    if (isMobile) {
+      return scrolled
+        ? "/images/company_logo.png"
+        : "/images/company_logo_white.png";
+    }
+
+    // Case 4: Desktop - white logo when not scrolled, colored when scrolled
     return scrolled || isAdvisoryPage
       ? "/images/company_logo.png"
       : "/images/company_logo_white.png";
@@ -67,7 +97,7 @@ const Nav = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Changes to dark when mobile menu opens */}
           <div className="shrink-0 z-50">
             <NavLink to="/" className="block">
               <div
@@ -79,13 +109,6 @@ const Nav = () => {
                   src={getLogoPath()}
                   alt="Cranfield Africa Impact Summit"
                   className="w-full h-auto object-contain"
-                  onError={(e) => {
-                    // Fallback in case the logo doesn't exist
-                    const img = e.target as HTMLImageElement;
-                    if (img.src.includes("_white")) {
-                      img.src = "/images/company_logo.png";
-                    }
-                  }}
                 />
               </div>
             </NavLink>
@@ -130,7 +153,7 @@ const Nav = () => {
               href={whatsappGroupLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-full transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0 inline-block"
+              className="px-6 text-[.8rem] py-2.5 bg-[#11766E] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0 inline-block"
             >
               Join Our Community
             </a>
@@ -181,7 +204,7 @@ const Nav = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-lg pt-20 px-6 overflow-hidden animate-fadeIn z-40">
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col mt-20 space-y-1">
               {navItems.map((item, index) => {
                 const active = isActive(item.href, item.exact);
                 return (
@@ -214,24 +237,6 @@ const Nav = () => {
                 >
                   Join Our Community
                 </a>
-              </div>
-
-              {/* Logo in mobile menu - Always use colored logo */}
-              <div className="px-4 py-6 mt-4 border-t border-gray-100 flex justify-center">
-                <NavLink to="/" onClick={() => setIsOpen(false)}>
-                  <div className="w-48 overflow-hidden flex items-center justify-center">
-                    <img
-                      src="/images/company_logo.png"
-                      alt="Cranfield Africa Impact Summit"
-                      className="w-full h-auto object-contain"
-                      onError={(e) => {
-                        // Fallback in case colored logo doesn't exist
-                        const img = e.target as HTMLImageElement;
-                        img.src = "/images/company_logo_white.png";
-                      }}
-                    />
-                  </div>
-                </NavLink>
               </div>
             </div>
           </div>
