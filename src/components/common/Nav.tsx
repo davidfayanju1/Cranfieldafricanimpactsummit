@@ -7,19 +7,27 @@ interface NavItem {
   exact?: boolean;
 }
 
-// Custom hook for media queries
+// Custom hook for media queries - FIXED
 const useMediaQuery = (query: string) => {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
-  }, [matches, query]);
+
+    // Set initial value
+    setMatches(media.matches);
+
+    const listener = (event: MediaQueryListEvent) => {
+      setMatches(event.matches);
+    };
+
+    // Modern browsers
+    media.addEventListener("change", listener);
+
+    return () => {
+      media.removeEventListener("change", listener);
+    };
+  }, [query]); // Remove 'matches' from dependencies
 
   return matches;
 };
@@ -41,6 +49,34 @@ const Nav = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // 🔒 Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobile && isOpen) {
+      // Prevent scrolling on the body
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      // Restore scrolling
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "unset";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+    };
+  }, [isMobile, isOpen]);
 
   // Nav items
   const navItems: NavItem[] = [
