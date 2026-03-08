@@ -60,7 +60,7 @@ const AdvisoryDetails = () => {
       name: "Lilian Awuor",
       title: "Product Manager",
       organization: "Tesco Technology",
-      role: "Advisory Circle Member",
+      role: "Mentor",
       expertise: ["Payments", "Product Innovation", "Financial Technology"],
       image: "/images/Lilian.jpeg",
       linkedin: "lilianawuor",
@@ -76,7 +76,7 @@ const AdvisoryDetails = () => {
       name: "Olawunmi ('Wunmi) Adelusi",
       title: "Financial Sector Specialist",
       organization: "World Bank Group",
-      role: "Advisory Circle Member",
+      role: "Mentor",
       expertise: [
         "Development Finance",
         "Financial Inclusion",
@@ -109,67 +109,6 @@ const AdvisoryDetails = () => {
       featuredQuote:
         "Award-winning global leader in women's economic empowerment and impact investing.",
       accentColor: "blue",
-    },
-    // President/Chair
-    {
-      id: "5",
-      name: "Ayodele Oluwaropo",
-      title: "President/Chair",
-      organization: "Cranfield Africa Impact Summit Society",
-      role: "President/Chair",
-      expertise: [
-        "Climate Finance",
-        "Impact Investment",
-        "SME Advisory",
-        "Youth Development",
-      ],
-      image: "/images/Ayodele.jpeg",
-      linkedin: "ayodeleoluwaropo",
-      bio: "Ayodele Oluwaropo is a PhD researcher at the Bettany Centre for Entrepreneurship, Cranfield University. He earned a bachelor's degree in Economics and Finance as well as an MSc in Finance and Investment Management from the University of Hertfordshire. Ayodele is committed to advancing Africa's sustainable development through policy, finance, and private sector innovation.\n\nWith experience spanning climate finance consulting, impact investment, SME advisory, and youth development, Ayodele has supported initiatives focused on climate policy implementation, access to sustainable finance, and SME Growth. His work bridges academia and practice, with research centred on how improved access to finance can enable African SMEs to scale, create jobs, and contribute meaningfully to the SDGs and Africa Agenda 2063.\n\nDriven by a passion for convening ideas and people, Ayodele founded the Cranfield Africa Impact Summit Society to create a platform for dialogue, mentorship, collaboration, and action among African change-makers within and beyond Cranfield University. His work reflects a deep commitment to building inclusive, resilient, and investment-ready pathways for Africa's future.",
-      location: "UK",
-      featuredQuote:
-        "Advancing Africa's sustainable development through policy, finance, and private sector innovation.",
-      accentColor: "violet",
-    },
-    // Vice President
-    {
-      id: "6",
-      name: "Nseobong Umoh",
-      title: "Vice President",
-      organization: "Cranfield Africa Impact Society",
-      role: "Vice President",
-      expertise: [
-        "Systems Engineering",
-        "Technology Innovation",
-        "Business Strategy",
-      ],
-      image: "/images/Nseobong.jpeg",
-      linkedin: "nseobong-umoh-9830257a",
-      bio: "Nseobong Umoh is the Vice President of the Cranfield Africa Impact Society. He is an MBA alumnus (Class of 2025) of the Cranfield University School of Management and is currently completing an MSc in Systems Engineering (part-time), with a focus on applying systems engineering and systems thinking to complex, real-world challenges.\n\nWith an engineering background and over a decade of industry experience, Nseobong operates at the intersection of technology, engineering, and commercial decision-making, bridging technical depth with business insight. He is an Incorporated Engineer (IEng) registered with the Engineering Council and a member of the Nigerian Society of Engineers.\n\nHis interests centre on translating technical innovation into commercially viable and scalable solutions, particularly within emerging markets, where the effective integration of technology, systems, and business models is critical to achieving sustainable impact.",
-      location: "UK",
-      featuredQuote:
-        "Translating technical innovation into commercially viable solutions for emerging markets.",
-      accentColor: "rose",
-    },
-    // Media & Digital Relations
-    {
-      id: "7",
-      name: "Obed Oduro Asamoah",
-      title: "Media & Digital Relations Lead",
-      organization: "Cranfield Africa Impact Society",
-      role: "Media & Digital Relations",
-      expertise: [
-        "Environmental Engineering",
-        "Sustainable Solutions",
-        "Digital Media",
-      ],
-      image: "/images/Obed.jpeg",
-      linkedin: "obed-asamoah-4b2249385",
-      bio: "Obed Oduro Asamoah is the Media & Digital Relations Lead of the Cranfield Africa Impact Society. He is a current MSc student at Cranfield University, Faculty of Environmental and Applied Science, studying Environmental Engineering (full-time).\n\nWith an Information Technology in Education background as an undergraduate program at AAMUSTED, Ghana. His interest lies in finding sustainable solutions to environmental problems through technology, critical thinking, and teamwork.",
-      location: "UK / Ghana",
-      featuredQuote:
-        "Finding sustainable solutions to environmental problems through technology and teamwork.",
-      accentColor: "teal",
     },
   ];
 
