@@ -43,17 +43,17 @@ const EventCard = ({
   event: Event;
   onOpenModal: (event: Event) => void;
 }) => {
-  const isEventPassed = (dateString: string): boolean => {
-    if (dateString.includes("TBD")) return false;
-    const eventDate = new Date(dateString);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    eventDate.setHours(0, 0, 0, 0);
-    return eventDate < today;
-  };
+  // const isEventPassed = (dateString: string): boolean => {
+  //   if (dateString.includes("TBD")) return false;
+  //   const eventDate = new Date(dateString);
+  //   const today = new Date();
+  //   today.setHours(0, 0, 0, 0);
+  //   eventDate.setHours(0, 0, 0, 0);
+  //   return eventDate < today;
+  // };
 
-  const isPast = isEventPassed(event.date);
-  const isTBD = event.date.includes("TBD");
+  // const isPast = isEventPassed(event.date);
+  // const isTBD = event.date.includes("TBD");
 
   return (
     <div
@@ -76,13 +76,7 @@ const EventCard = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
         {/* Badges */}
-        <div className="absolute top-4 left-4 flex gap-2">
-          {event.featured && (
-            <span className="bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
-              <Sparkles className="w-3 h-3" />
-              Featured
-            </span>
-          )}
+        {/* <div className="absolute top-4 left-4 flex gap-2">
           {isPast ? (
             <span className="bg-gray-800/90 backdrop-blur-sm text-gray-200 text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1">
               <Camera className="w-3 h-3" />
@@ -98,10 +92,10 @@ const EventCard = ({
               Upcoming
             </span>
           )}
-        </div>
+        </div> */}
 
         {/* Category Badge */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 left-4">
           <span className="bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-medium px-3 py-1.5 rounded-full">
             {event.category}
           </span>
@@ -367,14 +361,6 @@ const Events = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying, showEventModal, selectedEvent]);
 
-  // Reset slide when modal opens with new event
-  useEffect(() => {
-    if (showEventModal) {
-      setCurrentSlide(0);
-      setIsAutoPlaying(true);
-    }
-  }, [showEventModal, selectedEvent]);
-
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
@@ -561,8 +547,11 @@ const Events = () => {
 
   const filteredEvents = getFilteredEvents();
 
-  // Open event modal
+  // Open event modal - FIXED: Reset carousel state here
   const openEventModal = (event: Event) => {
+    // Reset carousel state when opening a new event
+    setCurrentSlide(0);
+    setIsAutoPlaying(true);
     setSelectedEvent(event);
     setShowEventModal(true);
   };
@@ -603,13 +592,13 @@ const Events = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-8 py-12">
         {/* Filter Tabs */}
-        <div className="flex items-center justify-center mb-16">
-          <div className="flex items-center gap-2 p-1 bg-gray-100 rounded-full">
+        <div className="flex w-full items-center justify-center mb-16">
+          <div className="flex max-w-lg justify-between items-center w-full md:gap-2 p-1 bg-gray-100 rounded-full">
             {(["all", "upcoming", "past"] as FilterType[]).map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-2 md:text-[1rem] text-[.7rem] rounded-full font-medium transition-all duration-300 ${
                   activeFilter === filter
                     ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
                     : "text-gray-600 hover:text-gray-900"

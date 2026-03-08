@@ -4,9 +4,7 @@ import { useState } from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 import {
   Search,
-  Mail,
   Linkedin,
-  Globe,
   Building2,
   Award,
   ChevronRight,
@@ -15,6 +13,7 @@ import {
   Users,
   Target,
   Zap,
+  Globe,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -26,11 +25,8 @@ interface CommitteeMember {
   role: string;
   expertise: string[];
   image: string;
-  email?: string;
   linkedin?: string;
-  website?: string;
   bio: string;
-  yearsOfExperience: number;
   location: string;
   featuredQuote?: string;
   accentColor?: string;
@@ -46,139 +42,83 @@ const AdvisoryCommittee = () => {
   const navigate = useNavigate();
 
   const committeeMembers: CommitteeMember[] = [
-    {
-      id: "1",
-      name: "DR. Inyene Nkanta",
-      title: "Lecturer in Business & Creative Industries",
-      organization: "University of the West of Scotland",
-      role: "Lecturer",
-      expertise: ["Entrepreneurship", "Sustainability", "Circular Economy"],
-      image: "/images/INYENE.jpeg",
-      email: "sarah.johnson@example.com",
-      linkedin: "inyene-nkanta-1a9b5590/",
-      website: "https://africagrowthfund.com",
-      bio: "Dr. Inyene is a Lecturer in Business and the Creative Industries at the University of the West of Scotland, United Kingdom. She holds a Doctorate degree from the University of Wolverhampton and is a specialist in Entrepreneurship, Sustainability, and the Circular Economy.",
-      yearsOfExperience: 10,
-      location: "West of Scotland, United Kingdom",
-      featuredQuote:
-        "Sustainable investment is not just about returns—it's about building legacies.",
-      accentColor: "emerald",
-    },
-    {
-      id: "2",
-      name: "Michael Adebayo",
-      title: "Managing Director",
-      organization: "West Africa Ventures",
-      role: "Vice Chair",
-      expertise: ["Venture Capital", "Tech Startups", "Digital Transformation"],
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      email: "michael@waventures.com",
-      linkedin: "michael-adebayo",
-      website: "https://westafricaventures.com",
-      bio: "Pioneer in West Africa's tech ecosystem, having invested in over 50 early-stage startups with a focus on fintech and agritech solutions. Michael's portfolio companies have created over 10,000 jobs across the region.",
-      yearsOfExperience: 15,
-      location: "Lagos, Nigeria",
-      featuredQuote:
-        "The future of Africa is being written by its innovators today.",
-      accentColor: "amber",
-    },
-    {
-      id: "3",
-      name: "Prof. Amina Diop",
-      title: "Director of Research",
-      organization: "Pan-African Economic Institute",
-      role: "Research Lead",
-      expertise: [
-        "Economic Policy",
-        "Sustainable Development",
-        "Climate Finance",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b786d4d9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      email: "amina.diop@research.org",
-      linkedin: "amina-diop",
-      website: "https://paei.org",
-      bio: "Leading researcher on sustainable economic models for Africa, author of multiple publications on climate-resilient development strategies. Professor Diop's work has influenced policy decisions in 15 African nations.",
-      yearsOfExperience: 18,
-      location: "Dakar, Senegal",
-      featuredQuote:
-        "Research must inform action—our continent's development depends on it.",
-      accentColor: "indigo",
-    },
+    // Patron
     {
       id: "4",
-      name: "David Omondi",
-      title: "CEO",
-      organization: "East Africa Energy Solutions",
-      role: "Energy Sector Advisor",
+      name: "THELMA EKIYOR",
+      title: "International Chief Executive Officer",
+      organization: "Women for Women International",
+      role: "Patron",
       expertise: [
-        "Renewable Energy",
-        "Infrastructure",
-        "Public-Private Partnerships",
+        "Women's Economic Empowerment",
+        "Philanthropy",
+        "Impact Investing",
       ],
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      email: "david.omondi@eaenergy.com",
-      linkedin: "david-omondi",
-      website: "https://eastafricaenergy.com",
-      bio: "Expert in renewable energy infrastructure with extensive experience in developing and implementing large-scale solar and hydro projects across East Africa. Under his leadership, the company has brought power to over 2 million people.",
-      yearsOfExperience: 25,
-      location: "Nairobi, Kenya",
+      image: "/images/THELMA.jpeg",
+      linkedin: "thelma-ekiyor-34a484120",
+      bio: "Thelma Ekiyor is an award-winning global leader in women's economic empowerment, philanthropy, impact investing, and international development, with over 25 years of experience across Africa, Europe, and the UK. Starting her early career in women, peace, and security, Thelma went on to pioneer and lead multiple organisations, including as founding CEO of SME.NG, Afrigrants, TY Danjuma Foundation and the West African Civil Society Institute (WACSI). Thelma is also a doctoral researcher on women's entrepreneurship at Cranfield University, UK. She holds an MBA from Imperial College London and an LLB from the University of Buckingham, UK. She has served on numerous boards and investment committees in Africa and Europe, with additional expertise spanning gender lens investing, catalytic finance, philanthropy advisory, and entrepreneurship development.",
+      location: "UK / Africa",
       featuredQuote:
-        "Energy access is the foundation of economic transformation.",
+        "Award-winning global leader in women's economic empowerment and impact investing.",
       accentColor: "blue",
     },
+    // Advisory Circle - Mentor
     {
-      id: "5",
-      name: "Chloe Williams",
-      title: "Partner",
-      organization: "Global Impact Partners",
-      role: "International Relations",
-      expertise: [
-        "International Development",
-        "Cross-border Investment",
-        "Policy Advocacy",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      email: "chloe.williams@gipartners.org",
-      linkedin: "chloe-williams",
-      website: "https://globalimpactpartners.org",
-      bio: "Specializes in connecting African enterprises with global capital and fostering international partnerships for sustainable development. Chloe has facilitated over $3 billion in cross-border investments into African markets.",
-      yearsOfExperience: 20,
-      location: "London, UK",
+      id: "1",
+      name: "DR. INYENE NKANTA",
+      title: "Lecturer in Business & Creative Industries",
+      organization: "University of the West of Scotland",
+      role: "Mentor",
+      expertise: ["Entrepreneurship", "Sustainability", "Circular Economy"],
+      image: "/images/INYENE.jpeg",
+      linkedin: "inyene-nkanta-1a9b5590",
+      bio: "Dr. Inyene is a Lecturer in Business and the Creative Industries at the University of the West of Scotland, United Kingdom. She holds a Doctorate degree from the University of Wolverhampton and is a specialist in Entrepreneurship, Sustainability, and the Circular Economy. Her research explores entrepreneurship, sustainable business models, circular economy practices, and social impact initiatives within global and African contexts. She collaborates on international projects across Europe and Africa and currently serves as a Visiting Lecturer at several universities, including VIVES University of Applied Sciences (Belgium), Liberec University of Technology (Czech Republic), CBS (Germany), and Western Norway University of Applied Sciences (HVL, Norway). She is also the Chair of the Sustainability Special Interest Group within the Academy for African Studies, where she leads interdisciplinary research and sustainability focused initiatives. A passionate advocate for youth empowerment and responsible digital influence, she uses social media to champion positive narratives around education, sustainability, and global citizenship. She is also the founder of the Academic Baddie, a group of dedicated African scholars.",
+      location: "United Kingdom",
       featuredQuote:
-        "Bridging global capital with local wisdom creates transformative impact.",
-      accentColor: "rose",
+        "A passionate advocate for youth empowerment and responsible digital influence.",
+      accentColor: "emerald",
     },
+    // Advisory Circle - Member
     {
-      id: "6",
-      name: "Kwame Mensah",
-      title: "Executive Director",
-      organization: "African Innovation Hub",
-      role: "Innovation Advisor",
+      id: "2",
+      name: "Lilian Awuor",
+      title: "Product Manager",
+      organization: "Tesco Technology",
+      role: "Mentor",
+      expertise: ["Payments", "Product Innovation", "Financial Technology"],
+      image: "/images/Lilian.jpeg",
+      linkedin: "lilianawuor",
+      bio: "Lilian Awuor is a payments and product innovation leader with 7+ years of experience spanning financial services, emerging technologies, and large-scale customer-centric financial technology products. She currently serves as a Product Manager at Tesco Technology, where she leads the development of secure, scalable, and user-focused payment solutions used across the organisation's retail ecosystem in the UK and Central Europe. With a background in the Financial Technology sector in the UK and the broader EEMEA market, Lilian brings a unique blend of technical expertise, strategic thinking, and market insight. Recognised for her collaborative leadership and ability to translate complex challenges into actionable product strategies.",
+      location: "UK",
+      featuredQuote:
+        "Bringing technical expertise, strategic thinking, and market insight to payment innovation.",
+      accentColor: "amber",
+    },
+    // Advisory Circle - Member
+    {
+      id: "3",
+      name: "Olawunmi ('Wunmi) Adelusi",
+      title: "Financial Sector Specialist",
+      organization: "World Bank Group",
+      role: "Mentor",
       expertise: [
-        "Technology Innovation",
-        "Entrepreneurship",
-        "Capacity Building",
+        "Development Finance",
+        "Financial Inclusion",
+        "Policy Development",
       ],
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      email: "kwame@africaninnovation.org",
-      linkedin: "kwame-mensah",
-      website: "https://africaninnovationhub.org",
-      bio: "Dedicated to fostering innovation ecosystems across Africa, with a track record of mentoring over 200 entrepreneurs and innovators. Kwame's programs have accelerated startups that have collectively raised over $500 million.",
-      yearsOfExperience: 12,
-      location: "Accra, Ghana",
-      featuredQuote: "Innovation is Africa's most renewable resource.",
-      accentColor: "violet",
+      image: "/images/Olawunmi.jpeg",
+      linkedin: "wunmiadelusi",
+      bio: "Wunmi is a finance professional dedicated to shaping policies that unlock economic opportunity, expand access to finance, and strengthen inclusive, resilient financial systems across Africa. She brings over a decade of experience spanning development finance, banking supervision, financial regulation, and policy development. She currently serves as a Financial Sector Specialist at the World Bank Group, where she supports financial-sector reforms, unlocking long-term local currency financing, innovative financing mechanisms for MSMEs, and gender-responsive financial inclusion initiatives. Prior to joining the World Bank, she worked in the Banking Supervision Department of the Central Bank of Nigeria. Wunmi holds an M.Sc. in Accounting and Finance (Distinction) from the University of Leeds, an MBA in Financial Management, and a B.Sc. in Accounting. She is a Chartered Accountant (ACA) and an Associate of the Chartered Institute of Bankers of Nigeria (ACIB). She is a published author of The Millennial Employee and a prolific writer whose thought leadership spans financial inclusion, women's economic empowerment, digital finance regulation, and leadership development. She is also a career columnist for BellaNaija, where she has published 40 articles. Beyond her professional pursuits, she is happily married and a devoted mother to three children.",
+      location: "USA / Nigeria",
+      featuredQuote:
+        "Shaping policies that unlock economic opportunity across Africa.",
+      accentColor: "indigo",
     },
   ];
 
   const expertiseAreas = Array.from(
     new Set(committeeMembers.flatMap((member) => member.expertise)),
-  );
+  ).sort();
 
   const filteredMembers = committeeMembers.filter((member) => {
     const matchesSearch =
@@ -187,7 +127,8 @@ const AdvisoryCommittee = () => {
       member.expertise.some((exp) =>
         exp.toLowerCase().includes(searchTerm.toLowerCase()),
       ) ||
-      member.bio.toLowerCase().includes(searchTerm.toLowerCase());
+      member.bio.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      member.role.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesExpertise =
       selectedExpertise === "all" ||
@@ -198,8 +139,6 @@ const AdvisoryCommittee = () => {
 
   const toggleMemberDetails = (memberId: string) => {
     navigate(`/advisory-details/${memberId}`);
-
-    // setExpandedMember(expandedMember === memberId ? null : memberId);
   };
 
   const getAccentColor = (color?: string) => {
@@ -210,6 +149,7 @@ const AdvisoryCommittee = () => {
       blue: "border-blue-200 text-blue-700 bg-blue-50",
       rose: "border-rose-200 text-rose-700 bg-rose-50",
       violet: "border-violet-200 text-violet-700 bg-violet-50",
+      teal: "border-teal-200 text-teal-700 bg-teal-50",
     };
     return colors[color || "emerald"];
   };
@@ -239,7 +179,6 @@ const AdvisoryCommittee = () => {
 
           {/* Hero Content - Moved Down */}
           <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
-            {/* Main Title Section */}
             {/* Main Title Section */}
             <div className="mb-12">
               {/* Add the image badge here */}
@@ -299,7 +238,7 @@ const AdvisoryCommittee = () => {
                     <Zap className="w-4 h-4 text-emerald-600" />
                   </div>
                   <div className="text-left">
-                    <div className="text-sm font-medium">112+ Years</div>
+                    <div className="text-sm font-medium">20+ Years</div>
                     <div className="text-xs text-gray-500">
                       Collective Experience
                     </div>
@@ -347,8 +286,8 @@ const AdvisoryCommittee = () => {
                       Global Reach
                     </h3>
                     <p className="text-gray-700">
-                      Members spanning 6 countries with deep regional expertise
-                      across the African continent and global markets.
+                      Members spanning multiple countries with deep regional
+                      expertise across the African continent and global markets.
                     </p>
                   </div>
 
@@ -367,8 +306,8 @@ const AdvisoryCommittee = () => {
                       Strategic Impact
                     </h3>
                     <p className="text-gray-700">
-                      Collective leadership in deploying over $10B in
-                      transformative investments across Africa.
+                      Collective leadership in transformative initiatives across
+                      Africa.
                     </p>
                   </div>
 
@@ -402,7 +341,7 @@ const AdvisoryCommittee = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search by name, expertise, organization..."
+                    placeholder="Search by name, expertise, organization, role..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-200 text-gray-700 placeholder-gray-400 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all text-base"
@@ -423,7 +362,7 @@ const AdvisoryCommittee = () => {
                       </span>
                     </div>
                     <select
-                      title="select"
+                      title="Select expertise area"
                       value={selectedExpertise}
                       onChange={(e) => setSelectedExpertise(e.target.value)}
                       className="w-full px-4 py-4 bg-gray-50 border-2 border-gray-200 text-gray-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all"
@@ -436,13 +375,6 @@ const AdvisoryCommittee = () => {
                       ))}
                     </select>
                   </div>
-
-                  {/* <button
-                    onClick={() => setShowFilters(!showFilters)}
-                    className="px-6 py-3 bg-emerald-50 text-emerald-700 rounded-xl border border-emerald-200 hover:bg-emerald-100 block transition-colors font-medium"
-                  >
-                    {showFilters ? "Hide Filters" : "More Filters"}
-                  </button> */}
                 </div>
 
                 {/* Quick Filter Chips */}
@@ -488,30 +420,13 @@ const AdvisoryCommittee = () => {
                 key={member.id}
                 className="group relative bg-white border border-gray-100 hover:border-emerald-200 transition-all duration-500 hover:shadow-2xl rounded-2xl overflow-hidden"
               >
-                {/* Accent Strip */}
-                <div
-                  className={`h-2 w-full ${
-                    member.accentColor === "emerald"
-                      ? "bg-emerald-500"
-                      : member.accentColor === "amber"
-                        ? "bg-amber-500"
-                        : member.accentColor === "indigo"
-                          ? "bg-indigo-500"
-                          : member.accentColor === "blue"
-                            ? "bg-blue-500"
-                            : member.accentColor === "rose"
-                              ? "bg-rose-500"
-                              : "bg-violet-500"
-                  }`}
-                />
-
                 {/* Image Container */}
                 <div className="relative h-80 overflow-hidden">
                   <div className="absolute inset-0 bg-linear-to-t from-black/30 via-black/10 to-transparent z-10" />
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="absolute inset-0 w-full h-full object-cover object-top-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
 
@@ -519,13 +434,6 @@ const AdvisoryCommittee = () => {
                   <div className="absolute top-4 left-4 z-20">
                     <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm text-xs font-medium text-gray-700 rounded-full">
                       {member.role}
-                    </span>
-                  </div>
-
-                  {/* Years Badge */}
-                  <div className="absolute bottom-4 right-4 z-20">
-                    <span className="px-3 py-1.5 bg-black/60 backdrop-blur-sm text-xs font-medium text-white rounded-full">
-                      {member.yearsOfExperience} Years
                     </span>
                   </div>
                 </div>
@@ -542,12 +450,12 @@ const AdvisoryCommittee = () => {
                   </div>
 
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-                    <Building2 className="w-4 h-4" />
+                    <Building2 className="w-4 h-4 flex-shrink-0" />
                     <span className="truncate">{member.organization}</span>
                   </div>
 
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-                    <Globe className="w-4 h-4" />
+                    <Globe className="w-4 h-4 flex-shrink-0" />
                     <span>{member.location}</span>
                   </div>
 
@@ -563,6 +471,11 @@ const AdvisoryCommittee = () => {
                         {exp}
                       </span>
                     ))}
+                    {member.expertise.length > 3 && (
+                      <span className="px-3 py-1.5 text-xs rounded-full border border-gray-200 text-gray-500 bg-gray-50">
+                        +{member.expertise.length - 3}
+                      </span>
+                    )}
                   </div>
 
                   {/* Actions */}
@@ -582,15 +495,6 @@ const AdvisoryCommittee = () => {
                     </button>
 
                     <div className="flex items-center gap-2">
-                      {member.email && (
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="p-2 text-gray-400 hover:text-emerald-600 transition-colors rounded-full hover:bg-emerald-50"
-                          title="Send email"
-                        >
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      )}
                       {member.linkedin && (
                         <a
                           href={`https://linkedin.com/in/${member.linkedin}`}
@@ -660,11 +564,11 @@ const AdvisoryCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="image-container mx-auto">
+          <div className="image-container mx-auto pb-16">
             <img
               src={"/images/strategic_advisory_circle.png"}
               alt="Strategic Advisory Circle"
-              className="w-100 h-100 mx-auto object-cover"
+              className="w-64 h-64 mx-auto object-cover opacity-50"
             />
           </div>
         </div>
