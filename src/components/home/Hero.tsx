@@ -4,23 +4,38 @@ import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [showEventModal, setShowEventModal] = useState(false);
+
+  // Check if user has seen the modal before - SHOW ON EVERY PAGE VISIT
+  useEffect(() => {
+    // Always show modal after a small delay, regardless of localStorage
+    const timer = setTimeout(() => {
+      setShowEventModal(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []); // This will run every time this component mounts (every page visit)
 
   // Elegant, sophisticated images showing progress, evolution, and institutional presence
   const slides = [
     {
       id: 1,
+      imageUrl: "/images/current-event.jpeg",
+      overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
+    },
+    {
+      id: 2,
       imageUrl:
         "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       overlay: "from-gray-900/80 via-gray-900/40 to-emerald-900/20",
     },
     {
-      id: 2,
+      id: 3,
       imageUrl:
         "https://images.unsplash.com/photo-1597245083280-607579e14c58?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       overlay: "from-gray-900/70 via-gray-900/30 to-emerald-900/25",
     },
     {
-      id: 3,
+      id: 4,
       imageUrl:
         "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
@@ -198,6 +213,130 @@ const Hero = () => {
           <div className="w-px h-8 bg-linear-to-b from-emerald-300/50 to-transparent mx-auto"></div>
         </div>
       </div>
+
+      {/* Event Modal - Mobile Optimized */}
+      {showEventModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            onClick={() => setShowEventModal(false)}
+          ></div>
+
+          {/* Modal Content - Mobile optimized with max height and scrolling */}
+          <div className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] md:max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-100 animate-fadeIn">
+            {/* Event Image - Smaller on mobile */}
+            <div className="relative h-48 md:h-56 overflow-hidden flex-shrink-0">
+              <img
+                src="/images/upcoming-2.jpeg"
+                alt="Cranfield Africa Impact Summit 2026"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+              {/* Date Badge */}
+              <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold">
+                May 8, 2026
+              </div>
+
+              {/* Title Overlay */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-1">
+                  CRANFIELD-AFRICA IMPACT SUMMIT 2026
+                </h2>
+                <p className="text-emerald-200 text-xs md:text-sm">
+                  Main Summit • Solving Africa's Wicked Problems
+                </p>
+              </div>
+            </div>
+
+            {/* Modal Body - Scrollable content */}
+            <div className="p-6 md:p-8 overflow-y-auto">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4">
+                Don't Miss Our Main Event!
+              </h3>
+
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+                Join us on{" "}
+                <span className="font-semibold text-emerald-600">
+                  Friday, May 8, 2026
+                </span>{" "}
+                at Cranfield University for our flagship summit exploring
+                AI-driven solutions, innovative energy systems, and sustainable
+                development strategies for Africa's most pressing challenges.
+              </p>
+
+              <div className="bg-emerald-50 rounded-xl p-4 mb-6 md:mb-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-xs md:text-sm text-emerald-700 font-medium">
+                      Early Bird Tickets Available
+                    </span>
+                    <p className="text-xs text-emerald-600 mt-1">
+                      Secure your spot today
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-base md:text-lg font-light text-emerald-800">
+                      Free
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons - Stack on mobile */}
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <a
+                  href="https://www.eventbrite.co.uk/e/solving-africas-wicked-problems-in-poverty-health-energy-tickets-1984427524144?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 px-4 md:px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg text-center transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  Get Tickets on Eventbrite
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+                <button
+                  onClick={() => {
+                    setShowEventModal(false);
+                  }}
+                  className="px-4 md:px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg transition-all duration-300 text-sm md:text-base"
+                >
+                  Maybe Later
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Add animation keyframes */}
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

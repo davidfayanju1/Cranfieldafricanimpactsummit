@@ -238,7 +238,7 @@ const AdvisoryCommittee = () => {
                     <Zap className="w-4 h-4 text-emerald-600" />
                   </div>
                   <div className="text-left">
-                    <div className="text-sm font-medium">20+ Years</div>
+                    <div className="text-sm font-medium">40+ Years</div>
                     <div className="text-xs text-gray-500">
                       Collective Experience
                     </div>

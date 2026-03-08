@@ -168,18 +168,24 @@ const Mission = () => {
                         },
                         {
                           year: "2025",
-                          title: "Launch",
-                          desc: "Inaugural summit hosted with 500+ leaders from 30 nations",
+                          title: "Innovation Lab",
+                          desc: "Mapping real problems with solution pathways. Developing start up ideas for impact",
                         },
                         {
-                          year: "2025",
-                          title: "First Impact",
-                          desc: "Grants in committed investments and partnerships formed",
+                          year: "2026",
+                          title: "Inaugural Summit",
+                          desc: "Plan to gather 250+ participants",
+                        },
+
+                        {
+                          year: "2026",
+                          title: "Research Pitch",
+                          desc: "",
                         },
                         {
                           year: "Present",
                           title: "Growth",
-                          desc: "Expanding to reach 50+ African nations and 1,000+ leaders annually",
+                          desc: "Expanding reach and partnership",
                         },
                       ].map((item, index) => (
                         <div key={index} className="flex items-start gap-6">

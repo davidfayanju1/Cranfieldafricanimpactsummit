@@ -9,7 +9,6 @@ import {
   Zap,
   TrendingUp,
   BarChart3,
-  Clock,
   ChevronRight,
   CheckCircle,
   Lightbulb,
@@ -18,8 +17,6 @@ import {
   Leaf,
   Network,
   BookOpen,
-  GraduationCap,
-  Rocket,
 } from "lucide-react";
 
 const Agenda = () => {
@@ -88,77 +85,77 @@ const Agenda = () => {
   ];
 
   // Core Agendas
-  const coreAgendas = [
-    {
-      title: "Intra-African Investment",
-      description: "Catalyzing $100B+ in cross-border capital flows by 2030",
-      progress: 35,
-      metrics: ["$35B deployed", "12 countries engaged", "45 projects funded"],
-      timeline: "2025-2030",
-      icon: <TrendingUp className="w-5 h-5" />,
-    },
-    {
-      title: "Digital Transformation",
-      description:
-        "Connecting 500M Africans to digital services and opportunities",
-      progress: 42,
-      metrics: ["200M connected", "8 digital corridors", "3,000+ startups"],
-      timeline: "2024-2028",
-      icon: <Zap className="w-5 h-5" />,
-    },
-    {
-      title: "Human Capital Development",
-      description: "Training 1M African professionals in critical skills",
-      progress: 28,
-      metrics: ["280K trained", "150 institutions", "40 specializations"],
-      timeline: "2025-2027",
-      icon: <GraduationCap className="w-5 h-5" />,
-    },
-    {
-      title: "Green Infrastructure",
-      description: "Developing 10GW of renewable energy capacity",
-      progress: 18,
-      metrics: ["1.8GW operational", "15 projects", "$4.2B investment"],
-      timeline: "2025-2030",
-      icon: <Leaf className="w-5 h-5" />,
-    },
-  ];
+  // const coreAgendas = [
+  //   {
+  //     title: "Intra-African Investment",
+  //     description: "Catalyzing $100B+ in cross-border capital flows by 2030",
+  //     progress: 35,
+  //     metrics: ["$35B deployed", "12 countries engaged", "45 projects funded"],
+  //     timeline: "2025-2030",
+  //     icon: <TrendingUp className="w-5 h-5" />,
+  //   },
+  //   {
+  //     title: "Digital Transformation",
+  //     description:
+  //       "Connecting 500M Africans to digital services and opportunities",
+  //     progress: 42,
+  //     metrics: ["200M connected", "8 digital corridors", "3,000+ startups"],
+  //     timeline: "2024-2028",
+  //     icon: <Zap className="w-5 h-5" />,
+  //   },
+  //   {
+  //     title: "Human Capital Development",
+  //     description: "Training 1M African professionals in critical skills",
+  //     progress: 28,
+  //     metrics: ["280K trained", "150 institutions", "40 specializations"],
+  //     timeline: "2025-2027",
+  //     icon: <GraduationCap className="w-5 h-5" />,
+  //   },
+  //   {
+  //     title: "Green Infrastructure",
+  //     description: "Developing 10GW of renewable energy capacity",
+  //     progress: 18,
+  //     metrics: ["1.8GW operational", "15 projects", "$4.2B investment"],
+  //     timeline: "2025-2030",
+  //     icon: <Leaf className="w-5 h-5" />,
+  //   },
+  // ];
 
   // Key Initiatives
-  const keyInitiatives = [
-    {
-      name: "African Capital Markets Initiative",
-      status: "Active",
-      timeline: "2024-2027",
-      partners: ["AFDB", "African Exchanges", "Pension Funds"],
-      impact: "Liquidity pool expansion",
-      icon: <BarChart3 className="w-4 h-4" />,
-    },
-    {
-      name: "Digital Trade Corridors",
-      status: "Implementation",
-      timeline: "2025-2026",
-      partners: ["AU Commission", "National Governments", "Tech Giants"],
-      impact: "Trade cost reduction",
-      icon: <Globe className="w-4 h-4" />,
-    },
-    {
-      name: "Climate Finance Facility",
-      status: "Launching",
-      timeline: "2025-2030",
-      partners: ["Climate Funds", "DFIs", "Private Sector"],
-      impact: "Carbon reduction targets",
-      icon: <Leaf className="w-4 h-4" />,
-    },
-    {
-      name: "Innovation Fellowship Program",
-      status: "Ongoing",
-      timeline: "2024-2026",
-      partners: ["Universities", "Corporates", "VC Firms"],
-      impact: "Talent retention",
-      icon: <Rocket className="w-4 h-4" />,
-    },
-  ];
+  // const keyInitiatives = [
+  //   {
+  //     name: "African Capital Markets Initiative",
+  //     status: "Active",
+  //     timeline: "2024-2027",
+  //     partners: ["AFDB", "African Exchanges", "Pension Funds"],
+  //     impact: "Liquidity pool expansion",
+  //     icon: <BarChart3 className="w-4 h-4" />,
+  //   },
+  //   {
+  //     name: "Digital Trade Corridors",
+  //     status: "Implementation",
+  //     timeline: "2025-2026",
+  //     partners: ["AU Commission", "National Governments", "Tech Giants"],
+  //     impact: "Trade cost reduction",
+  //     icon: <Globe className="w-4 h-4" />,
+  //   },
+  //   {
+  //     name: "Climate Finance Facility",
+  //     status: "Launching",
+  //     timeline: "2025-2030",
+  //     partners: ["Climate Funds", "DFIs", "Private Sector"],
+  //     impact: "Carbon reduction targets",
+  //     icon: <Leaf className="w-4 h-4" />,
+  //   },
+  //   {
+  //     name: "Innovation Fellowship Program",
+  //     status: "Ongoing",
+  //     timeline: "2024-2026",
+  //     partners: ["Universities", "Corporates", "VC Firms"],
+  //     impact: "Talent retention",
+  //     icon: <Rocket className="w-4 h-4" />,
+  //   },
+  // ];
 
   // Our Approach
   const approachSteps = [
@@ -166,7 +163,7 @@ const Agenda = () => {
       step: "01",
       title: "Strategic Diagnosis",
       description:
-        "Comprehensive analysis of systemic challenges and opportunities",
+        "Comprehensive and scientific research of systemic challenges an opportunities",
       icon: <BookOpen className="w-5 h-5" />,
     },
     {
@@ -206,15 +203,15 @@ const Agenda = () => {
     return colors[color] || "bg-emerald-500 text-emerald-50";
   };
 
-  const getBorderColor = (color: string) => {
-    const colors: Record<string, string> = {
-      emerald: "border-emerald-200",
-      blue: "border-blue-200",
-      green: "border-green-200",
-      violet: "border-violet-200",
-    };
-    return colors[color] || "border-emerald-200";
-  };
+  // const getBorderColor = (color: string) => {
+  //   const colors: Record<string, string> = {
+  //     emerald: "border-emerald-200",
+  //     blue: "border-blue-200",
+  //     green: "border-green-200",
+  //     violet: "border-violet-200",
+  //   };
+  //   return colors[color] || "border-emerald-200";
+  // };
 
   return (
     <DefaultLayout>
@@ -548,7 +545,7 @@ const Agenda = () => {
         </div>
 
         {/* Core Agendas */}
-        <div className="bg-white">
+        {/* <div className="bg-white">
           <div className="max-w-7xl mx-auto px-6 py-24">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6">
@@ -621,7 +618,7 @@ const Agenda = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Our Approach */}
         <div className="bg-gray-50">
@@ -672,7 +669,7 @@ const Agenda = () => {
         </div>
 
         {/* Key Initiatives */}
-        <div className="bg-white">
+        {/* <div className="bg-white">
           <div className="max-w-7xl mx-auto px-6 py-24">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-light text-gray-900 mb-6">
@@ -748,7 +745,7 @@ const Agenda = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-emerald-600 to-emerald-700">
@@ -758,18 +755,20 @@ const Agenda = () => {
                 Join Us in Shaping Africa's Future
               </h2>
               <p className="text-emerald-100 text-lg max-w-3xl mx-auto mb-8">
-                Our work depends on strategic partnerships with governments,
-                institutions, and visionary leaders committed to Africa's
-                transformation.
+                To become a world-class, student-led hub at Cranfield that
+                catalyses investment, innovation, knowledge and research for
+                Africa's sustainable transformation bridging academia, industry,
+                policymakers, and entrepreneurs, and driving measurable impact
+                in African economies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-white text-emerald-600 hover:bg-emerald-50 font-medium rounded-lg transition-colors flex items-center gap-2 justify-center">
                   Explore Partnership Opportunities
                   <ChevronRight className="w-4 h-4" />
                 </button>
-                <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium rounded-lg transition-colors">
+                {/* <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium rounded-lg transition-colors">
                   Download Annual Report
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
