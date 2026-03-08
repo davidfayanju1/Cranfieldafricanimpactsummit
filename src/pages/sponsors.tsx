@@ -535,7 +535,7 @@ const Sponsors = () => {
               {" • "}Open to all types of partnerships
             </p>
             <p className="mt-2 text-xs">
-              Contact: partnerships@cranfield-africa.org
+              Contact: Africaimpactsummit@cranfield.ac.uk
             </p>
           </div>
         </div>

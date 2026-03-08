@@ -486,7 +486,7 @@ const Events = () => {
       id: 4,
       title: "CRANFIELD-AFRICA IMPACT SUMMIT 2026",
       subtitle: "Main Summit",
-      date: "Fri, 8 March, 2026",
+      date: "Fri, 8 May, 2026",
       dateObj: new Date("2026-05-08"),
       time: "9:00 AM",
       venue: "Cranfield University",
