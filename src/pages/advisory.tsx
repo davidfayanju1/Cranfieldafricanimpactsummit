@@ -141,18 +141,18 @@ const AdvisoryCommittee = () => {
     navigate(`/advisory-details/${memberId}`);
   };
 
-  const getAccentColor = (color?: string) => {
-    const colors: Record<string, string> = {
-      emerald: "border-emerald-200 text-emerald-700 bg-emerald-50",
-      amber: "border-amber-200 text-amber-700 bg-amber-50",
-      indigo: "border-indigo-200 text-indigo-700 bg-indigo-50",
-      blue: "border-blue-200 text-blue-700 bg-blue-50",
-      rose: "border-rose-200 text-rose-700 bg-rose-50",
-      violet: "border-violet-200 text-violet-700 bg-violet-50",
-      teal: "border-teal-200 text-teal-700 bg-teal-50",
-    };
-    return colors[color || "emerald"];
-  };
+  // const getAccentColor = (color?: string) => {
+  //   const colors: Record<string, string> = {
+  //     emerald: "border-emerald-200 text-emerald-700 bg-emerald-50",
+  //     amber: "border-amber-200 text-amber-700 bg-amber-50",
+  //     indigo: "border-indigo-200 text-indigo-700 bg-indigo-50",
+  //     blue: "border-blue-200 text-blue-700 bg-blue-50",
+  //     rose: "border-rose-200 text-rose-700 bg-rose-50",
+  //     violet: "border-violet-200 text-violet-700 bg-violet-50",
+  //     teal: "border-teal-200 text-teal-700 bg-teal-50",
+  //   };
+  //   return colors[color || "emerald"];
+  // };
 
   return (
     <DefaultLayout>
