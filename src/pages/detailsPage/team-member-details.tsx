@@ -53,7 +53,7 @@ With an engineering background and over a decade of industry experience, Nseobon
 His interests centre on translating technical innovation into commercially viable and scalable solutions, particularly within emerging markets, where the effective integration of technology, systems, and business models is critical to achieving sustainable impact. `,
       image: "/images/Obong.jpeg",
       linkedin: "https://www.linkedin.com/in/nseobong-umoh-9830257a/",
-      email: "nseobong.umoh@example.com",
+      email: "Umoh.Umoh.008@cranfield.ac.uk",
       location: "MiltonKeynes, UK",
       yearsAtCranfield: 2,
       education: [
@@ -87,7 +87,7 @@ With a strong background in digital communication and environmental advocacy, Ob
 As Media Lead, Obed is responsible for shaping the society's digital presence, managing content strategy, and building relationships with media partners. He believes in the power of storytelling to drive environmental awareness and sustainable action.`,
       image: "/images/obed.jpeg",
       linkedin: "https://www.linkedin.com/in/obed-asamoah-4b2249385/",
-      email: "obed.asamoah@example.com",
+      email: "Obed.Asamoah.363@cranfield.ac.uk",
       location: "Cranfield, UK",
       yearsAtCranfield: 1,
       education: [
@@ -115,7 +115,7 @@ As Media Lead, Obed is responsible for shaping the society's digital presence, m
       fullBio: `He earned a bachelor’s degree in Economics and Finance as well as an MSc in Finance and Investment Management from the University of Hertfordshire. Ayodele is committed to advancing Africa’s sustainable development through policy, finance, and private sector innovation. With experience spanning climate finance consulting, impact investment, SME advisory, and youth development, Ayodele has supported initiatives focused on climate policy implementation, access to sustainable finance, and SME Growth. His work bridges academia and practice, with research centred on how improved access to finance can enable African SMEs to scale, create jobs, and contribute meaningfully to the SDGs and Africa Agenda 2063. Driven by a passion for convening ideas and people, Ayodele founded the Cranfield Africa Impact Summit Society to create a platform for dialogue, mentorship, collaboration, and action among African change-makers within and beyond Cranfield University. His work reflects a deep commitment to building inclusive, resilient, and investment-ready pathways for Africa’s future. `,
       image: "/images/ayodele.jpeg",
       linkedin: "https://www.linkedin.com/in/ayodeleoluwaropo/",
-      email: "ayodele.oluwaporpo@example.com",
+      email: "Ayodele.Oluwaropo@cranfield.ac.uk",
       location: "Cranfield, UK",
       yearsAtCranfield: 2,
       education: [
