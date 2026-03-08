@@ -464,9 +464,7 @@ const AdvisoryCommittee = () => {
                     {member.expertise.slice(0, 3).map((exp, index) => (
                       <span
                         key={index}
-                        className={`px-3 py-1.5 text-xs rounded-full border ${getAccentColor(
-                          member.accentColor,
-                        )}`}
+                        className={`px-3 py-1.5 border-emerald-100 text-emerald-600 bg-emerald-50 text-xs border-[1px] rounded-full border-solid}`}
                       >
                         {exp}
                       </span>
