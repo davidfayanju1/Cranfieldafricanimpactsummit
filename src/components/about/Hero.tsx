@@ -39,7 +39,7 @@ const AboutHero = () => {
 
           {/* Large Main Heading */}
           <div className="mb-6">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-normal text-white">
+            <h1 className="text-4xl sm:text-6xl lg:text-6xl font-normal text-white">
               Investing in Impact,
               <br />
               <span className="text-emerald-300 font-light">
@@ -50,7 +50,7 @@ const AboutHero = () => {
 
           {/* Smaller Subtext */}
           <div className="max-w-2xl mx-auto mb-10">
-            <p className="text-lg text-gray-200 font-light">
+            <p className="md:text-lg text-md text-gray-200 font-light">
               The Cranfield-Africa Impact Summit is a convergence of
               visionaries, innovators, and leaders dedicated to unlocking the
               immense potential of the African continent.
@@ -58,18 +58,18 @@ const AboutHero = () => {
           </div>
 
           {/* Simple CTA - Centered */}
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center md:gap-4 gap-2">
             <a
               href="https://www.mycsa.org.uk/groups/africa-impact-summit-society/join"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300 inline-block"
+              className="md:px-8 px-3 py-3 bg-emerald-500 hover:bg-emerald-600 text-white md:font-medium rounded-lg transition-all duration-300 md:text-[1rem] text-[.8rem] flex items-center justify-center"
             >
               Register As A Student
             </a>
             <button
               onClick={() => navigate("/agenda")}
-              className="px-8 py-3 bg-transparent border border-white/30 hover:border-white text-white font-medium rounded-lg transition-all duration-300"
+              className="md:px-8 px-3 py-3 bg-transparent border border-white/30 hover:border-white text-white md:font-medium rounded-lg transition-all duration-300 md:text-[1rem] text-[.8rem] flex items-center justify-center"
             >
               View Agenda
             </button>
