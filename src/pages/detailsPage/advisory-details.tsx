@@ -43,7 +43,7 @@ const AdvisoryDetails = () => {
       id: "1",
       name: "DR. INYENE NKANTA",
       title: "Lecturer in Business & Creative Industries",
-      organization: "University of the West of Scotland",
+      organization: "University of West Scotland",
       role: "Mentor",
       expertise: ["Entrepreneurship", "Sustainability", "Circular Economy"],
       image: "/images/INYENE.jpeg",
