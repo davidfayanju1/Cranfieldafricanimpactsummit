@@ -654,9 +654,9 @@ const Agenda = () => {
                       <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg font-bold mb-4 mx-auto">
                         {step.step}
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 mx-auto">
+                      {/* <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 mx-auto">
                         {step.icon}
-                      </div>
+                      </div> */}
                       <h3 className="font-medium text-gray-900 mb-2">
                         {step.title}
                       </h3>
