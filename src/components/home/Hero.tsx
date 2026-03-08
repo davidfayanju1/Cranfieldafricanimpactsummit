@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,6 +50,8 @@ const Hero = () => {
     setTimeout(() => setIsAutoPlaying(true), 12000);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Carousel Slides */}
@@ -88,7 +91,7 @@ const Hero = () => {
       </div>
 
       {/* Content - Minimal & Classy */}
-      <div className="absolute inset-0 flex items-center justify-center z-20">
+      <div className="absolute inset-0 flex items-center justify-center z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
           {/* Main Institution Name */}
           <div className="mb-8">
@@ -110,7 +113,11 @@ const Hero = () => {
 
           {/* Subtle CTA */}
           <div className="mt-16">
-            <button className="px-8 py-3 bg-transparent border border-emerald-400/50 hover:border-emerald-300 text-emerald-300 hover:text-white font-light tracking-wide rounded-sm transition-all duration-500 hover:bg-emerald-400/10 backdrop-blur-sm text-lg">
+            <button
+              title="button"
+              onClick={() => navigate("/about")}
+              className="px-8 py-3 cursor-pointer bg-transparent border border-emerald-400/50 hover:border-emerald-300 text-emerald-300 hover:text-white font-light tracking-wide rounded-sm transition-all duration-500 hover:bg-emerald-400/10 backdrop-blur-sm text-lg"
+            >
               Discover Our Vision
             </button>
           </div>

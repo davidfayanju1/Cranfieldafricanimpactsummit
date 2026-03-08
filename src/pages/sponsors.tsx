@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Sponsors = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -19,29 +20,29 @@ const Sponsors = () => {
   const currentSponsors = [
     {
       name: "Cranfield University",
-      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Cranfield_University_logo.svg/1200px-Cranfield_University_logo.svg.png",
+      logo: "/images/cranfield-university-logo.png",
       category: "academic",
       description:
         "World-leading postgraduate university specializing in technology and management",
-      since: "2024",
+      since: "2025",
       link: "https://www.cranfield.ac.uk",
     },
-    {
-      name: "African Development Bank",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/African_Development_Bank_%28logo%29.svg/1200px-African_Development_Bank_%28logo%29.svg.png",
-      category: "strategic",
-      description: "Regional multilateral development finance institution",
-      since: "2025",
-      link: "https://www.afdb.org",
-    },
-    {
-      name: "Tech Innovate Africa",
-      logo: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
-      category: "technology",
-      description: "Leading African technology innovation hub",
-      since: "2025",
-      link: "#",
-    },
+    // {
+    //   name: "African Development Bank",
+    //   logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/African_Development_Bank_%28logo%29.svg/1200px-African_Development_Bank_%28logo%29.svg.png",
+    //   category: "strategic",
+    //   description: "Regional multilateral development finance institution",
+    //   since: "2025",
+    //   link: "https://www.afdb.org",
+    // },
+    // {
+    //   name: "Tech Innovate Africa",
+    //   logo: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+    //   category: "technology",
+    //   description: "Leading African technology innovation hub",
+    //   since: "2025",
+    //   link: "#",
+    // },
   ];
 
   // Partnership Categories (not tiers)
@@ -119,6 +120,8 @@ const Sponsors = () => {
       icon: <Globe className="w-5 h-5" />,
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <DefaultLayout>
@@ -236,7 +239,7 @@ const Sponsors = () => {
               .filter(
                 (sponsor) =>
                   activeCategory === "all" ||
-                  sponsor.category === activeCategory
+                  sponsor.category === activeCategory,
               )
               .map((sponsor, index) => (
                 <div
@@ -268,8 +271,8 @@ const Sponsors = () => {
                       {sponsor.category === "academic"
                         ? "Academic Partner"
                         : sponsor.category === "strategic"
-                        ? "Strategic Partner"
-                        : "Technology Partner"}
+                          ? "Strategic Partner"
+                          : "Technology Partner"}
                     </span>
                     {sponsor.link && (
                       <a
@@ -295,7 +298,12 @@ const Sponsors = () => {
               types. Whether you're a corporation, academic institution, or
               individual supporter, there's a place for you in our journey.
             </p>
-            <button className="px-6 py-3 bg-emerald-600 text-white hover:bg-emerald-700 font-medium rounded-lg transition-colors inline-flex items-center gap-2">
+            <button
+              onClick={() =>
+                navigate("mailto:Africaimpactsummit@cranfield.ac.uk")
+              }
+              className="px-6 py-3 bg-emerald-600 text-white hover:bg-emerald-700 font-medium rounded-lg transition-colors inline-flex items-center gap-2"
+            >
               Explore Partnership
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -473,11 +481,11 @@ const Sponsors = () => {
                   interests and let's build something meaningful.
                 </p>
                 <a
-                  href="mailto:partnerships@cranfield-africa.org"
+                  href="mailto:Africaimpactsummit@cranfield.ac.uk"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white hover:bg-emerald-700 font-medium rounded-lg transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  Contact Our Partnership Team
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -498,12 +506,15 @@ const Sponsors = () => {
               Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-white text-emerald-600 hover:bg-emerald-50 font-medium rounded-lg transition-colors flex items-center gap-2 justify-center">
+              <button
+                onClick={() => navigate("/about")}
+                className="px-6 py-3 cursor-pointer bg-white text-emerald-600 hover:bg-emerald-50 font-medium rounded-lg transition-colors flex items-center gap-2 justify-center"
+              >
                 Learn More About Us
                 <ChevronRight className="w-4 h-4" />
               </button>
               <a
-                href="mailto:partnerships@cranfield-africa.org"
+                href="mailto:Africaimpactsummit@cranfield.ac.uk"
                 className="px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium rounded-lg transition-colors"
               >
                 Send an Email

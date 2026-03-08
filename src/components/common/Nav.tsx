@@ -125,7 +125,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-1000 transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
           : "bg-transparent py-6"
@@ -163,7 +163,7 @@ const Nav = () => {
                   <span
                     className={`transition-colors duration-300 ${
                       active
-                        ? "text-emerald-800 font-semibold"
+                        ? "text-emerald-500 font-semibold"
                         : scrolled || isAdvisoryPage
                           ? "text-gray-700 hover:text-emerald-700"
                           : "text-white hover:text-emerald-200"
@@ -174,7 +174,7 @@ const Nav = () => {
                   <span
                     className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
                       active
-                        ? "w-full bg-emerald-600"
+                        ? "w-full bg-emerald-500"
                         : "w-0 bg-emerald-400 group-hover:w-full"
                     }`}
                   ></span>

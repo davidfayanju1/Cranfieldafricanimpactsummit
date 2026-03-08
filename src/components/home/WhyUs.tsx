@@ -253,6 +253,8 @@ const WhyUs = () => {
   //   },
   // ];
 
+  const whatsappGroupLink = "https://chat.whatsapp.com/B7gWbAkEL3gLYSi89tHVrZ";
+
   return (
     <div className="min-h-[80vh] bg-linear-to-b from-gray-50 to-white py-24 relative overflow-hidden">
       {/* Background Pattern */}
@@ -335,9 +337,14 @@ const WhyUs = () => {
 
             {/* CTA */}
             <div className="pt-6">
-              <button className="px-6 py-3 bg-[#11766E] text-white font-normal tracking-wide rounded-sm transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0">
+              <a
+                href={whatsappGroupLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-[#11766E] text-white font-normal tracking-wide rounded-sm transition-all duration-300 hover:bg-emerald-800 hover:shadow-md hover:translate-y-px active:translate-y-0"
+              >
                 Join Our Community
-              </button>
+              </a>
             </div>
           </div>
 

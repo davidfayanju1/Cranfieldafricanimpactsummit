@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Mission = () => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -7,6 +8,8 @@ const Mission = () => {
     const timer = setTimeout(() => setHasMounted(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative overflow-hidden">
@@ -272,10 +275,18 @@ const Mission = () => {
                 continent.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-white text-emerald-600 hover:bg-emerald-50 font-bold rounded-lg transition-all duration-300 hover:scale-105">
+                <button
+                  onClick={() =>
+                    navigate("mailto:Africaimpactsummit@cranfield.ac.uk")
+                  }
+                  className="px-8 py-3 cursor-pointer bg-white text-emerald-600 hover:bg-emerald-50 font-bold rounded-lg transition-all duration-300 hover:scale-105"
+                >
                   Partner With Us
                 </button>
-                <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300 hover:scale-105">
+                <button
+                  onClick={() => navigate("/events")}
+                  className="px-8 cursor-pointer py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300 hover:scale-105"
+                >
                   View Our Impact
                 </button>
               </div>

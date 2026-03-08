@@ -59,17 +59,18 @@ const AboutHero = () => {
 
           {/* Simple CTA - Centered */}
           <div className="flex justify-center gap-4">
-            <button
-              onClick={() =>
-                navigate(
-                  "https://www.mycsa.org.uk/groups/africa-impact-summit-society/join",
-                )
-              }
-              className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300"
+            <a
+              href="https://www.mycsa.org.uk/groups/africa-impact-summit-society/join"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-all duration-300 inline-block"
             >
               Register As A Student
-            </button>
-            <button className="px-8 py-3 bg-transparent border border-white/30 hover:border-white text-white font-medium rounded-lg transition-all duration-300">
+            </a>
+            <button
+              onClick={() => navigate("/agenda")}
+              className="px-8 py-3 bg-transparent border border-white/30 hover:border-white text-white font-medium rounded-lg transition-all duration-300"
+            >
               View Agenda
             </button>
           </div>

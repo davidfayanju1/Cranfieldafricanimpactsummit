@@ -276,17 +276,17 @@ const Agenda = () => {
                     icon: <Globe className="w-4 h-4" />,
                   },
                   {
-                    value: "200+",
+                    value: "5+",
                     label: "Strategic Partners",
                     icon: <Handshake className="w-4 h-4" />,
                   },
                   {
-                    value: "$50B+",
+                    value: "£5K+",
                     label: "Catalyzed Investment",
                     icon: <TrendingUp className="w-4 h-4" />,
                   },
                   {
-                    value: "50+",
+                    value: "5+",
                     label: "Active Initiatives",
                     icon: <Target className="w-4 h-4" />,
                   },
@@ -395,7 +395,7 @@ const Agenda = () => {
                     <div key={index} className="flex items-start gap-4">
                       <div
                         className={`w-10 h-10 rounded-full ${getColorClass(
-                          "emerald"
+                          "emerald",
                         )} flex items-center justify-center flex-shrink-0`}
                       >
                         <span className="font-bold">{index + 1}</span>
@@ -470,7 +470,7 @@ const Agenda = () => {
                       <div className="flex items-center gap-4 mb-6">
                         <div
                           className={`w-16 h-16 rounded-full ${getColorClass(
-                            pillar.color
+                            pillar.color,
                           )} flex items-center justify-center`}
                         >
                           {pillar.icon}
@@ -573,7 +573,7 @@ const Agenda = () => {
                 <div
                   key={index}
                   className={`bg-white border ${getBorderColor(
-                    "emerald"
+                    "emerald",
                   )} rounded-xl p-6 hover:shadow-md transition-shadow ${
                     hasMounted
                       ? "opacity-100 translate-y-0"
@@ -710,8 +710,8 @@ const Agenda = () => {
                                 initiative.status === "Active"
                                   ? "bg-emerald-100 text-emerald-800"
                                   : initiative.status === "Implementation"
-                                  ? "bg-blue-100 text-blue-800"
-                                  : "bg-amber-100 text-amber-800"
+                                    ? "bg-blue-100 text-blue-800"
+                                    : "bg-amber-100 text-amber-800"
                               }`}
                             >
                               {initiative.status}
