@@ -45,7 +45,7 @@ const AdvisoryCommittee = () => {
     // Patron
     {
       id: "4",
-      name: "THELMA EKIYOR",
+      name: "Thelma Ekiyor",
       title: "International Chief Executive Officer",
       organization: "Women for Women International",
       role: "Patron",
@@ -65,7 +65,7 @@ const AdvisoryCommittee = () => {
     // Advisory Circle - Mentor
     {
       id: "1",
-      name: "DR. INYENE NKANTA",
+      name: "Dr. Inyene Nkanta",
       title: "Lecturer in Business & Creative Industries",
       organization: "University of West Scotland",
       role: "Mentor",
