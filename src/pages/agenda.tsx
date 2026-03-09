@@ -240,7 +240,7 @@ const Agenda = () => {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
+          <div className="relative z-10 max-w-7xl mx-auto md:px-6 px-4 pt-32 pb-24">
             <div className="text-center">
               {/* Badge with Glass Effect */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
@@ -321,7 +321,7 @@ const Agenda = () => {
 
         {/* Our Mandate Section */}
         <div className="bg-white border-y border-gray-200">
-          <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="max-w-7xl mx-auto md:px-6 px-4 py-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-3 mb-6">
@@ -456,7 +456,7 @@ const Agenda = () => {
               {strategicPillars.map((pillar) => (
                 <div
                   key={pillar.id}
-                  className={`p-8 md:p-12 transition-all duration-300 ${
+                  className={`p-4 md:p-12 transition-all duration-300 ${
                     activePillar === pillar.id ? "block" : "hidden"
                   }`}
                 >

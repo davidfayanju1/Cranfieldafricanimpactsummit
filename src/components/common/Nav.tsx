@@ -127,17 +127,17 @@ const Nav = () => {
     <nav
       className={`fixed w-full z-1000 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-6"
+          ? "bg-white/90 backdrop-blur-md shadow-sm md:py-3 py-2"
+          : "bg-transparent md:py-6 py-3"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo - Changes to dark when mobile menu opens */}
           <div className="shrink-0 z-50">
             <NavLink to="/" className="block">
               <div
-                className={`transition-all duration-300 ${
+                className={`transition-all md:w-40! w-20! duration-300 ${
                   scrolled ? "w-32" : "w-40"
                 } overflow-hidden flex items-center justify-center`}
               >
@@ -240,7 +240,7 @@ const Nav = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-lg pt-20 px-6 overflow-hidden animate-fadeIn z-40">
-            <div className="flex flex-col mt-20 space-y-1">
+            <div className="flex flex-col mt-5 space-y-1">
               {navItems.map((item, index) => {
                 const active = isActive(item.href, item.exact);
                 return (
