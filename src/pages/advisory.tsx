@@ -178,7 +178,7 @@ const AdvisoryCommittee = () => {
           </div>
 
           {/* Hero Content - Moved Down */}
-          <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
+          <div className="relative z-10 max-w-6xl mx-auto px-6 pt-42 pb-20 text-center">
             {/* Main Title Section */}
             <div className="mb-12">
               {/* Add the image badge here */}

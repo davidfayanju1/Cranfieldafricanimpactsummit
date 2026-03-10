@@ -63,7 +63,7 @@ const AboutHero = () => {
               href="https://www.mycsa.org.uk/groups/africa-impact-summit-society/join"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:px-8 px-3 py-3 bg-emerald-500 hover:bg-emerald-600 text-white md:font-medium rounded-lg transition-all duration-300 md:text-[1rem] text-[.8rem] flex items-center justify-center"
+              className="md:px-8 px-3 py-3 bg-[#11766E] hover:bg-emerald-600 text-white md:font-medium rounded-lg transition-all duration-300 md:text-[1rem] text-[.8rem] flex items-center justify-center"
             >
               Register As A Student
             </a>

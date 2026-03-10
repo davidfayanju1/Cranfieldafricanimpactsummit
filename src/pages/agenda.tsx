@@ -240,7 +240,7 @@ const Agenda = () => {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto md:px-6 px-4 pt-32 pb-24">
+          <div className="relative z-10 max-w-7xl mx-auto md:px-6 px-4 pt-52! pb-24">
             <div className="text-center">
               {/* Badge with Glass Effect */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
