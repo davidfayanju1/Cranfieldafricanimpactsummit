@@ -10,6 +10,7 @@ import AdvisoryDetails from "./pages/detailsPage/advisory-details";
 import ScrollToTop from "./components/common/ScrollToTop";
 import TeamMemberDetails from "./pages/detailsPage/team-member-details";
 import Blogs from "./pages/blogs";
+import BlogsDetails from "./pages/detailsPage/blogs-details";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
+        <Route path="/blog/:id" element={<BlogsDetails />} />
+
         <Route
           path="/team-member-details/:id"
           element={<TeamMemberDetails />}
