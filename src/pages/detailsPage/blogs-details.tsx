@@ -1,4 +1,4 @@
-import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DefaultLayout from "../../layout/DefaultLayout";

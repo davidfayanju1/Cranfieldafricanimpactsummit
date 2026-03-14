@@ -67,7 +67,7 @@ const Blogs = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const featuredPost = blogPosts.find((post) => post.featured);
+  // const featuredPost = blogPosts.find((post) => post.featured);
 
   return (
     <DefaultLayout>
