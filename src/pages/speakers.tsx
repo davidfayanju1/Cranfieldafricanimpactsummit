@@ -71,7 +71,7 @@ const Speakers = () => {
               {/* Event Image */}
               <div className="relative h-64 md:h-auto overflow-hidden">
                 <img
-                  src="/images/upcoming-2.jpeg"
+                  src="/images/currentevent_2.jpeg"
                   alt="Cranfield Africa Impact Summit 2026"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -100,7 +100,7 @@ const Speakers = () => {
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
                     <Clock className="w-5 h-5 text-emerald-500" />
-                    <span>9:00 AM - 6:00 PM GMT</span>
+                    <span>9:00 AM - 4:00 PM GMT</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
                     <MapPin className="w-5 h-5 text-emerald-500" />
