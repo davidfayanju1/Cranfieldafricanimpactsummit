@@ -1,8 +1,6 @@
 import DefaultLayout from "../layout/DefaultLayout";
 import {
   Mic2,
-  Users,
-  Sparkles,
   Calendar,
   Bell,
   ArrowRight,
@@ -11,7 +9,6 @@ import {
   Trophy,
 } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const Speakers = () => {
   const [notifyCount, setNotifyCount] = useState(0);
