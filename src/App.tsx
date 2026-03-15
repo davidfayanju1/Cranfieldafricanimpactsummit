@@ -11,6 +11,7 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import TeamMemberDetails from "./pages/detailsPage/team-member-details";
 import Blogs from "./pages/blogs";
 import BlogsDetails from "./pages/detailsPage/blogs-details";
+import Speakers from "./pages/speakers";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/speakers" element={<Speakers />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
         <Route path="/blog/:id" element={<BlogsDetails />} />

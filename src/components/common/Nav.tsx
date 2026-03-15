@@ -85,6 +85,7 @@ const Nav = () => {
     { label: "Advisory", href: "/advisory" },
     { label: "Agenda", href: "/agenda" },
     { label: "Events", href: "/events" },
+    { label: "Speakers", href: "/speakers" },
     { label: "Blogs", href: "/blogs" },
     { label: "Sponsors", href: "/sponsors" },
   ];
@@ -151,7 +152,7 @@ const Nav = () => {
           </div>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center space-x-12">
+          <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center space-x-8">
             {navItems.map((item) => {
               const active = isActive(item.href, item.exact);
               return (
