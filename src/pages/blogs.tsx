@@ -42,7 +42,7 @@ const Blogs = () => {
       title:
         "From Dependency to Dignity: Why Impact Investment in African SMEs Matters",
       excerpt:
-        "Africa's struggle for development has long been framed through the language of deficits—what the continent lacks, who must help, and how much aid is required. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact-driven investment.",
+        "Africa's struggle for development has long been framed through the language of deficits what the continent lacks, who must help, and how much aid is required. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact driven investment.",
       author: "Ayodele Babatomiwa Oluwaropo",
       authorTitle:
         "PhD Researcher, Bettany Centre for Entrepreneurship, Cranfield University",

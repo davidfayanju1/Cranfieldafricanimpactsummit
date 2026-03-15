@@ -31,7 +31,7 @@ const BlogsDetails = () => {
       title:
         "From Dependency to Dignity: Why Impact Investment in African SMEs Matters",
       excerpt:
-        "Africa's struggle for development has long been framed through the language of deficits—what the continent lacks, who must help, and how much aid is required. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact-driven investment.",
+        "Africa's struggle for development has long been framed through the language of deficits—what the continent lacks, who must help, and how much aid is required. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact driven investment.",
       author: "Ayodele Babatomiwa Oluwaropo",
       authorTitle:
         "PhD Researcher, Bettany Centre for Entrepreneurship, Cranfield University",
@@ -41,54 +41,48 @@ const BlogsDetails = () => {
       image: "/images/blog-1.jpeg",
       featured: true,
       content: `
-        <p>Africa's struggle for development has long been framed through the language of deficits—what the continent lacks, who must help, and how much aid is required. While external assistance has played a role in addressing humanitarian needs, an overreliance on aid has often weakened Africa's agency by externalising decision-making, distorting local incentives, and sidelining domestic productive capacity.</p>
+        <p>Africa's struggle for development has long been framed through the language of deficits what the continent lacks, who must help, and how much aid is required. While external assistance has played a role in addressing humanitarian needs, an overreliance on aid has often weakened Africa's agency by externalising decision making, distorting local incentives, and sidelining domestic productive capacity. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact driven investment. At the centre of this shift lie Africa's small and medium sized enterprises (SMEs).</p>
         
-        <p>Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact-driven investment. At the centre of this shift lie Africa's small and medium-sized enterprises (SMEs).</p>
         
-        <h2>SMEs: The Backbone of African Economies</h2>
+        <br />
         
-        <p>SMEs are the backbone of African economies. They account for over 90% of businesses and provide approximately 80% of employment across the continent. From agribusinesses improving food security, to renewable energy firms expanding last-mile access, to health and education enterprises serving underserved communities, African SMEs are already delivering tangible development outcomes.</p>
+        <p>SMEs are the backbone of African economies. They account for over 90% of businesses and provide approximately 80% of employment across the continent. From agribusinesses improving food security, to renewable energy firms expanding last mile access, to health and education enterprises serving underserved communities, African SMEs are already delivering tangible development outcomes. Yet paradoxically, they remain chronically underfunded. The International Finance Corporation estimates the SME financing gap of over 100 developing economies including Africa to be US$5.7 trillion with women and youth led enterprises being disproportionately excluded.</p>
         
-        <p>Yet paradoxically, they remain chronically underfunded. The International Finance Corporation estimates the SME financing gap of over 100 developing economies including Africa to be US$5.7 trillion with women- and youth-led enterprises being disproportionately excluded.</p>
+        <br />
         
-        <h2>A Failure of Development Imagination</h2>
         
-        <p>This persistent underinvestment is not merely a market failure; it is a failure of development imagination. Africa's transformation cannot be imported—it must be built. Impact investment offers a powerful pathway for reclaiming Africa's agency by mobilising capital that aligns financial returns with social, environmental, and developmental outcomes.</p>
+        <p>This persistent underinvestment is not merely a market failure; it is a failure of development imagination. Africa's transformation cannot be imported it must be built. Impact investment offers a powerful pathway for reclaiming Africa's agency by mobilising capital that aligns financial returns with social, environmental, and developmental outcomes. Unlike traditional aid, impact investment treats African enterprises not as beneficiaries, but as partners and drivers of change.</p>
         
-        <p>Unlike traditional aid, impact investment treats African enterprises not as beneficiaries, but as partners and drivers of change.</p>
+        <br />
+
         
-        <h2>Looking Inward: Africa's Untapped Capital</h2>
+        <p>Crucially, reclaiming agency through impact investment requires looking inward. Africa holds significant pools of domestic capital pension funds, sovereign wealth funds, diaspora remittances, and private savings that remain largely disconnected from productive SME financing. In 2024 alone, remittances to Africa exceeded USD 90 billion, surpassing foreign direct investment (FDI) and official development assistance. Redirecting even a fraction of this capital into structured, well governed SME impact vehicles could unlock transformative growth while retaining African ownership and control.</p>
         
-        <p>Crucially, reclaiming agency through impact investment requires looking inward. Africa holds significant pools of domestic capital—pension funds, sovereign wealth funds, diaspora remittances, and private savings—that remain largely disconnected from productive SME financing. In 2024 alone, remittances to Africa exceeded USD 90 billion, surpassing foreign direct investment (FDI) and official development assistance.</p>
         
-        <p>Redirecting even a fraction of this capital into structured, well-governed SME impact vehicles could unlock transformative growth while retaining African ownership and control.</p>
+        <br />
         
-        <h2>Alignment with Development Frameworks</h2>
+        <p>To be truly transformative, however, SME focused impact investment must be intentionally aligned with Africa's development frameworks particularly the Sustainable Development Goals (SDGs) and Agenda 2063. Too often, development strategies reference these frameworks rhetorically while capital allocation remains misaligned. SMEs operating across priority sectors clean energy (SDG 7), food systems (SDG 2), decent work (SDG 8), climate action (SDG 13) and industrialisation (Agenda 2063 Aspiration 1) are uniquely positioned to translate continental aspirations into lived realities.</p>
         
-        <p>To be truly transformative, however, SME-focused impact investment must be intentionally aligned with Africa's development frameworks—particularly the Sustainable Development Goals (SDGs) and Agenda 2063. Too often, development strategies reference these frameworks rhetorically while capital allocation remains misaligned.</p>
         
-        <p>SMEs operating across priority sectors—clean energy (SDG 7), food systems (SDG 2), decent work (SDG 8), climate action (SDG 13)—and industrialisation (Agenda 2063 Aspiration 1) are uniquely positioned to translate continental aspirations into lived realities.</p>
+        <br />
+
+        <p>Consider renewable energy SMEs delivering off grid solar solutions to rural communities. These enterprises advance energy access, create local jobs, reduce carbon emissions, and enhance productivity simultaneously contributing to SDGs and Agenda 2063's vision of inclusive growth. Similar multiplier effects can be seen in climate smart agriculture, digital health, affordable housing, and circular economy ventures. Yet many of these enterprises remain trapped in the "missing middle": too large for microfinance, too small or risky for commercial banks.</p>
         
-        <p>Consider renewable energy SMEs delivering off-grid solar solutions to rural communities. These enterprises advance energy access, create local jobs, reduce carbon emissions, and enhance productivity—simultaneously contributing to SDGs and Agenda 2063's vision of inclusive growth.</p>
         
-        <p>Similar multiplier effects can be seen in climate-smart agriculture, digital health, affordable housing, and circular economy ventures. Yet many of these enterprises remain trapped in the "missing middle": too large for microfinance, too small or risky for commercial banks.</p>
+        <br />
         
-        <h2>Reforming Ecosystems</h2>
+        <p>Reclaiming Africa's dignity also means reforming the ecosystems that constrain SME growth. This includes strengthening local financial institutions' capacity for SME risk assessment, embedding impact measurement standards that reflect African realities, and reforming policies that penalise enterprise formalisation. Development finance institutions and donors still have a role but as catalytic partners, not agenda setters. Blended finance should crowd in private capital, not crowd out African initiative.</p>
         
-        <p>Reclaiming Africa's dignity also means reforming the ecosystems that constrain SME growth. This includes strengthening local financial institutions' capacity for SME risk assessment, embedding impact measurement standards that reflect African realities, and reforming policies that penalise enterprise formalisation.</p>
+        <br />
         
-        <p>Development finance institutions and donors still have a role—but as catalytic partners, not agenda-setters. Blended finance should crowd in private capital, not crowd out African initiative.</p>
+        <p>Ultimately, to reclaim our dignity as a continent we need to look at power who defines value, who allocates capital, and who shapes the future. Investing in African SMEs aligned with the SDGs and Agenda 2063 is not charity; it is strategy. It affirms Africa's dignity by backing its entrepreneurs, trusting its markets, and financing its solutions. Transformation will not come from aid flows alone, but from intentional investments that enable Africans to build, own, and scale the systems that sustain their societies.</p>
         
-        <h2>Conclusion: A Question of Power</h2>
-        
-        <p>Ultimately, to reclaim our dignity as a continent we need to look at power—who defines value, who allocates capital, and who shapes the future. Investing in African SMEs aligned with the SDGs and Agenda 2063 is not charity; it is strategy.</p>
-        
-        <p>It affirms Africa's dignity by backing its entrepreneurs, trusting its markets, and financing its solutions. Transformation will not come from aid flows alone, but from intentional investments that enable Africans to build, own, and scale the systems that sustain their societies.</p>
-        
+       <br />
+
         <p>Africa does not lack ideas, ambition, or enterprise. What it requires is capital that believes in its innovation and the courage to deploy it accordingly.</p>
       `,
       references: [
-        "United Nations. Micro-, Small and Medium-sized Enterprises Day.",
+        "United Nations. Micro , Small and Medium sized Enterprises Day.",
         "World Bank. Small and Medium Enterprises (SMEs) Finance.",
         "World Economic Forum. Rethinking Remittances: The Overlooked Billions Sustaining African Households.",
         "United Nations. Sustainable Development Goals.",
@@ -234,7 +228,7 @@ const BlogsDetails = () => {
           />
 
           {/* References */}
-          {post.references && (
+          {/* {post.references && (
             <div className="mt-12 pt-8 border-t border-gray-200">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 References
@@ -247,7 +241,7 @@ const BlogsDetails = () => {
                 ))}
               </ul>
             </div>
-          )}
+          )} */}
 
           {/* Share and Navigation */}
           <div className="mt-12 pt-8 border-t border-gray-200 flex items-center justify-between">
