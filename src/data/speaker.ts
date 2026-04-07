@@ -117,7 +117,7 @@ export const speakersData: Speaker[] = [
     id: "olu-omoyele",
     name: "Olu Omoyele",
     role: "Project Leader",
-    organization: "",
+    organization: "Chemonics International",
     image: "/images/speakers/olu.jpeg",
     bio: [
       "Olu Omoyele is a project leader working at the intersection of international development, climate finance, and private capital mobilisation.",
@@ -166,7 +166,7 @@ export const speakersData: Speaker[] = [
     id: "promise-akwaowo",
     name: "Promise Akwaowo",
     role: "Business Process Analyst and Product Owner",
-    organization: "",
+    organization: "Royal Mail Group",
     image: "/images/speakers/promise.jpeg",
     bio: [
       "Promise Akwaowo is a CBAP-certified Business Process Analyst and Product Owner specialising in intelligent automation, AI-enabled process improvement, and large-scale digital transformation in regulated environments.",
@@ -186,7 +186,9 @@ export const speakersData: Speaker[] = [
     bio: [
       "Kayode Adeniyi is a Fellow at The London School of Economics and Political Science.",
       "He works at the intersection of AI governance, digital public infrastructure, and technology policy.",
-      "At the United Nations Development Programme, he developed AI readiness frameworks and strategies.",
+      "At the United Nations Development Programme, he developed AI readiness and governance maturity frameworks for public institutions across African and Latin American countries.",
+      "Previously, as a Software Engineer at Flutterwave, and later led AI and Satellite technology-driven flood risk modelling and climate resilience projects across West Africa.",
+      "He served as the President of the Programme for African Leadership at the Firoz Lalji Institute for Africa.",
     ],
     achievements: [],
   },
