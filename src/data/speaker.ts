@@ -66,6 +66,8 @@ export const speakersData: Speaker[] = [
     role: "Product Manager",
     organization: "Tesco Technology",
     image: "/images/speakers/lillian.jpeg",
+    panel:
+      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Lilian Auwor is a payments and product innovation leader with 7+ years of experience spanning financial services, emerging technologies, and large-scale customer-centric financial technology products.",
       "She currently serves as a Product Manager at Tesco Technology, where she leads the development of secure, scalable, and user-focused payment solutions used across the organisation's retail ecosystem in the UK and Central Europe.",
@@ -83,6 +85,8 @@ export const speakersData: Speaker[] = [
     role: "CEO",
     organization: "LEAP Africa",
     image: "/images/speakers/kehinde.jpeg",
+    panel:
+      "From Policy to Execution: Innovation, Skills, and Africa’s Young Workforce",
     bio: [
       "Kehinde Ayeni leads LEAP Africa, a nonprofit organisation nurturing young African leaders and advancing sustainable development across the continent.",
       "Under her leadership, LEAP Africa delivers high-impact programmes across more than 30 African countries, reaching thousands of young people annually through its core focus areas and strategic pillars.",
@@ -103,6 +107,8 @@ export const speakersData: Speaker[] = [
     role: "Researcher and Policy Thinker",
     organization: "SASIE",
     image: "/images/speakers/jennifer.jpeg",
+    panel:
+      "Why Africa’s Solutions Don’t Scale and What Research, Policy, and Practice Are Missing",
     bio: [
       "Dr Jennifer Daniel is a researcher and policy thinker focused on the design and performance of inclusion and entrepreneurship programmes within governments and development finance institutions.",
       "Her work examines how governments, universities, and development institutions design programmes intended to support entrepreneurs, innovation, and inclusion and why many of these initiatives struggle to demonstrate measurable economic outcomes.",
@@ -119,6 +125,8 @@ export const speakersData: Speaker[] = [
     role: "Project Leader",
     organization: "Chemonics International",
     image: "/images/speakers/olu.jpeg",
+    panel:
+      "Beyond Aid: Who Funds Africa’s Future? Impact Investment, Domestic Capital, or Sovereign Funds",
     bio: [
       "Olu Omoyele is a project leader working at the intersection of international development, climate finance, and private capital mobilisation.",
       "He currently manages donor-funded programmes focused on unlocking investment through public markets, with experience spanning origination, investment due diligence, ESG analysis, and stakeholder engagement across emerging markets.",
@@ -132,6 +140,7 @@ export const speakersData: Speaker[] = [
     role: "Co-Founder",
     organization: "Energyz Black & Energyzer",
     image: "/images/speakers/olaoye.jpeg",
+    panel: "From Energy Poverty to Energy Access: Financing What Works.",
     bio: [
       "Jesusoorefunmi (Soore) Olaoye is an energy and sustainability professional with a decade of experience delivering energy projects.",
       "His corporate work experience and unique mix of entrepreneurship cuts across Telecommunications, Renewables, and Management consulting in countries in Sub Saharan Africa, Middle East and Europe.",
@@ -153,6 +162,7 @@ export const speakersData: Speaker[] = [
     role: "Data Analytics Manager",
     organization: "EPAM Systems",
     image: "/images/speakers/aisha.jpeg",
+    panel: "AI, Data, and the Future of Healthcare in Africa.",
     bio: [
       "Aisha Ekundayo is an AI and data leader with over a decade of experience delivering enterprise AI solutions across global markets.",
       "She is a Data Analytics Manager at EPAM Systems, where she leads LLM-powered products, including the Artworks Assistant GenAI platform, leveraging Claude and GPT to transform marketing operations for global enterprises.",
@@ -168,6 +178,7 @@ export const speakersData: Speaker[] = [
     role: "Business Process Analyst and Product Owner",
     organization: "Royal Mail Group",
     image: "/images/speakers/promise.jpeg",
+    panel: "AI, Data, and the Future of Healthcare in Africa.",
     bio: [
       "Promise Akwaowo is a CBAP-certified Business Process Analyst and Product Owner specialising in intelligent automation, AI-enabled process improvement, and large-scale digital transformation in regulated environments.",
       "He currently works within an automation function helping to design and scale enterprise workflows across operations, customer journeys, and back-office functions using platforms such as Salesforce, RPA and low-code automation.",
@@ -183,6 +194,9 @@ export const speakersData: Speaker[] = [
     role: "Fellow",
     organization: "The London School of Economics and Political Science",
     image: "/images/speakers/kayode.jpeg",
+    panel: `1.Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?
+    
+2.From Policy to Execution: Innovation, Skills, and Africa’s Young Workforce`,
     bio: [
       "Kayode Adeniyi is a Fellow at The London School of Economics and Political Science.",
       "He works at the intersection of AI governance, digital public infrastructure, and technology policy.",
@@ -198,6 +212,7 @@ export const speakersData: Speaker[] = [
     role: "Assistant Professor in Digital Technologies",
     organization: "Cranfield University",
     image: "/images/speakers/desmond.jpeg",
+    panel: "AI, Data, and the Future of Healthcare in Africa.",
     bio: [
       "Dr Desmond Bisandu holds a PhD in Artificial Intelligence (Data Science) from Cranfield University, alongside an MSc and a BSc in Computer Science from the University of Jos and the American University of Nigeria, respectively.",
       "He previously served as a Postdoctoral Research Fellow in Artificial Intelligence and Scientific Computing at Cranfield University immediately after completing his PhD, where he was actively involved in both teaching and research, conducting advanced work at the intersection of AI and data-driven modelling to address complex digital aviation and aerospace challenges using advanced computational methods.",
@@ -212,6 +227,7 @@ export const speakersData: Speaker[] = [
     role: "Programme Director",
     organization: "Cranfield University",
     image: "/images/speakers/igie.jpeg",
+    panel: "From Energy Poverty to Energy Access: Financing What Works.",
     bio: [
       "Dr Uyioghosa Igie is the Programme Director of the Thermal Power and Propulsion MSc courses at Cranfield University.",
       "He gained his PhD in Gas Turbine Engineering from the same university in 2012.",
@@ -230,6 +246,8 @@ export const speakersData: Speaker[] = [
     role: "Researcher",
     organization: "Global Center on AI Governance",
     image: "/images/speakers/ayantola.jpeg",
+    panel:
+      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Ayantola Alayande is a researcher at the Global Center on AI Governance, where his work focuses on state-led approaches to AI governance, responsible AI policy measurement, and international AI cooperation.",
       "At the GCG, Ayantola has worked on a variety of AI research and advisory projects in Africa with partners including the IDRC, the Gates Foundation, Meta, Google, Luminate, the Atlantic Council, among others.",
@@ -245,6 +263,8 @@ export const speakersData: Speaker[] = [
     role: "Founder & Chief Strategist",
     organization: "SWIF",
     image: "/images/speakers/ifeoluwa.jpeg",
+    panel:
+      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Ifeoluwa Ogunbunumi is a Global Startup Strategist and AI Ecosystem Advisor, operating at the intersection of startups, investment, innovation, and public policy.",
       "As Founder & Chief Strategist of SWIF, she has advised over 200 startups across 23 countries, working closely with global accelerators, venture programs, governments, and investment platforms.",
