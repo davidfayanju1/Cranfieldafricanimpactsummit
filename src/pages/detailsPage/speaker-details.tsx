@@ -6,6 +6,7 @@ import {
   Briefcase,
   Linkedin,
   Mic,
+  Shield,
   Sparkles,
 } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -212,8 +213,16 @@ const SpeakerDetail = () => {
                         <Mic className="w-6 h-6 text-emerald-600" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-1">
-                          Session Panel
+                        <div className="flex items-center gap-3 mb-1">
+                          <div className="text-sm font-semibold text-emerald-600 uppercase tracking-wide">
+                            Session Panel
+                          </div>
+                          {speaker.isModeRator && (
+                            <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-200">
+                              <Shield className="w-3 h-3" />
+                              Moderator
+                            </span>
+                          )}
                         </div>
                         <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">
                           {speaker.panel}
@@ -260,41 +269,6 @@ const SpeakerDetail = () => {
                   )}
                 </div>
               </div>
-
-              {/* <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-100">
-                <Quote className="w-8 h-8 text-emerald-300 mb-3" />
-                <p className="text-gray-600 italic text-sm leading-relaxed">
-                  "The future belongs to those who believe in the beauty of
-                  their dreams and have the courage to pursue them."
-                </p>
-                <p className="text-emerald-600 text-xs mt-3 font-medium">
-                  — Inspiration for change
-                </p>
-              </div> */}
-
-              {/* <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  <Heart className="w-5 h-5 text-emerald-500" />
-                  Areas of Expertise
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Innovation",
-                    "Leadership",
-                    "AI Strategy",
-                    "Digital Transformation",
-                    "Impact Investing",
-                    "Policy Design",
-                  ].map((topic) => (
-                    <span
-                      key={topic}
-                      className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium hover:bg-emerald-100 hover:text-emerald-700 transition cursor-default"
-                    >
-                      {topic}
-                    </span>
-                  ))}
-                </div>
-              </div> */}
             </div>
 
             <div className="lg:col-span-2">

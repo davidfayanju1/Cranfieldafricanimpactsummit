@@ -10,6 +10,7 @@ export interface Speaker {
   achievements?: string[];
   isKeynote?: boolean;
   linkedin?: string;
+  isModeRator?: boolean;
 }
 
 // data/speakers.ts
@@ -117,6 +118,7 @@ export const speakersData: Speaker[] = [
       "Alongside her research work, she founded SASIE, a platform that translates research insights into practical discussions on technology, entrepreneurship, and innovation in Africa.",
     ],
     achievements: [],
+    isModeRator: true,
   },
 
   {
@@ -155,6 +157,7 @@ export const speakersData: Speaker[] = [
       "Rising star Award in Energy by CHARGE Brands 2024",
       "Equity, Diversity & Inclusion Focus Sponsored by Policy by Murray 2024",
     ],
+    isModeRator: true,
   },
   {
     id: "dr-aisha-ekundayo",
@@ -258,6 +261,7 @@ export const speakersData: Speaker[] = [
     achievements: [],
   },
   {
+    isModeRator: true,
     id: "ifeoluwa-ogunbunumi",
     name: "Ifeoluwa Ogunbunumi",
     role: "Founder & Chief Strategist",
