@@ -106,7 +106,7 @@ const Speakers = () => {
           </h1>
           <p className="hero-sub">
             Thought leaders, innovators, and change-makers shaping Africa's
-            future — gathered in one room.
+            future gathered in one room.
           </p>
         </div>
       </div>
