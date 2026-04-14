@@ -118,7 +118,7 @@ const SpeakerDetail = () => {
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  className={`w-full h-full object-cover transition duration-700 ${isImageLoaded ? "scale-100 opacity-100" : "scale-110 opacity-0"}`}
+                  className={`w-full h-full object-cover object-top transition duration-700 ${isImageLoaded ? "scale-100 opacity-100" : "scale-110 opacity-0"}`}
                   onLoad={() => setIsImageLoaded(true)}
                 />
               </div>
