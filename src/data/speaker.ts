@@ -38,6 +38,46 @@ export const speakersData: Speaker[] = [
     ],
   },
   {
+    id: "kenneth-amaeshi",
+    name: "Kenneth Amaeshi",
+    role: "Professor of Sustainable Finance and Governance",
+    organization: "School of Transnational Governance",
+    image: "/images/speakers/kenneth.jpeg",
+    panel:
+      "Beyond Aid: Who Funds Africa's Future? Impact Investment, Domestic Capital, or Sovereign Funds",
+    bio: [
+      "Kenneth Amaeshi is a Professor of Sustainable Finance and Governance at the School of Transnational Governance, currently on leave from the University of Edinburgh where he is the Chair in Business and Sustainable Development and Director of Scaling Business in Africa.",
+      "He is also a Visiting Professor of Leadership and Financial Markets in Africa at the London School of Economics and an Honorary Professor of Business in Africa at the Graduate School of Business, University of Cape Town, South Africa.",
+      "Kenneth is a leading scholar on sustainable business and finance in the global south, with research focused on financial market reforms and governance, sector-level policies for sustainability, and sustainability strategy in organisations.",
+      "He works closely with businesses and governments in Africa, Europe, and Asia, leading executive capacity building engagements and consultancy projects in sustainable finance, sustainability strategy, leadership, ethics, and governance.",
+      "Since 2015, he has significantly contributed to developing the intellectual foundations of Africapitalism — an economic philosophy for the development of Africa — and championed its mainstreaming in global academia.",
+      "Between 2016 and 2017, he was a Scholar in Residence at the National Pension Commission, Nigeria.",
+    ],
+    achievements: [
+      "Chair in Business and Sustainable Development at the University of Edinburgh",
+      "Visiting Professor at the London School of Economics",
+      "Honorary Professor at the University of Cape Town Graduate School of Business",
+      "Key contributor to developing the intellectual foundations of Africapitalism since 2015",
+    ],
+  },
+  {
+    id: "edidiong-uwemakpan",
+    name: "Edidiong Uwemakpan",
+    role: "Vice President, Corporate Affairs",
+    organization: "Moniepoint Inc.",
+    image: "/images/speakers/edidiong.jpeg",
+    panel:
+      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
+    bio: [
+      "Edidiong 'Didi' Uwemakpan is a corporate affairs and communications leader with a passion for how human behaviour shapes strategy, reputation, and business growth.",
+      "As Vice President, Corporate Affairs at Moniepoint Inc., one of Africa's largest fintech startups, she drives reputation management, government and regulatory relations, and strategic storytelling to position Moniepoint as the preferred brand.",
+      "With over a decade of experience influencing consumer behaviour, she has worked across renewables, energy, telecommunications, FMCG, and tech, shaping brands like Budweiser, KFC, Belron, Monster Energy, and Bharti Airtel.",
+      "She also served as Head of Marketing at Rensource Energy, strengthening its presence in Nigeria's cleantech space.",
+      "Didi holds a Bachelor's in Microbiology and an MSc in Marketing and Creative Analytics from ESCP Europe Business School.",
+    ],
+    achievements: [],
+  },
+  {
     id: "jermaine-craig",
     name: "Jermaine Craig",
     role: "Founder",
@@ -284,5 +324,21 @@ export const speakersData: Speaker[] = [
       "Hosted and chaired large-scale global tech conferences including LEAP Saudi Arabia, London Tech Week, GITEX Africa Morocco",
       "Hosted exclusive high-level delegate summits during UN General Assembly week in New York",
     ],
+  },
+
+  {
+    id: "ola-goriola",
+    name: "Ola Goriola",
+    role: "Founder and Head AI Researcher",
+    organization: "ConvergenceAI",
+    image: "/images/speakers/ola.jpeg",
+    panel: "AI, Data, and the Future of Healthcare in Africa.",
+    bio: [
+      "Ola Goriola is the Founder and Head AI Researcher at ConvergenceAI, where he leads work on responsible, context-aware AI systems tailored to African contexts.",
+      "A machine learning engineer and AI researcher, his work explores how data and artificial intelligence can drive inclusive innovation across Africa.",
+      "He contributes to global discussions on AI governance and digital transformation, with publications and insights featured by the World Economic Forum, OECD, ACET, and the South African Institute of International Affairs (SAIIA).",
+      "He holds a Master's degree in Entrepreneurship and Innovation from the Salford Business School.",
+    ],
+    achievements: [],
   },
 ];
