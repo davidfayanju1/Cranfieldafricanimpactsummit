@@ -60,6 +60,22 @@ export const speakersData: Speaker[] = [
       "Key contributor to developing the intellectual foundations of Africapitalism since 2015",
     ],
   },
+
+  {
+    id: "thelma-ekiyor",
+    name: "Thelma Ekiyor",
+    role: "International CEO",
+    organization: "Women for Women International",
+    image: "/images/THELMA.jpeg",
+    bio: [
+      "Thelma Ekiyor is an award-winning global leader in women's economic empowerment, philanthropy, impact investing, and international development, with over 25 years of experience across Africa, Europe, and the UK.",
+      "Starting her early career in women, peace, and security, Thelma went on to pioneer and lead multiple organisations, including as founding CEO of SME.NG, Afrigrants, TY Danjuma Foundation, and the West African Civil Society Institute (WACSI).",
+      "Thelma is also a doctoral researcher on women's entrepreneurship at Cranfield University, UK.",
+      "She holds an MBA from Imperial College London and an LLB from the University of Buckingham, UK.",
+      "She has served on numerous boards and investment committees in Africa and Europe, with additional expertise spanning gender lens investing, catalytic finance, philanthropy advisory, and entrepreneurship development.",
+    ],
+    achievements: [],
+  },
   {
     id: "edidiong-uwemakpan",
     name: "Edidiong Uwemakpan",
@@ -119,6 +135,24 @@ export const speakersData: Speaker[] = [
       "Leads payment solutions across UK and Central European retail ecosystem",
       "Recognised for collaborative leadership and strategic product innovation",
     ],
+  },
+  {
+    id: "inyene-nkanta",
+    name: "Dr. Inyene Nkanta",
+    role: "Lecturer in Business and the Creative Industries",
+    organization: "University of the West of Scotland",
+    image: "/images/INYENE.jpeg",
+    panel:
+      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
+    bio: [
+      "Dr. Inyene Nkanta is a Lecturer in Business and the Creative Industries at the University of the West of Scotland, UK, holding a Doctorate from the University of Wolverhampton and specialising in Entrepreneurship, Sustainability, and the Circular Economy.",
+      "Her research explores entrepreneurship, sustainable business models, circular economy practices, and social impact initiatives within global and African contexts.",
+      "She collaborates on international projects across Europe and Africa and currently serves as a Visiting Lecturer at several universities, including VIVES University of Applied Sciences (Belgium), Liberec University of Technology (Czech Republic), CBS (Germany), and Western Norway University of Applied Sciences (HVL, Norway).",
+      "She is the Chair of the Sustainability Special Interest Group within the Academy for African Studies, where she leads interdisciplinary research and sustainability-focused initiatives.",
+      "A passionate advocate for youth empowerment and responsible digital influence, Inyene uses social media to champion positive narratives around education, sustainability, and global citizenship.",
+      "She is also the founder of the Academic Baddie, a group of dedicated African scholars.",
+    ],
+    achievements: [],
   },
   {
     id: "kehinde-ayeni",
