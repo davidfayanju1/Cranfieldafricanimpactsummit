@@ -27,6 +27,16 @@ const Sponsors = () => {
       since: "2025",
       link: "https://www.cranfield.ac.uk",
     },
+
+    {
+      name: "Cranfield Student Association (CSA)",
+      logo: "/images/csa_logo.png",
+      category: "academic",
+      description:
+        "Elected student-run association supporting welfare and organising social, cultural and sporting activities",
+      since: "2025",
+      link: "http://www.mycsa.org.uk/",
+    },
     // {
     //   name: "African Development Bank",
     //   logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/African_Development_Bank_%28logo%29.svg/1200px-African_Development_Bank_%28logo%29.svg.png",
