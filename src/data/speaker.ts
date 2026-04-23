@@ -11,10 +11,31 @@ export interface Speaker {
   isKeynote?: boolean;
   linkedin?: string;
   isModeRator?: boolean;
+  isMC?: boolean;
 }
 
 // data/speakers.ts
 export const speakersData: Speaker[] = [
+  {
+    id: "leon-terry",
+    name: "Prof Leon A. Terry",
+    role: "Pro-Vice Chancellor of Education and Research",
+    organization: "Cranfield University",
+    isKeynote: true,
+    image: "/images/speakers/leon.jpeg",
+    bio: [
+      "Professor Leon Terry is Pro-Vice Chancellor of Education and Research at Cranfield University, responsible for academic excellence and strategic leadership across all aspects of the University's education, research, and knowledge exchange activities.",
+      "His vision is that Cranfield is globally recognised as the UK's applied research powerhouse.",
+      "Prof Terry graduated from Imperial College, London, and completed his MSc, PhD, and DSc at Cranfield University.",
+      "He is a leading international figure in agricultural and environmental research, with his personal scholarship driven by a need to preserve and maintain the quality of food to reduce losses.",
+    ],
+    achievements: [
+      "BSc (Hons) ARCS, MSc, PhD, PGCert, DSc from Imperial College London and Cranfield University",
+      "Fellow of the Institution of Agricultural Engineers (FIAgrE)",
+      "Fellow of the Royal Society of Biology (FRSB)",
+      "Fellow of the Higher Education Academy (FHEA)",
+    ],
+  },
   {
     id: "mojisola-hunponu-wusu",
     name: "Mojisola Hunponu-Wusu",
@@ -35,6 +56,70 @@ export const speakersData: Speaker[] = [
       "Supported 3,000 individuals worldwide through education, healthcare, and economic empowerment",
       "Impacted over 1,500 young Africans aged 16-35 through the GRIP Mentorship Programme",
       "Expanded GRIP reach through the GRIP Diaspora Series connecting diaspora professionals with Africa's economy",
+    ],
+  },
+  {
+    id: "thelma-ekiyor",
+    name: "Thelma Ekiyor",
+    role: "International CEO",
+    organization: "Women for Women International",
+    image: "/images/THELMA.jpeg",
+    bio: [
+      "Thelma Ekiyor is an award-winning global leader in women's economic empowerment, philanthropy, impact investing, and international development, with over 25 years of experience across Africa, Europe, and the UK.",
+      "Starting her early career in women, peace, and security, Thelma went on to pioneer and lead multiple organisations, including as founding CEO of SME.NG, Afrigrants, TY Danjuma Foundation, and the West African Civil Society Institute (WACSI).",
+      "Thelma is also a doctoral researcher on women's entrepreneurship at Cranfield University, UK.",
+      "She holds an MBA from Imperial College London and an LLB from the University of Buckingham, UK.",
+      "She has served on numerous boards and investment committees in Africa and Europe, with additional expertise spanning gender lens investing, catalytic finance, philanthropy advisory, and entrepreneurship development.",
+    ],
+    achievements: [],
+  },
+
+  {
+    id: "julius-oni",
+    name: "Dr. Julius Kunle Oni",
+    role: "Founder & CEO",
+    organization: "The O.N.I. Clinic",
+    image: "/images/speakers/julius-oni.jpeg",
+    bio: [
+      "Dr. Julius K. Oni is a globally recognised orthopedic surgeon and visionary healthcare entrepreneur, whose work spans clinical excellence, healthcare innovation, and cross-continental leadership.",
+      "He is the Founder and CEO of The O.N.I. Clinic (Ortho Nigeria International), a high-impact musculoskeletal centre committed to raising the standard of orthopedic care across Africa.",
+      "A specialist in adult hip and knee reconstruction, Dr. Oni previously served as the Director of Global Orthopaedics and Director of the Adult Hip and Knee Reconstructive Surgery Fellowship at Johns Hopkins, and also led the institution's Orthopaedic Surgery Diversity Council.",
+      "He is the founder of The O.N.I. Fellowship (formerly known as The DOC Fellowship), a post-residency programme designed to elevate orthopedic surgical training in Nigeria.",
+      "Since launching clinical operations in Nigeria, he has successfully performed dozens of joint replacement procedures with outstanding outcomes and has built strategic partnerships with leading healthcare institutions and medical device manufacturers.",
+      "With over 80 peer-reviewed publications and multiple speaking engagements across continents, Dr. Oni is not only a clinical authority but also a catalytic force in global health, research, and surgical education.",
+      "His vision is to position underserved countries, starting with Nigeria, as hubs of orthopedic excellence and innovation on the global stage.",
+      "Dr. Oni graduated summa cum laude with a degree in biology from SUNY Plattsburgh, earned his medical degree with Alpha Omega Alpha honours from Howard University College of Medicine, and completed his orthopedic surgery residency at NYU Hospital for Joint Diseases, followed by a joint replacement fellowship at Rush University Medical Center in Chicago.",
+      "In addition to his clinical work, Dr. Oni is a prolific investor with a portfolio spanning over 50 startups across diverse industries, including Helium Health and MDAAS Global. He is also Co-Founder and CEO of XSITE Capital, a U.S.-based real estate investment firm.",
+    ],
+    achievements: [
+      "Over 80 peer-reviewed publications",
+      "Named 'Top Doctor in Joint Replacement' by Baltimore Magazine consecutively from 2019–2022",
+      "One of four recipients globally for the 2023 Rothman-Ranawat Traveling Fellowship",
+      "Founder of The O.N.I. Fellowship for post-residency orthopedic surgical training in Nigeria",
+      "Portfolio of 50+ startup investments including Helium Health and MDAAS Global",
+      "Co-Founder & CEO of XSITE Capital, a U.S.-based real estate investment firm",
+    ],
+  },
+  {
+    id: "ade-ayeyemi",
+    name: "Ade Ayeyemi",
+    role: "Doctoral Researcher",
+    organization: "Cranfield University",
+    image: "/images/speakers/ade-ayeyemi.jpeg",
+    bio: [
+      "With over 35 years of experience in financial services, Ade Ayeyemi has had a distinguished career spanning leadership roles in multinational organisations, including Ecobank Transnational Incorporated (ETI) and Citigroup.",
+      "As Group CEO of ETI from 2015 to 2023, he led the strategic management of a diversified financial services group operating in 39 countries across Africa, Europe, the Middle East, and Asia. Under his leadership, the group achieved remarkable profitability milestones, including a return on equity exceeding 20% in 2022.",
+      "Before joining ETI, Ade spent over two decades at Citigroup, where he held various senior leadership roles, such as CEO for Sub-Saharan Africa and Managing Director for Global Transaction Services.",
+      "His expertise in financial product innovation, risk management, and technology-driven solutions has positioned him as a thought leader in transforming financial operations across emerging markets.",
+      "Ade Ayeyemi's transition from industry to academia reflects his commitment to leveraging professional expertise to contribute to academic research and policy development. As a doctoral student at Cranfield University, his research focuses on exploring the role of global regulations in shaping the efficiency, profitability, and stability of banks in Africa.",
+    ],
+    achievements: [
+      "Group CEO of Ecobank Transnational Incorporated (ETI) 2015–2023, operating across 39 countries",
+      "Achieved return on equity exceeding 20% at ETI in 2022",
+      "Over two decades at Citigroup including CEO for Sub-Saharan Africa",
+      "MSc in Financial Management from the University of London",
+      "Advanced Management Program (AMP) from Harvard Business School",
+      "Chartered Accountant (ACA)",
     ],
   },
   {
@@ -61,21 +146,6 @@ export const speakersData: Speaker[] = [
     ],
   },
 
-  {
-    id: "thelma-ekiyor",
-    name: "Thelma Ekiyor",
-    role: "International CEO",
-    organization: "Women for Women International",
-    image: "/images/THELMA.jpeg",
-    bio: [
-      "Thelma Ekiyor is an award-winning global leader in women's economic empowerment, philanthropy, impact investing, and international development, with over 25 years of experience across Africa, Europe, and the UK.",
-      "Starting her early career in women, peace, and security, Thelma went on to pioneer and lead multiple organisations, including as founding CEO of SME.NG, Afrigrants, TY Danjuma Foundation, and the West African Civil Society Institute (WACSI).",
-      "Thelma is also a doctoral researcher on women's entrepreneurship at Cranfield University, UK.",
-      "She holds an MBA from Imperial College London and an LLB from the University of Buckingham, UK.",
-      "She has served on numerous boards and investment committees in Africa and Europe, with additional expertise spanning gender lens investing, catalytic finance, philanthropy advisory, and entrepreneurship development.",
-    ],
-    achievements: [],
-  },
   {
     id: "edidiong-uwemakpan",
     name: "Edidiong Uwemakpan",
@@ -124,7 +194,7 @@ export const speakersData: Speaker[] = [
     organization: "Tesco Technology",
     image: "/images/speakers/lillian.jpeg",
     panel:
-      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
+      "Can AI Solve Africa's Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Lilian Auwor is a payments and product innovation leader with 7+ years of experience spanning financial services, emerging technologies, and large-scale customer-centric financial technology products.",
       "She currently serves as a Product Manager at Tesco Technology, where she leads the development of secure, scalable, and user-focused payment solutions used across the organisation's retail ecosystem in the UK and Central Europe.",
@@ -135,6 +205,21 @@ export const speakersData: Speaker[] = [
       "Leads payment solutions across UK and Central European retail ecosystem",
       "Recognised for collaborative leadership and strategic product innovation",
     ],
+  },
+  {
+    id: "tina-caruana",
+    name: "Tina Caruana",
+    role: "AI Creative Specialist",
+    organization: "Nzuri Talents",
+    image: "/images/speakers/tina.jpeg",
+    panel: "AI, Data, and the Future of Healthcare in Africa",
+    isModeRator: true,
+    bio: [
+      "Tina Caruana is an AI Creative Specialist who studied International Business and Marketing at the University of Leeds, with a focus on localised value creation for technologies developed in the Global North and applied in Sub-Saharan Africa.",
+      "She currently supports AI content guideline development for the King's Maudsley Partnership, exploring ethical uses of AI storytelling in healthcare.",
+      "Tina is the founder of Nzuri Talents, which focuses on improving generative AI models for accurate representation of African communities.",
+    ],
+    achievements: [],
   },
   {
     id: "inyene-nkanta",
@@ -161,7 +246,7 @@ export const speakersData: Speaker[] = [
     organization: "LEAP Africa",
     image: "/images/speakers/kehinde.jpeg",
     panel:
-      "From Policy to Execution: Innovation, Skills, and Africa’s Young Workforce",
+      "From Policy to Execution: Innovation, Skills, and Africa's Young Workforce",
     bio: [
       "Kehinde Ayeni leads LEAP Africa, a nonprofit organisation nurturing young African leaders and advancing sustainable development across the continent.",
       "Under her leadership, LEAP Africa delivers high-impact programmes across more than 30 African countries, reaching thousands of young people annually through its core focus areas and strategic pillars.",
@@ -183,7 +268,7 @@ export const speakersData: Speaker[] = [
     organization: "SASIE",
     image: "/images/speakers/jennifer.jpeg",
     panel:
-      "Why Africa’s Solutions Don’t Scale and What Research, Policy, and Practice Are Missing",
+      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
     bio: [
       "Dr Jennifer Daniel is a researcher and policy thinker focused on the design and performance of inclusion and entrepreneurship programmes within governments and development finance institutions.",
       "Her work examines how governments, universities, and development institutions design programmes intended to support entrepreneurs, innovation, and inclusion and why many of these initiatives struggle to demonstrate measurable economic outcomes.",
@@ -194,7 +279,6 @@ export const speakersData: Speaker[] = [
     achievements: [],
     isModeRator: true,
   },
-
   {
     id: "olu-omoyele",
     name: "Olu Omoyele",
@@ -202,7 +286,7 @@ export const speakersData: Speaker[] = [
     organization: "Chemonics International",
     image: "/images/speakers/olu.jpeg",
     panel:
-      "Beyond Aid: Who Funds Africa’s Future? Impact Investment, Domestic Capital, or Sovereign Funds",
+      "Beyond Aid: Who Funds Africa's Future? Impact Investment, Domestic Capital, or Sovereign Funds",
     bio: [
       "Olu Omoyele is a project leader working at the intersection of international development, climate finance, and private capital mobilisation.",
       "He currently manages donor-funded programmes focused on unlocking investment through public markets, with experience spanning origination, investment due diligence, ESG analysis, and stakeholder engagement across emerging markets.",
@@ -271,9 +355,9 @@ export const speakersData: Speaker[] = [
     role: "Fellow",
     organization: "The London School of Economics and Political Science",
     image: "/images/speakers/kayode.jpeg",
-    panel: `1.Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?
+    panel: `1.Can AI Solve Africa's Wicked Problems or Is the Hype Ahead of Reality?
     
-2.From Policy to Execution: Innovation, Skills, and Africa’s Young Workforce`,
+2.From Policy to Execution: Innovation, Skills, and Africa's Young Workforce`,
     bio: [
       "Kayode Adeniyi is a Fellow at The London School of Economics and Political Science.",
       "He works at the intersection of AI governance, digital public infrastructure, and technology policy.",
@@ -324,7 +408,7 @@ export const speakersData: Speaker[] = [
     organization: "Global Center on AI Governance",
     image: "/images/speakers/ayantola.jpeg",
     panel:
-      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
+      "Can AI Solve Africa's Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Ayantola Alayande is a researcher at the Global Center on AI Governance, where his work focuses on state-led approaches to AI governance, responsible AI policy measurement, and international AI cooperation.",
       "At the GCG, Ayantola has worked on a variety of AI research and advisory projects in Africa with partners including the IDRC, the Gates Foundation, Meta, Google, Luminate, the Atlantic Council, among others.",
@@ -342,7 +426,7 @@ export const speakersData: Speaker[] = [
     organization: "SWIF",
     image: "/images/speakers/ifeoluwa.jpeg",
     panel:
-      "Can AI Solve Africa’s Wicked Problems or Is the Hype Ahead of Reality?",
+      "Can AI Solve Africa's Wicked Problems or Is the Hype Ahead of Reality?",
     bio: [
       "Ifeoluwa Ogunbunumi is a Global Startup Strategist and AI Ecosystem Advisor, operating at the intersection of startups, investment, innovation, and public policy.",
       "As Founder & Chief Strategist of SWIF, she has advised over 200 startups across 23 countries, working closely with global accelerators, venture programs, governments, and investment platforms.",
@@ -359,7 +443,6 @@ export const speakersData: Speaker[] = [
       "Hosted exclusive high-level delegate summits during UN General Assembly week in New York",
     ],
   },
-
   {
     id: "ola-goriola",
     name: "Ola Goriola",
@@ -372,6 +455,22 @@ export const speakersData: Speaker[] = [
       "A machine learning engineer and AI researcher, his work explores how data and artificial intelligence can drive inclusive innovation across Africa.",
       "He contributes to global discussions on AI governance and digital transformation, with publications and insights featured by the World Economic Forum, OECD, ACET, and the South African Institute of International Affairs (SAIIA).",
       "He holds a Master's degree in Entrepreneurship and Innovation from the Salford Business School.",
+    ],
+    achievements: [],
+  },
+  {
+    id: "abi-bademosi",
+    name: "Abi Bademosi",
+    role: "MC / Event Host",
+    organization: "Abi Bademosi-MC",
+    image: "/images/speakers/abi-bademosi.jpeg",
+    isMC: true,
+    bio: [
+      "Abi is a dynamic MC and event host with a natural flair for connecting with audiences across all spheres.",
+      "She brings a unique blend of elegance, execution, and authenticity to every occasion, always ensuring a seamless and engaging experience for both organisers and audiences.",
+      "Her versatility is evident in the wide range of events she has hosted over the years, across corporate, private, and virtual settings.",
+      "Her commitment to excellence means she delivers to high standards across event types, from conferences to business and bespoke events, awards ceremonies, and more.",
+      "Whether you're planning an intimate gathering of 20 or a summit of 2,000, Abi is your trusted hosting partner for events that matter.",
     ],
     achievements: [],
   },
