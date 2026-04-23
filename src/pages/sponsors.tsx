@@ -37,6 +37,15 @@ const Sponsors = () => {
       since: "2025",
       link: "http://www.mycsa.org.uk/",
     },
+    {
+      name: "Society Of Black Academics",
+      logo: "/images/sba_logo.jpg",
+      category: "academic",
+      description:
+        "The Society of Black Academics (SBA) provides a supportive community where Black Academics and Aspiring Scholars connect, share insights, and strengthen their career paths.",
+      since: "2026",
+      link: "https://societyofblackacademics.com/",
+    },
     // {
     //   name: "African Development Bank",
     //   logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/African_Development_Bank_%28logo%29.svg/1200px-African_Development_Bank_%28logo%29.svg.png",
