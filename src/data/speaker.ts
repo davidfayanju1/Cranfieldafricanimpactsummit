@@ -12,6 +12,7 @@ export interface Speaker {
   linkedin?: string;
   isModeRator?: boolean;
   isMC?: boolean;
+  isSpecialGuest?: boolean;
 }
 
 // data/speakers.ts
@@ -21,7 +22,7 @@ export const speakersData: Speaker[] = [
     name: "Prof Leon A. Terry",
     role: "Pro-Vice Chancellor of Education and Research",
     organization: "Cranfield University",
-    isKeynote: true,
+    isKeynote: false,
     image: "/images/speakers/leon.jpeg",
     bio: [
       "Professor Leon Terry is Pro-Vice Chancellor of Education and Research at Cranfield University, responsible for academic excellence and strategic leadership across all aspects of the University's education, research, and knowledge exchange activities.",
@@ -35,6 +36,7 @@ export const speakersData: Speaker[] = [
       "Fellow of the Royal Society of Biology (FRSB)",
       "Fellow of the Higher Education Academy (FHEA)",
     ],
+    isSpecialGuest: true,
   },
   {
     id: "mojisola-hunponu-wusu",
@@ -72,6 +74,7 @@ export const speakersData: Speaker[] = [
       "She has served on numerous boards and investment committees in Africa and Europe, with additional expertise spanning gender lens investing, catalytic finance, philanthropy advisory, and entrepreneurship development.",
     ],
     achievements: [],
+    isSpecialGuest: true,
   },
 
   {
@@ -144,6 +147,7 @@ export const speakersData: Speaker[] = [
       "Honorary Professor at the University of Cape Town Graduate School of Business",
       "Key contributor to developing the intellectual foundations of Africapitalism since 2015",
     ],
+    isSpecialGuest: true,
   },
 
   {

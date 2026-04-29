@@ -213,6 +213,11 @@ const Speakers = () => {
                         Keynote
                       </span>
                     )}
+                    {speaker.isSpecialGuest && (
+                      <span className="absolute top-4 left-4 z-10 bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Special Guest
+                      </span>
+                    )}
                     {speaker.isModeRator && (
                       <span className="absolute top-4 left-4 z-10 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                         Moderator
