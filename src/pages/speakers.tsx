@@ -231,7 +231,7 @@ const Speakers = () => {
                     <img
                       src={speaker.image}
                       alt={speaker.name}
-                      className="w-full bg-red-800 h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-6">
