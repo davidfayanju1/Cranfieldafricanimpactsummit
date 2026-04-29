@@ -16,6 +16,7 @@ export interface Speaker {
 }
 
 // data/speakers.ts
+// data/speakers.ts
 export const speakersData: Speaker[] = [
   {
     id: "leon-terry",
@@ -148,6 +149,75 @@ export const speakersData: Speaker[] = [
       "Key contributor to developing the intellectual foundations of Africapitalism since 2015",
     ],
     isSpecialGuest: true,
+  },
+
+  {
+    id: "aisha-abdulaziz",
+    name: "Aisha Abdulaziz",
+    role: "Energy Access Specialist, Fellow LSE",
+    organization: "London School of Economics and Political Science",
+    image: "/images/speakers/abdulaziz.jpeg",
+    panel: "From Energy Poverty to Energy Access: Financing What Works",
+    bio: [
+      "Aisha Abdulaziz is a Kenyan Energy Access Specialist with over 15 years of experience providing technical and policy advisory in the preparation, implementation, management and monitoring of projects aimed at increasing access to energy services.",
+      "She has worked on projects in Kenya, Malawi, Mozambique, Rwanda, Somalia, Sudan, Tanzania and Uganda.",
+      "Aisha holds a BSc Energy Engineering degree from Kenyatta University and an MSc Sustainable Energy and Entrepreneurship degree from University of Nottingham.",
+      "She is a Doctoral Candidate in Science, Technology, Engineering and Public Policy at University College London and a Senior Fellow of the Atlantic Fellows for Social and Economic Equity Programme at the London School of Economics and Political Science.",
+      "For her PhD, she is exploring the interface between structural inequalities and electrification, and seeks to inform public policy to promote just and equitable outcomes through electrification.",
+    ],
+    achievements: [
+      "15+ years of experience in energy access across East Africa",
+      "Doctoral Candidate at UCL in Science, Technology, Engineering and Public Policy",
+      "Senior Fellow at LSE Atlantic Fellows for Social and Economic Equity Programme",
+    ],
+  },
+  {
+    id: "janet-mulu",
+    name: "Janet Mulu",
+    role: "International Trade Specialist & Founder",
+    organization: "ImpacTower",
+    image: "/images/speakers/janet.jpeg",
+    panel:
+      "From Policy to Execution: Innovation, Skills, and Africa's Young Workforce",
+    isModeRator: true,
+    bio: [
+      "Janet Mulu is an International Trade Specialist and sustainability professional with over 20 years of experience in international trade and development, specialising in trade policy, market access, sustainable value chains, and inclusive trade systems.",
+      "She has worked across Africa, the UK, and international development ecosystems, focusing on sustainable and ethical trade.",
+      "Janet is the Founder and CEO of ImpacTower, where she advises organisations on trade, sustainability, and development strategies that strengthen UK–Africa trade linkages and promote inclusive growth.",
+      "She has contributed to initiatives in trade policy, AfCFTA, and sustainable trade frameworks, supporting efforts to enhance equitable participation in global markets.",
+      "She is a Trade Advisor with the Commonwealth Businesswomen's Network and a member of the London Trade Roundtable and OWIT.",
+      "Janet holds an MSc in International Trade & Finance and an MBA in Export & Institutional Finance, and is an accredited ITS.",
+    ],
+    achievements: [
+      "20+ years in international trade and development",
+      "Founder & CEO of ImpacTower",
+      "Trade Advisor with the Commonwealth Businesswomen's Network",
+      "Member of London Trade Roundtable and OWIT",
+    ],
+  },
+  {
+    id: "mary-adeturinmo",
+    name: "Mary Adeturinmo",
+    role: "Healthcare and Design Researcher",
+    organization: "Imperial College London",
+    image: "/images/speakers/mary.jpeg",
+    panel:
+      "Know Your Bloodline: Generational impact through Research, Advocacy, and Community",
+    bio: [
+      "Mary Adeturinmo is a Healthcare and Design Researcher with a multidisciplinary background and personal lived experience with Sickle Cell, bringing a perspective to her work that is both shaped by research and rooted in lived experience.",
+      "Her work combines design thinking, systems thinking, and patient-centred approaches to advance understanding and care for those living with sickle cell disorder.",
+      "Patient and Public Involvement and Engagement are embedded throughout, ensuring that the voices and experiences of those affected guide and shape the research at every stage.",
+      "She is a founding member of the Imperial Sickle Cell Group at Imperial College London and Sickle Cell Alliance UK, and has contributed to research spanning co-design facilitation, qualitative research, genomics, and behavioural science.",
+      "As Project Lead for Know Your Bloodline, she is developing community sessions on genetic inheritance and reproductive health decision-making, building approaches that are scientifically grounded and culturally resonant.",
+      "Alongside her research, she has served as an Advisor to the NHS Race and Health Observatory, including contributing to Public Digital's digital discovery project on sickle cell care, and is a Sickle Cell Ambassador for NHS Blood and Transplant, where she led a national campaign reaching over seven million people and registering thousands of new donors from Black communities.",
+    ],
+    achievements: [
+      "Founding member of Imperial Sickle Cell Group and Sickle Cell Alliance UK",
+      "Project Lead for Know Your Bloodline",
+      "Advisor to the NHS Race and Health Observatory",
+      "Sickle Cell Ambassador for NHS Blood and Transplant",
+      "Led national campaign reaching over 7 million people",
+    ],
   },
 
   {
