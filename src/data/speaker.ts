@@ -16,7 +16,6 @@ export interface Speaker {
 }
 
 // data/speakers.ts
-// data/speakers.ts
 export const speakersData: Speaker[] = [
   {
     id: "leon-terry",
@@ -77,7 +76,6 @@ export const speakersData: Speaker[] = [
     achievements: [],
     isSpecialGuest: true,
   },
-
   {
     id: "julius-oni",
     name: "Dr. Julius Kunle Oni",
@@ -150,7 +148,6 @@ export const speakersData: Speaker[] = [
     ],
     isSpecialGuest: true,
   },
-
   {
     id: "aisha-abdulaziz",
     name: "Aisha Abdulaziz",
@@ -219,7 +216,28 @@ export const speakersData: Speaker[] = [
       "Led national campaign reaching over 7 million people",
     ],
   },
-
+  {
+    id: "fred-amonya",
+    name: "Dr Fred David Amonya",
+    role: "Senior Fellow in Complex Systems and Investment",
+    organization: "University of Birmingham",
+    image: "/images/speakers/fred.jpeg",
+    panel:
+      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
+    bio: [
+      "Dr Fred David Amonya is an infrastructure economist and engineer specialising in complexity science and public investment. He is Senior Fellow in Complex Systems and Investment at the University of Birmingham.",
+      "With over two decades of experience across Africa and internationally, he has advised governments, development banks, and private investors on infrastructure policy, PPP, and national development strategy.",
+      "His work challenges conventional appraisal methods, arguing that infrastructure operates within complex, dynamic systems where linear tools often fail.",
+      "He is the originator of Layered Operator Appraisal, a framework that rethinks decision-making under uncertainty, with particular relevance to Africa's scaling challenge.",
+    ],
+    achievements: [
+      "Senior Fellow in Complex Systems and Investment at University of Birmingham",
+      "Over 20 years of experience across Africa and internationally",
+      "Originator of Layered Operator Appraisal framework",
+      "Expert in infrastructure policy, PPP, and national development strategy",
+    ],
+  },
+  // ... rest of your speakers continue here
   {
     id: "edidiong-uwemakpan",
     name: "Edidiong Uwemakpan",
