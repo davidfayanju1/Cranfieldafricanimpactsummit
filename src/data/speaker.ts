@@ -566,4 +566,46 @@ export const speakersData: Speaker[] = [
     ],
     achievements: [],
   },
+  {
+    id: "dione-rogers",
+    name: "Dione Rogers",
+    role: "Founder",
+    organization: "The Flourishing Hub",
+    image: "/images/speakers/dione-rogers.jpeg", // Update path as needed
+    panel: "AI, Data, and the Future of Healthcare in Africa",
+    bio: [
+      "Dione Rogers is founder of The Flourishing Hub and a nationally recognised leader in ethical AI, digital health, and clinical informatics. With over three decades in healthcare and a master's degree in Artificial Intelligence, she blends deep nursing insight with strategic digital leadership.",
+      "A former Chief Nursing Information Officer and recipient of the CNO Silver Award, Dione is CHIME Faculty, an international speaker, and a trusted advisor to health systems and industry partners. Known as one of the NHS's leading clinical voices on AI, she champions equity, neurodiverse talent, and responsible innovation—helping organisations design technology that is safe, inclusive, and human-centred.",
+    ],
+    achievements: [
+      "Former Chief Nursing Information Officer",
+      "Recipient of the CNO Silver Award",
+      "CHIME Faculty",
+      "Master's in Artificial Intelligence",
+    ],
+    isKeynote: false,
+  },
+  {
+    id: "may-sule",
+    name: "Dr May Sule",
+    role: "Lecturer",
+    organization: "Cranfield University",
+    image: "/images/speakers/may-sule.jpeg", // Update path as needed
+    panel:
+      "Why Africa’s Solutions Don’t Scale and What Research, Policy, and Practice Are Missing",
+    bio: [
+      "Dr May Sule's background is in environmental engineering and environmental health risks. She obtained her BSc in Chemical Engineering (UniLag), MSc in Environmental Engineering (Newcastle) and PhD in Environmental Engineering (Imperial College London).",
+      "May was a promising leader in the water sector in Nigeria, managing the Usuma Dam Water Treatment Plant Abuja and an Area Manager of the FCT Water Board, before moving into academia in the UK. She was a Post-Doctoral Research Associate at Imperial College and a Senior Research Associate at the University of Oxford before joining Cranfield University as Lecturer in 2021.",
+      "Her research focuses on the intersection of water security and policy, integrated water resources management, climate change and sustainability. May has practical experience of carrying out and supervising research trials and fieldwork in many developing countries and has a keen interest in stakeholder engagement, equity issues and effectively communicating scientific evidence to help inform public policy.",
+      "She has a unique network of relationships with key stakeholders at the supranational levels including the African Ministers' Council on Water (AMCOW) and a strong record of working in collaboration with national and local water and health policymakers. She has served on strategic working groups for the World Health Organisation, UNICEF WASH and the Global Schistosomiasis Alliance. She is also the current Chairman of the Nigerian Society of Engineers, London UK Branch.",
+    ],
+    achievements: [
+      "BSc Chemical Engineering (UniLag)",
+      "MSc Environmental Engineering (Newcastle)",
+      "PhD Environmental Engineering (Imperial College London)",
+      "Current Chairman of the Nigerian Society of Engineers, London UK Branch",
+      "Served on strategic working groups for WHO, UNICEF WASH, and Global Schistosomiasis Alliance",
+    ],
+    isKeynote: false,
+  },
 ];
