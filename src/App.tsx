@@ -13,6 +13,7 @@ import Blogs from "./pages/blogs";
 import BlogsDetails from "./pages/detailsPage/blogs-details";
 import Speakers from "./pages/speakers";
 import SpeakerDetail from "./pages/detailsPage/speaker-details";
+import Programme from "./pages/programme";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/programme" element={<Programme />} />
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
         <Route path="/blog/:id" element={<BlogsDetails />} />
         <Route path="/speakers/:id" element={<SpeakerDetail />} />
