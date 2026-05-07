@@ -46,22 +46,24 @@ const Sponsors = () => {
       since: "2026",
       link: "https://societyofblackacademics.com/",
     },
-    // {
-    //   name: "African Development Bank",
-    //   logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/African_Development_Bank_%28logo%29.svg/1200px-African_Development_Bank_%28logo%29.svg.png",
-    //   category: "strategic",
-    //   description: "Regional multilateral development finance institution",
-    //   since: "2025",
-    //   link: "https://www.afdb.org",
-    // },
-    // {
-    //   name: "Tech Innovate Africa",
-    //   logo: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
-    //   category: "technology",
-    //   description: "Leading African technology innovation hub",
-    //   since: "2025",
-    //   link: "#",
-    // },
+    {
+      name: "Lumar Learn",
+      logo: "/images/sponsors/luma-learn.jpeg",
+      category: "industry",
+      description:
+        "Africa's favourite learning and teaching companion for learners, parents, and teachers",
+      since: "2026",
+      link: "https://www.lumalearn.ai/",
+    },
+    {
+      name: "Innopower",
+      logo: "/images/sponsors/innopower.jpeg",
+      category: "industry",
+      description:
+        "Building Strong Economies Across Africa. We partner with governments, institutions, and the African diaspora to turn talent into business owners and employable professionals.",
+      since: "2026",
+      link: "https://innopowerafrica.org/",
+    },
   ];
 
   // Partnership Categories (not tiers)
@@ -155,7 +157,7 @@ const Sponsors = () => {
               loading="eager"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-emerald-800/60 to-emerald-700/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-emerald-900/80 via-emerald-800/60 to-emerald-700/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-20">
@@ -263,28 +265,30 @@ const Sponsors = () => {
               .map((sponsor, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
+                  className="bg-white border flex flex-col justify-between border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-white rounded-lg border border-gray-200 p-3 flex items-center justify-center">
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="max-w-full max-h-full object-contain"
-                      />
+                  <div className="item-container">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-white rounded-lg border border-gray-200 p-3 flex items-center justify-center">
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
+                          {sponsor.name}
+                        </h3>
+                        <span className="text-xs text-gray-500 mt-1 block">
+                          Partner since {sponsor.since}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
-                        {sponsor.name}
-                      </h3>
-                      <span className="text-xs text-gray-500 mt-1 block">
-                        Partner since {sponsor.since}
-                      </span>
-                    </div>
+                    <p className="text-gray-600 text-sm mb-4">
+                      {sponsor.description}
+                    </p>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {sponsor.description}
-                  </p>
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span className="px-2 py-1 bg-gray-100 rounded text-xs">
                       {sponsor.category === "academic"
@@ -398,7 +402,7 @@ const Sponsors = () => {
       {/* Custom Partnership Section */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="bg-gradient-to-r from-emerald-50 to-white rounded-2xl p-8 md:p-12">
+          <div className="bg-linear-to-r from-emerald-50 to-white rounded-2xl p-8 md:p-12">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-light text-gray-900 mb-4">
                 Flexible{" "}
@@ -417,7 +421,7 @@ const Sponsors = () => {
                 <h4 className="font-medium text-gray-900">Ways to Support:</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 shrink-0">
                       <svg
                         className="w-3 h-3"
                         fill="currentColor"
@@ -435,7 +439,7 @@ const Sponsors = () => {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 shrink-0">
                       <svg
                         className="w-3 h-3"
                         fill="currentColor"
@@ -453,7 +457,7 @@ const Sponsors = () => {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 shrink-0">
                       <svg
                         className="w-3 h-3"
                         fill="currentColor"
@@ -471,7 +475,7 @@ const Sponsors = () => {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 shrink-0">
                       <svg
                         className="w-3 h-3"
                         fill="currentColor"
@@ -513,7 +517,7 @@ const Sponsors = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-emerald-600 to-emerald-700">
+      <div className="bg-linear-to-r from-emerald-600 to-emerald-700">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="text-center text-white">
             <h2 className="text-3xl font-light mb-6">
