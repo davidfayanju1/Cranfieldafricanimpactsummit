@@ -149,6 +149,70 @@ export const speakersData: Speaker[] = [
     isSpecialGuest: true,
   },
   {
+    id: "emil-nabo-ekiyor",
+    name: "Emil Nabo Ekiyor",
+    role: "Founder & CEO",
+    organization: "InnoPower LLC",
+    isKeynote: false,
+    image: "/images/speakers/emil-nabor.png", // Update with actual image path
+    bio: [
+      "A transformative leader fusing the competitive drive of a professional athlete with a mission-driven vision for economic empowerment and talent development across two continents.",
+      "Born in Lagos, Nigeria, Emil relocated to the United States at 15, where he excelled both academically and athletically. His athletic career competing at the highest level of professional football taught him discipline, adaptability, and vision under pressure.",
+      "Today, as Founder and CEO of InnoPower LLC, Emil creates high-impact partnerships at the intersection of U.S. enterprise innovation and African market emergence. His work demonstrates how strategic collaboration can unlock opportunity in underserved communities by linking African and American talent to ecosystems of entrepreneurship, education, and innovation.",
+      "Through InnoPower Africa, a foundation he launched in Lagos. Emil is leading ambitious efforts to train 10,000 African youth in AI, entrepreneurship, and digital innovation. This initiative operates with support from Nigeria's Diaspora Commission (NIDCOM), the Nigeria Philanthropy Office, University of Lagos Centre of Excellence, ECOWAS Small Business Coalition, and Itana (Talent City).",
+    ],
+    achievements: [
+      "2025 Nile Award (Philanthropic) - Savvy Initiative Recognition Awards",
+      "Society of Innovators Inductee - Purdue Northwest, 2025",
+      "Indianapolis Urban League Award 'Community Partner Impact Award' 2025",
+      "MLK Jr. Community Impact - City of Indianapolis, 2024",
+      "Rally Cross Sector Innovation 'Innovator of the Year' Award, 2024",
+      "Indiana's Most Influential - IBJ '250 Most Influential Leaders' 2023 & 2024",
+      "Trained 1,000+ Hoosiers in cutting-edge AI skills (partnership with Indiana Wesleyan University and State of Indiana)",
+      "Founder of Indy Biz Pass (connecting local entrepreneurs to resources and networks)",
+    ],
+    panel:
+      "Can AI solve Africa's wicked problems or is the hype ahead of reality?", // Matches the Summit panel you indicated
+  },
+  {
+    id: "irene-otieno",
+    name: "Irene Otieno",
+    role: "Founder",
+    organization: "Cynea AI",
+    isKeynote: false,
+    image: "/images/speakers/irene-otieno.jpeg", // Update with actual image path
+    bio: [
+      "Irene Otieno is the Founder of Cynea AI, a UK-based company deploying enterprise AI solutions through agentic systems, automation, and digital intelligence infrastructure.",
+      "With a background spanning chemistry, data systems, and emerging technologies, she works at the intersection of AI, innovation, and digital transformation across Africa and the UK.",
+      "Her work focuses on helping organisations strengthen operations, compliance, workforce capability, and decision-making through practical and scalable AI adoption.",
+      "Irene is also an advocate for AI capability development, youth innovation, and building trusted digital infrastructure for emerging economies.",
+    ],
+    achievements: [
+      "Founder of Cynea AI",
+      "Expert in enterprise AI, agentic systems, and digital intelligence infrastructure",
+      "Background in chemistry, data systems, and emerging technologies",
+    ],
+    panel:
+      "Can AI solve Africa's wicked problems...or is the hype ahead of reality?",
+  },
+  {
+    id: "edidiong-uwemakpan",
+    name: "Edidiong Uwemakpan",
+    role: "Vice President, Corporate Affairs",
+    organization: "Moniepoint Inc.",
+    image: "/images/speakers/edidiong.jpeg",
+    panel:
+      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
+    bio: [
+      "Edidiong 'Didi' Uwemakpan is a corporate affairs and communications leader with a passion for how human behaviour shapes strategy, reputation, and business growth.",
+      "As Vice President, Corporate Affairs at Moniepoint Inc., one of Africa's largest fintech startups, she drives reputation management, government and regulatory relations, and strategic storytelling to position Moniepoint as the preferred brand.",
+      "With over a decade of experience influencing consumer behaviour, she has worked across renewables, energy, telecommunications, FMCG, and tech, shaping brands like Budweiser, KFC, Belron, Monster Energy, and Bharti Airtel.",
+      "She also served as Head of Marketing at Rensource Energy, strengthening its presence in Nigeria's cleantech space.",
+      "Didi holds a Bachelor's in Microbiology and an MSc in Marketing and Creative Analytics from ESCP Europe Business School.",
+    ],
+    achievements: [],
+  },
+  {
     id: "aisha-abdulaziz",
     name: "Aisha Abdulaziz",
     role: "Energy Access Specialist, Fellow LSE",
@@ -238,23 +302,7 @@ export const speakersData: Speaker[] = [
     ],
   },
   // ... rest of your speakers continue here
-  {
-    id: "edidiong-uwemakpan",
-    name: "Edidiong Uwemakpan",
-    role: "Vice President, Corporate Affairs",
-    organization: "Moniepoint Inc.",
-    image: "/images/speakers/edidiong.jpeg",
-    panel:
-      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
-    bio: [
-      "Edidiong 'Didi' Uwemakpan is a corporate affairs and communications leader with a passion for how human behaviour shapes strategy, reputation, and business growth.",
-      "As Vice President, Corporate Affairs at Moniepoint Inc., one of Africa's largest fintech startups, she drives reputation management, government and regulatory relations, and strategic storytelling to position Moniepoint as the preferred brand.",
-      "With over a decade of experience influencing consumer behaviour, she has worked across renewables, energy, telecommunications, FMCG, and tech, shaping brands like Budweiser, KFC, Belron, Monster Energy, and Bharti Airtel.",
-      "She also served as Head of Marketing at Rensource Energy, strengthening its presence in Nigeria's cleantech space.",
-      "Didi holds a Bachelor's in Microbiology and an MSc in Marketing and Creative Analytics from ESCP Europe Business School.",
-    ],
-    achievements: [],
-  },
+
   {
     id: "jermaine-craig",
     name: "Jermaine Craig",
