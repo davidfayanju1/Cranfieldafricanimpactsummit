@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import DefaultLayout from "../layout/DefaultLayout";
 
 // Configuration for the grid
-const START_HOUR = 8; // 8 AM
+const START_HOUR = 8; // 8 AM - Changed to 8 to accommodate 8:30 registration
 const HOUR_HEIGHT = 120; // px per hour
 const MINUTE_HEIGHT = HOUR_HEIGHT / 60;
 
+// Updated schedule data based on the provided document (Final Programme_CAIS2026.docx)
 const scheduleData = [
   {
     id: 1,
@@ -32,7 +33,7 @@ const scheduleData = [
     end: "09:20",
     title: "Welcome Address",
     details: "Cranfield University",
-    speakers: "Pro Vice-Chancellor",
+    speakers: "Prof. Leon Terry (Pro Vice-Chancellor)",
     type: "highlight",
   },
   {
@@ -41,7 +42,7 @@ const scheduleData = [
     end: "09:35",
     title: "Goodwill Message",
     details: "Patron",
-    speakers: "Thelma Ekiyor - International CEO Women for Women Intl.",
+    speakers: "Thelma Ekiyor (International CEO Women for Women Intl.)",
     type: "highlight",
   },
   {
@@ -50,33 +51,32 @@ const scheduleData = [
     end: "09:55",
     title: "Keynote Address",
     details: "Beyond Aid: Who Funds Africa's Future?",
-    speakers: "Mojisola Hunponu-Wusu - President Woodhall Capital",
+    speakers: "Mojisola Hunponu-Wusu (President Woodhall Capital Group)",
     type: "highlight",
   },
   {
     id: 6,
-    start: "09:55",
-    end: "10:40",
-    title: "Panel 1: Solutions",
-    details:
-      "Why Africa's Solutions Don't Scale and What Research, Policy, and Practice Are Missing",
+    start: "10:00",
+    end: "10:45",
+    title: "Panel 1: Why Africa's Solutions Don't Scale",
+    details: "What Research, Policy, and Practice Are Missing",
     speakers:
-      "Dr. Jennifer Daniel, Dr. Inyene Nkanta, Edidiong Uwemakpan, Dr May Sule, Dr Fred Amonya",
+      "Moderator: Dr. Jennifer Daniel. Panelists: Dr. Inyene Nkanta, Edidiong Uwemakpan, Dr May Sule, Dr Fred Amonya",
     type: "panel",
   },
   {
     id: 7,
-    start: "10:40",
-    end: "10:50",
+    start: "10:45",
+    end: "10:55",
     title: "Pitch Session",
     details: "Pitch 1 & 2 (2 × 5 mins)",
-    speakers: "Desmond Evurani & Mayowa",
+    speakers: "Desmond Evurani & Mayowa Andrew",
     type: "breakout",
   },
   {
     id: 8,
-    start: "10:50",
-    end: "11:05",
+    start: "10:55",
+    end: "11:10",
     title: "Coffee Break & Networking",
     details: "Refreshments & connections",
     speakers: "All",
@@ -84,112 +84,92 @@ const scheduleData = [
   },
   {
     id: 9,
-    start: "11:05",
-    end: "11:15",
+    start: "11:10",
+    end: "11:20",
     title: "Research Presentation",
     details: "Mitigating Conflict and Climate Obstacles to Africa's Potential",
-    speakers: "Dr Colin D. Robinson - Kings College London",
+    speakers: "Dr Colin D. Robinson (Kings College London)",
     type: "breakout",
   },
   {
     id: 10,
-    start: "11:15",
-    end: "12:00",
-    title: "Panel 2: AI Hype",
-    details:
-      "Can AI Solve Africa's Wicked Problems or Is the Hype Ahead of Reality?",
+    start: "11:20",
+    end: "12:05",
+    title: "Panel 2: Can AI Solve Africa's Wicked Problems?",
+    details: "Is the Hype Ahead of Reality?",
     speakers:
-      "Lillian Awuor, Kayode Adeniyi, Ayantola Alayande, Dr Desmond Bisandu",
+      "Moderator: Ifeoluwa Ogunbufunmi. Panelists: Lillian Awuor, Kayode Adeniyi, Ayantola Alayande, Dr Desmond Bisandu, Emil Ekiyor",
     type: "panel",
   },
   {
     id: 11,
-    start: "12:00",
-    end: "12:10",
+    start: "12:05",
+    end: "12:15",
     title: "Research Presentation",
     details: "Know Your BloodLine: Sickle Cell Genetic Inheritance",
-    speakers: "Mary Adeturinmo - Imperial College",
+    speakers: "Mary Adeturinmo (Imperial College)",
     type: "breakout",
   },
   {
     id: 12,
-    start: "12:10",
-    end: "12:55",
-    title: "Breakout Sessions",
+    start: "12:20",
+    end: "13:05",
+    title: "Breakout Sessions (Parallel Tracks)",
     details:
       "A: AI, Data & Healthcare | B: Energy Access Financing | C: Skills & Workforce Innovation",
-    speakers: "Various Experts",
+    speakers: "Various experts (see session details)",
     type: "breakout",
   },
   {
     id: 13,
-    start: "12:55",
-    end: "13:00",
-    title: "Pitch 3",
-    details: "Pitch Your Wicked Solution",
-    speakers: "Mary Wambugu (University of Leeds)",
-    type: "breakout",
-  },
-  {
-    id: 14,
-    start: "13:00",
-    end: "13:20",
-    title: "Special Presentation",
-    details: "Africapitalism - Rethinking Capitalism for Africa",
-    speakers:
-      "Prof. Kenneth Amaeshi - Chair in Business and Sustainable Development",
-    type: "highlight",
-  },
-  {
-    id: 15,
-    start: "13:20",
-    end: "14:20",
+    start: "13:05",
+    end: "14:05",
     title: "Lunch Break",
     details: "Networking & Showcases",
     speakers: "All",
     type: "break",
   },
   {
-    id: 16,
-    start: "14:20",
+    id: 14,
+    start: "14:10",
     end: "14:30",
-    title: "Research Presentation",
-    details: "Mycotoxins in Africa",
-    speakers: "Dr Carol Verheecke-Vaesse - Cranfield University",
+    title: "Special Presentation",
+    details: "Africapitalism - Rethinking Capitalism for Africa",
+    speakers: "Prof. Kenneth Amaeshi (European University Institute)",
+    type: "highlight",
+  },
+  {
+    id: 15,
+    start: "14:30",
+    end: "15:15",
+    title: "Panel 3: Beyond Aid",
+    details:
+      "Who Funds Africa's Future? (Impact Investment, Domestic Capital, Sovereign Funds)",
+    speakers:
+      "Moderator: Aisha Abdulaziz. Panelists: Prof. Kenneth Amaeshi, Mojisola Hunponu-Wusu, Ade Ayeyemi, Olu Omoyele",
+    type: "panel",
+  },
+  {
+    id: 16,
+    start: "15:15",
+    end: "15:25",
+    title: "Pitch Session",
+    details: "Pitch 3 & 4 - Pitch Your Wicked Solution",
+    speakers: "Crystal & Johnson-Mitchell, Nadjette Djemouai",
     type: "breakout",
   },
   {
     id: 17,
-    start: "14:30",
-    end: "15:15",
-    title: "Panel 3: Funding",
-    details:
-      "Beyond Aid: Who Funds Africa's Future? (Impact Investment, Domestic Capital, Sovereign Funds)",
-    speakers:
-      "Mojisola Hunponu-Wusu, Ade Ayeyemi, Prof. Kenneth Amaeshi, Olu Omoyele",
-    type: "panel",
+    start: "15:25",
+    end: "15:35",
+    title: "Research Presentation",
+    details: "Mycotoxins in Africa",
+    speakers: "Dr Carol Verheecke-Vaesse (Cranfield University)",
+    type: "breakout",
   },
   {
     id: 18,
-    start: "15:15",
-    end: "15:20",
-    title: "Research Presentation",
-    details: "Clean Cooling",
-    speakers: "Dr Natalia Falagán - Cranfield University",
-    type: "breakout",
-  },
-  {
-    id: 19,
-    start: "15:20",
-    end: "15:30",
-    title: "Pitch 4 & 5",
-    details: "Pitch Your Wicked Solution",
-    speakers: "Nadjette and Crystal",
-    type: "breakout",
-  },
-  {
-    id: 20,
-    start: "15:30",
+    start: "15:35",
     end: "15:45",
     title: "Reflections & Takeaways",
     details: "Synthesis of insights from panels, breakouts, and discussions",
@@ -197,7 +177,7 @@ const scheduleData = [
     type: "breakout",
   },
   {
-    id: 21,
+    id: 19,
     start: "15:45",
     end: "16:00",
     title: "Closing Remarks",
@@ -206,10 +186,10 @@ const scheduleData = [
     type: "highlight",
   },
   {
-    id: 22,
+    id: 20,
     start: "16:00",
     end: "17:00",
-    title: "Networking & Dinner",
+    title: "Networking & Small Chops",
     details: "Strategic networking, relationship building",
     speakers: "All participants",
     type: "break",
@@ -359,7 +339,8 @@ const Programme = () => {
                 {scheduleData.map((event) => {
                   const top = calculatePosition(event.start);
                   const height = calculateHeight(event.start, event.end);
-                  const isSmallEvent = height < 50;
+                  // Determine layout based on available height
+                  const isVerySmallEvent = height < 40;
 
                   return (
                     <motion.div
@@ -368,30 +349,37 @@ const Programme = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       onMouseEnter={() => setHoveredEvent(event.id)}
                       onMouseLeave={() => setHoveredEvent(null)}
-                      className={`absolute left-2 right-4 rounded-lg border-l-4 p-2 cursor-pointer transition-all z-0 hover:z-30 shadow-md ${
+                      className={`absolute left-2 right-4 rounded-lg border-l-4 cursor-pointer transition-all z-0 hover:z-30 shadow-md ${
                         event.type === "highlight"
                           ? "bg-emerald-50 border-emerald-500 text-emerald-900"
                           : event.type === "panel"
                             ? "bg-blue-50 border-blue-500 text-blue-900"
                             : "bg-gray-50 border-gray-400 text-gray-700"
-                      }`}
+                      } ${isVerySmallEvent ? "p-1.5" : "p-2"}`}
                       style={{ top: `${top}px`, height: `${height - 4}px` }}
                     >
                       <div className="flex flex-col h-full overflow-hidden">
-                        <span className="text-[10px] font-bold opacity-70 mb-0.5 uppercase tracking-wider">
-                          {event.start} - {event.end}
-                        </span>
-
-                        {isSmallEvent ? (
-                          <h4 className="font-bold text-xs leading-tight truncate">
-                            {event.title}
-                          </h4>
-                        ) : (
+                        {isVerySmallEvent ? (
+                          // Compact layout for very short events (10-15 min)
                           <>
+                            <span className="text-[9px] font-semibold opacity-70 uppercase tracking-wide leading-none">
+                              {event.start} - {event.end}
+                            </span>
+                            <h4 className="font-bold text-[10px] leading-tight mt-0.5 line-clamp-2">
+                              {event.title}
+                            </h4>
+                          </>
+                        ) : (
+                          // Normal layout for longer events
+                          <>
+                            <span className="text-[10px] font-bold opacity-70 mb-0.5 uppercase tracking-wider">
+                              {event.start} - {event.end}
+                            </span>
                             <h4 className="font-bold text-sm md:text-base leading-tight">
                               {event.title}
                             </h4>
-                            {height > 80 && (
+                            {/* Additional details only for taller cards */}
+                            {height > 60 && (
                               <p className="text-xs mt-1 opacity-60 line-clamp-2">
                                 {event.details}
                               </p>
