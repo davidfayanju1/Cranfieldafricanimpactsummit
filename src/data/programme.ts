@@ -180,7 +180,7 @@ export const scheduleData = [
     id: 20,
     start: "16:00",
     end: "17:00",
-    title: "Networking",
+    title: "Networking & Refreshments",
     details: "Strategic networking, relationship building",
     speakers: "All participants",
     type: "break",
