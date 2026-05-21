@@ -174,13 +174,13 @@ const Mission = () => {
                         {
                           year: "2026",
                           title: "Inaugural Summit",
-                          desc: "Plan to gather 250+ participants",
+                          desc: "Gathered 250+ participants",
                         },
 
                         {
                           year: "2026",
                           title: "Research Pitch",
-                          desc: "",
+                          desc: "Pitch Your Wicked Solution",
                         },
                         {
                           year: "Present",
