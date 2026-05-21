@@ -18,6 +18,8 @@ const AuthorDetails = () => {
   const { slug } = useParams<{ slug: string }>();
   const author = getAuthorBySlug(slug || "");
 
+  console.log(slug, "SLUG");
+
   if (!author) {
     return (
       <DefaultLayout>
