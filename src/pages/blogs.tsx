@@ -1,3 +1,4 @@
+// Blogs.tsx
 import DefaultLayout from "../layout/DefaultLayout";
 import {
   ArrowRight,
@@ -9,50 +10,28 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-interface Blog {
-  id: number;
-  title: string;
-  excerpt: string;
-  author: string;
-  authorTitle: string;
-  date?: string;
-  readTime: string;
-  category: string;
-  image: string;
-  featured: boolean;
-}
+import { blogPosts } from "../data/blogs-data";
 
 const Blogs = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const blogCategories = [
-    { id: "all", name: "All Posts", count: 1 },
-    { id: "innovation", name: "Innovation", count: 0 },
-    { id: "africa", name: "Africa Focus", count: 1 },
-    { id: "sustainability", name: "Sustainability", count: 0 },
-    { id: "events", name: "Event Recaps", count: 0 },
-  ];
+  // Calculate category counts dynamically
+  const getCategoryCount = (categoryId: string) => {
+    if (categoryId === "all") return blogPosts.length;
+    return blogPosts.filter((post) => post.category === categoryId).length;
+  };
 
-  // ONLY ONE REAL BLOG POST from your docx
-  const blogPosts: Blog[] = [
-    {
-      id: 1,
-      title:
-        "From Dependency to Dignity: Why Impact Investment in African SMEs Matters",
-      excerpt:
-        "Africa's struggle for development has long been framed through the language of deficits what the continent lacks, who must help, and how much aid is required. Reclaiming Africa's agency and dignity demands a decisive shift: from dependency to ownership, from consumption to production, and from aid to impact driven investment.",
-      author: "Ayodele Babatomiwa Oluwaropo",
-      authorTitle:
-        "PhD Researcher, Bettany Centre for Entrepreneurship, Cranfield University",
-      date: "March 14, 2026",
-      readTime: "8 min read",
-      category: "africa",
-      image: "/images/blog-1.jpeg",
-      featured: true,
-    },
-  ];
+  const blogCategories = [
+    { id: "all", name: "All Posts" },
+    { id: "africa", name: "Africa Focus" },
+    { id: "healthcare", name: "Healthcare" },
+    { id: "innovation", name: "Innovation" },
+    { id: "sustainability", name: "Sustainability" },
+  ].map((cat) => ({
+    ...cat,
+    count: getCategoryCount(cat.id),
+  }));
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearch =
@@ -67,11 +46,9 @@ const Blogs = () => {
     return matchesSearch && matchesCategory;
   });
 
-  // const featuredPost = blogPosts.find((post) => post.featured);
-
   return (
     <DefaultLayout>
-      {/* Hero Section - KEEP YOUR EXISTING DESIGN */}
+      {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-emerald-900 to-emerald-800 text-white py-16 md:py-24">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto pt-[8rem] px-4 md:px-8">
@@ -84,7 +61,8 @@ const Blogs = () => {
             </h1>
             <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
               Discover thought-provoking articles, event recaps, and expert
-              insights on innovation, sustainability, and impact across Africa.
+              insights on innovation, sustainability, healthcare, and impact
+              across Africa.
             </p>
 
             {/* Search Bar */}
@@ -106,7 +84,7 @@ const Blogs = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-8 py-12">
-        {/* Categories Filter - KEEP YOUR EXISTING DESIGN */}
+        {/* Categories Filter */}
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
@@ -144,7 +122,7 @@ const Blogs = () => {
           </div>
         </div>
 
-        {/* SHOW THE BLOG POST INSTEAD OF EMPTY STATE */}
+        {/* Blog Posts Grid */}
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
@@ -157,7 +135,7 @@ const Blogs = () => {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -175,14 +153,13 @@ const Blogs = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-gray-500 block">
+                      <Link
+                        to={`/author/${post.authorSlug}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-xs text-gray-500 hover:text-emerald-600 transition-colors block"
+                      >
                         {post.author}
-                      </span>
-                      {/* {post.authorTitle && (
-                        <span className="text-xs text-gray-400 italic">
-                          {post.authorTitle}
-                        </span>
-                      )} */}
+                      </Link>
                     </div>
                     <span className="text-emerald-600 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                       Read More <ArrowRight className="w-3 h-3" />
@@ -193,24 +170,16 @@ const Blogs = () => {
             ))}
           </div>
         ) : (
-          /* Empty State - KEEP YOUR EXISTING DESIGN but only show when no posts */
           <div className="min-h-[60vh] flex items-center justify-center py-16">
-            {/* ... your existing empty state JSX ... */}
             <div className="max-w-3xl mx-auto text-center">
-              {/* Animated Icon Container */}
               <div className="relative mb-8">
-                {/* Background Glow */}
                 <div className="absolute inset-0 bg-emerald-200/30 rounded-full blur-3xl animate-pulse"></div>
-
-                {/* Main Icon Circle */}
                 <div className="relative inline-flex">
                   <div className="absolute inset-0 bg-emerald-100 rounded-full animate-ping opacity-20"></div>
                   <div className="relative z-10 w-28 h-28 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-full flex items-center justify-center shadow-xl">
                     <div className="absolute inset-0 rounded-full border-2 border-emerald-200/50 animate-spin-slow"></div>
                     <PenTool className="w-12 h-12 text-emerald-600 transform -rotate-12" />
                   </div>
-
-                  {/* Floating Icons */}
                   <div className="absolute -top-4 -right-4 animate-float-slow">
                     <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center shadow-lg">
                       <Feather className="w-6 h-6 text-amber-600" />
@@ -224,7 +193,6 @@ const Blogs = () => {
                 </div>
               </div>
 
-              {/* Main Empty State Message */}
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
                 No Articles Found
               </h2>
@@ -256,7 +224,6 @@ const Blogs = () => {
         )}
       </div>
 
-      {/* Add custom animations - KEEP YOUR EXISTING STYLES */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }

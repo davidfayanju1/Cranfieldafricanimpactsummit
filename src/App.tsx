@@ -14,6 +14,7 @@ import BlogsDetails from "./pages/detailsPage/blogs-details";
 import Speakers from "./pages/speakers";
 import SpeakerDetail from "./pages/detailsPage/speaker-details";
 import Programme from "./pages/programme";
+import AuthorDetails from "./pages/detailsPage/blog-author-details";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
         <Route path="/blog/:id" element={<BlogsDetails />} />
         <Route path="/speakers/:id" element={<SpeakerDetail />} />
+        <Route path="/author/:slug" element={<AuthorDetails />} />
 
         <Route
           path="/team-member-details/:id"
