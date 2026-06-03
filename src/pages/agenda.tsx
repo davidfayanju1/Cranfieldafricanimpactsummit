@@ -221,7 +221,7 @@ const Agenda = () => {
             {/* Background Image */}
             <div className="absolute inset-0">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80"
+                src="/images/summit-images/summit-main.jpg"
                 alt="Africa strategic development background"
                 className="w-full h-full object-cover blur-md scale-110"
                 loading="eager"
