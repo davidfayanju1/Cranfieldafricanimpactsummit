@@ -354,7 +354,7 @@ const WhyUs = () => {
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-20"
                 style={{
-                  backgroundImage: `url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&sat=-20")`,
+                  backgroundImage: `url("/images/summit-images/summit-main.jpg")`,
                 }}
               ></div>
               <div className="absolute inset-0 flex items-center justify-center p-8">

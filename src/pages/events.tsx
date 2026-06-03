@@ -505,6 +505,15 @@ const Events = () => {
       image: "/images/upcoming-2.jpeg",
       category: "summit",
       featured: true,
+      images: [
+        "/images/summit-images/summit-cover.jpg",
+        "/images/summit-images/summit-main.jpg",
+        "/images/summit-images/summit1.jpg",
+        "/images/summit-images/summit2.jpg",
+        "/images/summit-images/summit3.jpg",
+        "/images/summit-images/summit5.jpg",
+        "/images/summit-images/summit6.jpg",
+      ],
     },
   ];
 
@@ -564,7 +573,7 @@ const Events = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+              "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/summit-images/summit-cover.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/30 to-transparent"></div>

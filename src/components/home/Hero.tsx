@@ -12,21 +12,24 @@ const Hero = () => {
       overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
     },
     {
-      id: 2,
-      imageUrl:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      overlay: "from-gray-900/80 via-gray-900/40 to-emerald-900/20",
-    },
-    {
       id: 3,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597245083280-607579e14c58?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageUrl: "/images/summit-images/summit-main.jpg",
       overlay: "from-gray-900/70 via-gray-900/30 to-emerald-900/25",
     },
     {
+      id: 2,
+      imageUrl: "/images/summit-images/summit-cover.jpg",
+      overlay: "from-gray-900/80 via-gray-900/40 to-emerald-900/20",
+    },
+
+    {
+      id: 5,
+      imageUrl: "/images/summit-images/summit2.jpg",
+      overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
+    },
+    {
       id: 4,
-      imageUrl:
-        "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageUrl: "/images/summit-images/summit1.jpg",
       overlay: "from-gray-900/75 via-gray-900/35 to-emerald-900/15",
     },
   ];
