@@ -78,6 +78,17 @@ const Team = () => {
         linkedin: "#",
       },
     },
+    {
+      id: 7,
+      name: "Matthew Henry Jackson-Koufie",
+      role: "WASH Researcher",
+      bio: "Matthew Henry Jackson-Koufie is a PhD researcher at Cranfield University in the Water, Sanitation and Hygiene (WASH) sector, focusing on sustainable sanitation for low-income urban areas in sub-Saharan Africa.",
+      image: "/images/matthew.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "#", // Add LinkedIn URL if available
+      },
+    },
   ];
 
   const handleMemberClick = (id: number) => {

@@ -223,6 +223,30 @@ Chanda brings a people‑centered approach to her work, valuing inclusion, colla
         "Managed successful digital campaign reaching 50,000+ people",
       ],
     },
+    {
+      id: 7,
+      name: "Matthew Henry Jackson-Koufie",
+      role: "WASH Researcher",
+      bio: "Matthew Henry Jackson-Koufie is a PhD researcher at Cranfield University in the Water, Sanitation and Hygiene (WASH) sector, focusing on sustainable sanitation for low-income urban areas in sub-Saharan Africa.",
+      fullBio: `Matthew Henry Jackson-Koufie is a PhD researcher at Cranfield University in the Water, Sanitation and Hygiene (WASH) sector. His research directly focuses on providing sustainable sanitation to low-income urban areas within sub-Saharan Africa. He currently works with various stakeholders in sub-Saharan Africa to evaluate sanitation systems for their improvement.
+
+His background is in Chemical Engineering, and his previous work experience has included project management, supporting people experiencing homelessness, product development, teaching and research. His passion is to see Africa develop to be full of self-reliant, thriving communities.
+
+Matthew holds an MEng in Chemical Engineering with Diploma in International Studies (DIntS) and is in his 3rd year at Cranfield University.`,
+      image: "/images/matthew.jpeg", // You'll need to add this image
+      linkedin: "#", // Add LinkedIn URL if available
+      email: "matthew.jackson-koufie@cranfield.ac.uk",
+      location: "London, UK",
+      yearsAtCranfield: 3,
+      education: [
+        "PhD in WASH, Cranfield University (Ongoing - 3rd year)",
+        "MEng in Chemical Engineering with Diploma in International Studies (DIntS)",
+      ],
+      achievements: [
+        "Working with stakeholders across sub-Saharan Africa on sanitation system evaluation",
+        "Focus on sustainable sanitation solutions for low-income urban areas",
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -353,8 +377,8 @@ Chanda brings a people‑centered approach to her work, valuing inclusion, colla
 
                   {member.linkedin && member.linkedin !== "#" && (
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
-                        <Linkedin className="w-5 h-5 text-blue-600" />
+                      <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                        <Linkedin className="w-5 h-5 text-emerald-600" />
                       </div>
                       <div>
                         <div className="text-sm text-gray-500">LinkedIn</div>
@@ -373,8 +397,8 @@ Chanda brings a people‑centered approach to her work, valuing inclusion, colla
 
                   {member.location && (
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-amber-600" />
+                      <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                        <MapPin className="w-5 h-5 text-emerald-600" />
                       </div>
                       <div>
                         <div className="text-sm text-gray-500">Location</div>
@@ -387,8 +411,8 @@ Chanda brings a people‑centered approach to her work, valuing inclusion, colla
 
                   {member.yearsAtCranfield && (
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center">
-                        <Calendar className="w-5 h-5 text-violet-600" />
+                      <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                        <Calendar className="w-5 h-5 text-emerald-600" />
                       </div>
                       <div>
                         <div className="text-sm text-gray-500">Experience</div>
