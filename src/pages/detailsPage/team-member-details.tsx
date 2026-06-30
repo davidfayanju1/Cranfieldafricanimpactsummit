@@ -250,7 +250,6 @@ Matthew holds an MEng in Chemical Engineering with Diploma in International Stud
   ];
 
   useEffect(() => {
-    // Simulate API call
     setTimeout(() => {
       const foundMember = teamMembers.find((m) => m.id === Number(id));
       setMember(foundMember || null);
