@@ -207,8 +207,7 @@ export const blogPosts: Blog[] = [
     excerpt:
       "For most of the 20th century, competition law spoke a narrow language of prices, output, and consumer welfare. As Africa stands at the centre of two of the world's most consequential Global Value Chains, critical minerals and agricultural commodities, this article argues that competition policy must be reimagined as an instrument of sustainable development.",
     author: "Omowonuola Adekanmbi",
-    authorTitle:
-      "LLM Candidate, Bettany Centre for Entrepreneurship, Cranfield University",
+    authorTitle: "Founder & Editor-in-Chief, The Competition Brief",
     authorSlug: "omowonuola-adekanmbi",
     authorImage: "/images/blog-authors/wonuola.jpg",
     date: "June 30, 2026",
@@ -405,20 +404,19 @@ Linia is passionate about addressing global disparities in genetic research and 
   {
     slug: "omowonuola-adekanmbi",
     name: "Omowonuola Adekanmbi",
-    title: "LLM Candidate, Bettany Centre for Entrepreneurship, Cranfield University",
-    bio: "Omowonuola is an LLM candidate whose research and writing focus on competition law, regulatory policy, and sustainable development across African markets.",
-    longBio: `Omowonuola Adekanmbi is an LLM candidate whose work explores how competition law can be reimagined as a lever for sustainable development across African markets.
+    title: "Founder & Editor-in-Chief, The Competition Brief",
+    bio: "Omowonuola Adekanmbi is the Founder and Editor-in-Chief of The Competition Brief, a digital publication delivering analysis of competition law developments across Africa and Europe, and a corporate and commercial solicitor qualified in England & Wales and Nigeria.",
+    longBio: `Omowonuola Adekanmbi is the Founder and Editor-in-Chief of The Competition Brief, a digital publication delivering analysis of competition law developments across Africa and Europe for policymakers, practitioners, and academics.
 
-Her research examines how African competition authorities, from South Africa and Nigeria to Kenya and Egypt, are broadening their mandates to integrate environmental sustainability and public interest considerations into merger review and enforcement, particularly within the green minerals and agricultural value chains that anchor Africa's role in global trade.
+A corporate and commercial solicitor qualified in both England & Wales and Nigeria, she has years of transactional experience advising domestic and international clients on cross-border M&A, private equity, joint ventures, and competition law matters, gained at a leading Tier 1 Nigerian law firm.
 
-She is interested in the intersection of regulatory policy, industrial development, and continental harmonisation efforts such as the AfCFTA Competition Protocol.`,
+She holds a First-Class LLM in Commercial Law from the University of Cambridge, where she completed advanced modules in EU and UK competition law and was awarded the St Edmund's College Prize. Her research focuses on competition enforcement in African markets, abuse of dominance in digital and agricultural value chains, and the intersection of competition policy with sustainability and development.`,
     image: "/images/blog-authors/wonuola.jpg",
-    location: "Cranfield, UK",
     expertise: [
       "Competition Law",
-      "Regulatory Policy",
-      "Sustainable Development",
-      "African Markets",
+      "Mergers & Acquisitions",
+      "Competition Enforcement",
+      "Sustainability & Development",
     ],
     posts: blogPosts.filter(
       (post) => post.authorSlug === "omowonuola-adekanmbi"
