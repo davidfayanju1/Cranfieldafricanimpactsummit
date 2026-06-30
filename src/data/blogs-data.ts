@@ -200,6 +200,151 @@ export const blogPosts: Blog[] = [
       <p><em>Linia Tendai Zambezi is the Founder and CEO of Afromics, a genomics startup focused on building African genomic datasets for inclusive precision medicine. She holds degrees in Biomedicine, Bioinformatics, and Genomic Medicine, and is passionate about addressing global disparities in genetic research. Find out more at <a href="https://www.afromics.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">afromics.org</a>.</em></p>
     `,
   },
+  {
+    id: 3,
+    title:
+      "Competition Law as a Lever for Sustainable Development: Rethinking African Markets in an Age of Green Value Chains",
+    excerpt:
+      "For most of the 20th century, competition law spoke a narrow language of prices, output, and consumer welfare. As Africa stands at the centre of two of the world's most consequential Global Value Chains, critical minerals and agricultural commodities, this article argues that competition policy must be reimagined as an instrument of sustainable development.",
+    author: "Omowonuola Adekanmbi",
+    authorTitle:
+      "LLM Candidate, Bettany Centre for Entrepreneurship, Cranfield University",
+    authorSlug: "omowonuola-adekanmbi",
+    authorImage: "/images/blog-authors/wonuola.jpg",
+    date: "June 30, 2026",
+    readTime: "12 min read",
+    category: "sustainability",
+    image:
+      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    featured: false,
+    content: `
+      <h2><strong>Introduction</strong></h2>
+
+      <p>For most of the 20th century, competition law spoke a narrow language: prices, output, consumer welfare and market efficiency. In Africa, this vocabulary was inherited largely intact from the Global North's model, even though the continent's economic realities demanded a wider conversation. Now, that conversation is finally opening up.</p>
+
+      <br />
+
+      <p>Across the continent, competition authorities are quietly redrawing the boundaries of what their mandate covers. Public interest provisions are being broadened to include environmental sustainability. Merger reviews are now going beyond considering the traditional likelihood of price increases to the potential adverse effects on environmental outcomes, labor markets and small producers. This shift is important and is happening as Africa stands at the center of two of the world's most consequential Global Value Chains (GVCs): critical minerals for the energy transition and agricultural commodities for global food systems. How African competition regimes evolve over the next decade will shape whether the continent extracts genuine value from these chains or remains locked into the upstream extractive role it has played for generations.</p>
+
+      <br />
+
+      <p>This article argues that competition policy across Africa must be reimagined as an instrument of sustainable development (by integrating non-price parameters) and not its competitor. It examines how specific African countries, namely Nigeria, Kenya, Egypt and South Africa, are navigating that reframing, how regional bodies can harmonise these efforts, and concludes with actionable policy recommendations.</p>
+
+      <br />
+
+      <h2><strong>Evolving Approaches to Competition Law and Sustainability</strong></h2>
+
+      <p>Competition law analysis was largely anchored to a consumer welfare standard, measured predominantly through short term price and output effects. However, as Khan has argued, this narrow focus is ill suited to capturing the full architecture of market power in the modern economy, particularly where dominant platforms can entrench structural advantages through strategies that do not immediately manifest in higher consumer prices but nonetheless undermine the competitive process and diminish long term consumer interests, including product diversity and innovation. More recently, scholars and policymakers have extended this critique further, recognising that the competitive harms left unregistered by a price centric framework may also include the deterioration of environmental quality and sustainability outcomes. Consequently, authorities have started shifting, for example, the OECD's work on sustainability and the 2023 EU Horizontal Guidelines (Chapter 9), which provide a dedicated framework for assessing sustainability agreements between competitors. Similarly, the UK's Competition and Markets Authority and the Dutch Authority for Consumers and Markets have introduced frameworks to ensure that competition enforcement does not chill green cooperation.</p>
+
+      <br />
+
+      <p>Within the African context, the case for a broader mandate is even stronger. <strong>First</strong>, many African nations face institutional capacity constraints in standalone environmental or labour regulators, making the competition authority a vital catch all for market oversight. <strong>Second</strong>, the structural inequality embedded in African markets often means that competition on the merits is illusory without state intervention to protect smaller, sustainable entrants. <strong>Finally</strong>, regional bodies have explicit developmental ambitions that transcend mere price centricity. While critics argue that broadening competition law risks regulatory unpredictability, the emerging consensus is that an effects-based approach must now account for the negative externalities of environmental degradation.</p>
+
+      <br />
+
+      <h2><strong>Sustainability Integration in African Competition Regimes</strong></h2>
+
+      <h2><strong><i>South Africa</i></strong></h2>
+
+      <p>South Africa explicitly incorporates public interest provisions into antitrust review, including the promotion of small businesses owned by historically disadvantaged persons. An example of this is the most recent trend of imposing environmental conditions on mergers, such as mandatory carbon emission commitments or investments in green energy infrastructure as a prerequisite for clearance. This reflects an emerging approach in which sustainability operates as a public interest condition imposed as a prerequisite for merger clearance. However, empirical evidence linking such conditions to measurable welfare improvements remains limited, raising questions about whether they deliver real results or function primarily as political commitments. What this demonstrates is that competition law can be harnessed to pursue developmental and environmental goals, but the legitimacy of this approach depends on developing verifiable theories of harm and robust monitoring frameworks to ensure that public interest conditions produce real outcomes rather than regulatory uncertainty.</p>
+
+      <br />
+
+      <h2><strong><i>Nigeria</i></strong></h2>
+
+      <p>The Federal Competition and Consumer Protection Commission (FCCPC) operates under a broad, multi-functional mandate encompassing both competition enforcement and consumer protection. The FCCPC's engagement with sustainability has been primarily through its consumer protection function, with the FCCPC identifying the increasing prevalence of greenwashing litigation as an area exposing regulatory gaps in the Nigerian market. However, there remains an unexploited opportunity in deploying competition enforcement tools, particularly in abuse of dominance and merger review, to incentivize green innovation and research &amp; development.</p>
+
+      <br />
+
+      <h2><strong><i>Kenya</i></strong></h2>
+
+      <p>Kenya's Competition Authority (CAK) has taken a more interventionist posture, particularly in agriculture. It is the first jurisdiction in Africa to prohibit the abuse of buyer power as a standalone offence. It directly targets dominant buyers imposing unfair trading conditions on smallholder farmers, a concern with clear sustainability dimensions given the link between market concentration in agricultural inputs and food security outcomes. The CAK's joint report with the World Bank on Kenya's fertilizer subsidy programme explicitly recommended strengthening anti-cartel oversight and ensuring that the most vulnerable smallholders benefit from market reforms.</p>
+
+      <br />
+
+      <h2><strong><i>Egypt</i></strong></h2>
+
+      <p>Egypt's Competition Authority (ECA) has historically concentrated its enforcement resources on hard core cartels, as demonstrated by its 2025 prosecution of 162 broiler chick producers and three further price fixing decisions in the egg market. The ECA's 2021–2025 Strategic Plan aligns its mission with Egypt's Sustainable Development Strategy (Vision 2030), and the 2024 overhaul of the merger control regime has significantly strengthened the ECA's institutional toolkit. These developments provide the foundation for sector specific market studies, particularly in Egypt's rapidly expanding renewable energy sector, where barriers to entry for new providers and concentration in generation infrastructure remain significant.</p>
+
+      <br />
+
+      <h2><strong><i>COMESA (Common Market for Eastern and Southern Africa)</i></strong></h2>
+
+      <p>At the regional level, the COMESA Competition and Consumer Commission (the "Commission") is reshaping the landscape through its 2025 Regulations. Amongst all the other changes made, the most important one worth noting here is that for the first time, the Commission is empowered to consider public interest grounds that may justify an otherwise anticompetitive transaction, and these grounds now expressly include environmental protection or sustainability considerations alongside employment, the ability of small and medium-sized firms to be competitive, the ability of industries in the Common Market to compete in international markets, and innovation considerations. The Regulations make clear, however, that the Commission will place greater weight on the outcomes of the competition assessment than on public interest factors, a hierarchy that distinguishes the COMESA framework from South Africa's regime, where the competition and public interest assessments are co-equal.</p>
+
+      <br />
+
+      <p>In practical terms, transactions resulting in significant reductions in greenhouse emissions may be viewed favorably, while those reversing environmental gains or creating barriers to green solutions may attract scrutiny. This matters because it allows the regional regulator to scrutinize mergers not only for their price and competition effects, but for their impact on the continent's green transition, particularly in cross border infrastructure. It should be mentioned that, while this framework is promising, it has been untested, and there are questions about the Commission's technical capacity to conduct prospective analyses of green value chains where competitive effects may be difficult to quantify.</p>
+
+      <br />
+
+      <h2><strong>The Global Value Chain Dimension</strong></h2>
+
+      <p>The debate about sustainability and competition becomes concrete in Global Value Chains (GVCs), where African markets act as critical nodes and structural determinants of economic resilience. Take mining for example: Africa holds a dominant global share of cobalt, lithium, copper, manganese, and rare earths, which are the bedrock of the global green transition. Despite this upstream resource endowment, the mining sector faces a structural concentration problem, where raw extraction is controlled by a combination of global firms and state-backed enterprises, while domestic processing and refining remains negligible. China's midstream dominance in refining creates a bottleneck that confines African markets into a role of pure extraction, often bypassing local environmental standards and foreclosing opportunities for value addition.</p>
+
+      <br />
+
+      <p>African responses signal a move toward legitimate industrial policy ambitions. South Africa's Draft Mineral Resources Development Bill, 2025 seeks to enhance provisions relating to the beneficiation of minerals and mineral products, impose export controls on strategic minerals, and tighten ministerial oversight over the transfer of mineral resources. At the continental level, the African Green Minerals Strategy provides a roadmap for harnessing Africa's mineral wealth to drive value addition at source, regional industrialization, and climate resilience, explicitly targeting critical minerals as levers for inclusive growth.</p>
+
+      <br />
+
+      <p>For competition authorities, the challenge is adjudicating between AfCFTA's open market disciplines and these industrial policy ambitions. Enforcers must therefore adopt a competition analysis that looks beyond current market conditions to assess how they would develop over the next decade, so that new domestic refining ventures are not shut out by global firms that control the entire supply chain.</p>
+
+      <br />
+
+      <p>In agriculture, sustainability is inseparable from how value is distributed along the supply chain. Across many African markets, a small number of dominant processors and retailers control the buying side, enabling them to dictate terms to smallholder farmers who must either adopt unsustainable, high-input farming practices or face exclusion from the value chain entirely. Examples like Kenya's dairy concentration, Nigeria's input markets and Egypt's agribusiness illustrate how a narrow focus on low consumer prices ignores the negative externalities of producer end poverty and soil degradation. Competition law must reshape its buyer power doctrine to internalize these concerns. Recognizing sustainability standardisation agreements as pro-competitive can level the playing field, provided they are not naked restrictions used to fix prices.</p>
+
+      <br />
+
+      <p>In terms of harmonisation, the AfCFTA is the ultimate mechanism for harmonisation. Just as the European Competition Network (ECN) fostered soft convergence across member states, the AfCFTA competition protocol must ensure that national initiatives do not lead to fragmentation in the internal market. True harmonisation requires a shared theory of harm that prioritises the process of competition over immediate price outcomes, recognizing that certain sustainability commitments are necessary to the success of regional green projects.</p>
+
+      <br />
+
+      <h2><strong>Policy Recommendations</strong></h2>
+
+      <p>The foregoing analysis points to several interrelated reforms that competition authorities across the continent and their regional counterparts should consider as the sustainability dimension of enforcement matures. The most foundational reform concerns market definition. Authorities have traditionally defined markets by reference to price, output, and substitutability, but where environmental quality and resource efficiency materially differentiate products, they should be recognised as core quality parameters. Treating sustainability as extraneous to competition ignores its real influence on consumer choice, entry conditions, and long-term market development.</p>
+
+      <br />
+
+      <p>African jurisdictions could also adapt the model introduced by the 2023 EU Horizontal Guidelines, which provide a framework for assessing sustainability agreements under Article 101(3) TFEU. Transparent, non-discriminatory sustainability standards should benefit from a soft safe harbour that gives firms legal certainty to cooperate on green objectives without cartel liability, provided such agreements are not used to disguise price-fixing or market allocation.</p>
+
+      <br />
+
+      <p>In sectors where green innovation is nascent, particularly critical mineral processing and renewable energy infrastructure, authorities should prioritise innovation-based theories of harm that protect the competitive process in research and development rather than focusing narrowly on static price effects.</p>
+
+      <br />
+
+      <p>At the institutional level, the risk of inconsistent enforcement outcomes across jurisdictions calls for a continental referral mechanism. Drawing on the ECN's architecture, such a mechanism would allocate cases to the best-placed authority, reduce duplication, and prevent forum shopping. The AfCFTA Competition Protocol provides the natural institutional home, though operationalisation will require political commitment and sustained capacity-building.</p>
+
+      <br />
+
+      <p>Finally, competition authorities also need expanded market investigation powers to conduct sector inquiries into green mineral value chains and agricultural supply networks before anticompetitive harm crystallises.</p>
+
+      <br />
+
+      <h2><strong>Conclusion</strong></h2>
+
+      <p>Rethinking African markets in the age of green value chains requires competition law to pivot from being a passive observer of price fluctuations. Instead, it must be a proactive lever for sustainable development. By moving from a narrow consumer welfare logic to a framework that prioritises innovation, quality, and market structure, African competition authorities can ensure the continent is a leader in the creation of sustainable, resilient markets.</p>
+    `,
+    references: [
+      "Sunside Acquisitions/NBL Investment Holdings and the Distell beverage businesses (Competition Tribunal of South Africa, Case No LM136Dec21, 8 March 2023).",
+      "COMESA Competition and Consumer Protection Regulations 2025.",
+      "Competition Act 89 of 1998 (South Africa), as amended by the Competition Amendment Act 18 of 2018.",
+      "Competition Act No 12 of 2010 (Kenya), as amended by the Competition Amendment Act No 27 of 2019.",
+      "Consolidated Version of the Treaty on the Functioning of the European Union, art 101.",
+      "Draft Mineral Resources Development Bill 2025 (South Africa).",
+      "Renewable Energy Law No 203 of 2014 (Egypt).",
+      "European Commission, 'Guidelines on the Applicability of Article 101 of the Treaty on the Functioning of the European Union to Horizontal Co-operation Agreements' [2023] OJ C259/1.",
+      "Lina M Khan, 'Amazon's Antitrust Paradox' (2017) 126 Yale LJ 710.",
+      "Fox EM and Bakhoum M, Making Markets Work for Africa: Markets, Development, and Competition Law in Sub-Saharan Africa (OUP 2019).",
+      "Bonakele T and others, 'Introduction: African Competition Policy' (2022) 60 Review of Industrial Organization 1.",
+      "Raslan A, 'Competition Policy and Inequality: Developing Countries in the Spotlight' (2017) CPI Antitrust Chronicle.",
+      "African Union, 'Africa's Green Minerals Strategy (AGMS)' (March 2025).",
+      "Kigwiru VK, 'Supranational or Cooperative? Rethinking the African Continental Free Trade Area Agreement Competition Protocol Institutional Design' (2024) 12(1) Journal of Antitrust Enforcement 68.",
+      "Competition Authority of Kenya and World Bank, 'Fertiliser Subsidy Faces Reform Calls to Boost Competition and Protect Farmer Choice' (November 2025).",
+      "Helmy, Hamza and Partners, 'Egypt: The Egyptian Competition Authority Issues Its Largest Price Fixing Cartel Decision and Expands the Scope of Commercially Sensitive Information' (Lexology, 27 February 2025).",
+    ],
+  },
 ];
 
 // data/blogs-data.ts (add author images and Instagram if needed)
@@ -256,6 +401,28 @@ Linia is passionate about addressing global disparities in genetic research and 
       email: "linia@afromics.org",
     },
     posts: blogPosts.filter((post) => post.authorSlug === "linia-zambezi"),
+  },
+  {
+    slug: "omowonuola-adekanmbi",
+    name: "Omowonuola Adekanmbi",
+    title: "LLM Candidate, Bettany Centre for Entrepreneurship, Cranfield University",
+    bio: "Omowonuola is an LLM candidate whose research and writing focus on competition law, regulatory policy, and sustainable development across African markets.",
+    longBio: `Omowonuola Adekanmbi is an LLM candidate whose work explores how competition law can be reimagined as a lever for sustainable development across African markets.
+
+Her research examines how African competition authorities, from South Africa and Nigeria to Kenya and Egypt, are broadening their mandates to integrate environmental sustainability and public interest considerations into merger review and enforcement, particularly within the green minerals and agricultural value chains that anchor Africa's role in global trade.
+
+She is interested in the intersection of regulatory policy, industrial development, and continental harmonisation efforts such as the AfCFTA Competition Protocol.`,
+    image: "/images/blog-authors/wonuola.jpg",
+    location: "Cranfield, UK",
+    expertise: [
+      "Competition Law",
+      "Regulatory Policy",
+      "Sustainable Development",
+      "African Markets",
+    ],
+    posts: blogPosts.filter(
+      (post) => post.authorSlug === "omowonuola-adekanmbi"
+    ),
   },
 ];
 
