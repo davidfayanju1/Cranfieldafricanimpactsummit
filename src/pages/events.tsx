@@ -9,6 +9,7 @@ import {
   Sparkles,
   Camera,
   ArrowRight,
+  Lock,
 } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 
@@ -31,6 +32,8 @@ interface Event {
   images?: string[];
   category: EventType;
   featured: boolean;
+  inviteOnly?: boolean;
+  rsvpEmail?: string;
 }
 
 type FilterType = "all" | "upcoming" | "past";
@@ -100,6 +103,16 @@ const EventCard = ({
             {event.category}
           </span>
         </div>
+
+        {/* Invite Only Badge */}
+        {event.inviteOnly && (
+          <div className="absolute top-4 right-4">
+            <span className="bg-amber-500/95 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1">
+              <Lock className="w-3 h-3" />
+              Invite Only
+            </span>
+          </div>
+        )}
 
         {/* Title Overlay */}
         <div className="absolute bottom-4 left-4 right-4">
@@ -247,6 +260,14 @@ const SingleImageDisplay = ({ event }: { event: Event }) => (
       style={{ objectPosition: "center 30%" }}
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+    {event.inviteOnly && (
+      <div className="absolute top-4 right-4">
+        <span className="bg-amber-500/95 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1">
+          <Lock className="w-3 h-3" />
+          Invite Only
+        </span>
+      </div>
+    )}
     <div className="absolute bottom-8 left-8 right-8">
       <span className="inline-block bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
         {event.organizedBy}
@@ -521,22 +542,24 @@ const Events = () => {
       subtitle: "With a Practitioner's Guide",
       date: "Saturday, July 25, 2026",
       dateObj: new Date("2026-07-25"),
-      time: "5:00 PM",
-      venue:
-        "The Woughton House, Newport Rd, Woughton on the Green, Milton Keynes MK6 3LR, UK",
+      time: "5:30 PM - 8:00 PM",
+      venue: "Milton Keynes, UK. Full venue address shared upon RSVP",
       description:
-        "Join us for the launch of 'Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa: With a Practitioner's Guide', with a foreword by Nobel Peace Laureate Leymah Gbowee.",
+        "Save the date for the launch of 'Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa: With a Practitioner's Guide' by Thelma Ekiyor. This event is strictly by invitation, please RSVP at tellyekiyor@gmail.com to attend.",
       organizedBy: "Cranfield Africa Impact Summit Society",
-      tagline: "Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa",
+      tagline:
+        "Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa",
       highlights: [
-        "Celebrate the launch of a new book on women entrepreneurs and post-conflict recovery in Africa",
-        "Foreword by Leymah Gbowee, Nobel Peace Laureate",
-        "Includes a practitioner's guide for those working in post-conflict and fragile economies",
-        "Network with authors, practitioners, and researchers in the field",
+        "Strictly by invitation only RSVP required to attend",
+        "RSVP at tellyekiyor@gmail.com",
+        "Meet author Thelma Ekiyor at the launch of her new book",
+        "Celebrate a milestone for women's entrepreneurship and post-conflict recovery scholarship in Africa",
       ],
-      image: "/images/events/book-launch-cover.jpg",
+      image: "/images/events/book-launch.jpeg",
       category: "launch",
       featured: true,
+      inviteOnly: true,
+      rsvpEmail: "tellyekiyor@gmail.com",
     },
   ];
 
@@ -779,14 +802,24 @@ const Events = () => {
                   </div>
                 </div>
 
-                {/* Close Button */}
-                <div className="mt-8 flex justify-end">
+                {/* Close / RSVP Buttons */}
+                <div className="mt-8 flex justify-end gap-3">
                   <button
                     onClick={() => setShowEventModal(false)}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium transition-colors"
                   >
                     Close
                   </button>
+                  {selectedEvent.rsvpEmail && (
+                    <a
+                      href={`mailto:${selectedEvent.rsvpEmail}?subject=${encodeURIComponent(
+                        `RSVP: ${selectedEvent.title}`,
+                      )}`}
+                      className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                    >
+                      RSVP Now
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
