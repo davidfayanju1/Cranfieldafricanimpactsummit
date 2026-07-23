@@ -33,7 +33,7 @@ const Agenda = () => {
       title: "Economic Sovereignty",
       description: "Building self-sufficient, resilient African economies",
       icon: <Scale className="w-6 h-6" />,
-      color: "emerald",
+      color: "#11766E",
       initiatives: [
         "Intra-African trade facilitation",
         "Local currency capital markets",
@@ -46,7 +46,7 @@ const Agenda = () => {
       title: "Innovation Ecosystem",
       description: "Fostering homegrown technological advancement",
       icon: <Zap className="w-6 h-6" />,
-      color: "blue",
+      color: "#11766E",
       initiatives: [
         "Tech talent development programs",
         "Startup acceleration platforms",
@@ -59,7 +59,7 @@ const Agenda = () => {
       title: "Sustainable Development",
       description: "Balancing growth with environmental stewardship",
       icon: <Leaf className="w-6 h-6" />,
-      color: "green",
+      color: "#11766E",
       initiatives: [
         "Climate adaptation strategies",
         "Green energy transition",
@@ -72,7 +72,7 @@ const Agenda = () => {
       title: "Strategic Governance",
       description: "Strengthening institutions and policy frameworks",
       icon: <Shield className="w-6 h-6" />,
-      color: "violet",
+      color: "#11766E",
       initiatives: [
         "Policy harmonization efforts",
         "Transparency initiatives",

@@ -13,7 +13,7 @@ import {
 import { useState, useEffect, useCallback } from "react";
 
 // Define types
-type EventType = "workshop" | "social" | "summit";
+type EventType = "workshop" | "social" | "summit" | "launch";
 
 interface Event {
   id: number;
@@ -514,6 +514,29 @@ const Events = () => {
         "/images/summit-images/summit5.jpg",
         "/images/summit-images/summit6.jpg",
       ],
+    },
+    {
+      id: 5,
+      title: "Book Launch",
+      subtitle: "With a Practitioner's Guide",
+      date: "Saturday, July 25, 2026",
+      dateObj: new Date("2026-07-25"),
+      time: "5:00 PM",
+      venue:
+        "The Woughton House, Newport Rd, Woughton on the Green, Milton Keynes MK6 3LR, UK",
+      description:
+        "Join us for the launch of 'Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa: With a Practitioner's Guide', with a foreword by Nobel Peace Laureate Leymah Gbowee.",
+      organizedBy: "Cranfield Africa Impact Summit Society",
+      tagline: "Women Entrepreneurs as Catalysts for Post-Conflict Recovery in Africa",
+      highlights: [
+        "Celebrate the launch of a new book on women entrepreneurs and post-conflict recovery in Africa",
+        "Foreword by Leymah Gbowee, Nobel Peace Laureate",
+        "Includes a practitioner's guide for those working in post-conflict and fragile economies",
+        "Network with authors, practitioners, and researchers in the field",
+      ],
+      image: "/images/events/book-launch-cover.jpg",
+      category: "launch",
+      featured: true,
     },
   ];
 
