@@ -15,6 +15,8 @@ import Speakers from "./pages/speakers";
 import SpeakerDetail from "./pages/detailsPage/speaker-details";
 import Programme from "./pages/programme";
 import AuthorDetails from "./pages/detailsPage/blog-author-details";
+import Recap from "./pages/recap";
+import PitchCompetition from "./pages/pitch-competition";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/programme" element={<Programme />} />
+        <Route path="/recap" element={<Recap />} />
+        <Route path="/pitch-competition" element={<PitchCompetition />} />
         <Route path="/advisory-details/:id" element={<AdvisoryDetails />} />
         <Route path="/blog/:id" element={<BlogsDetails />} />
         <Route path="/speakers/:id" element={<SpeakerDetail />} />

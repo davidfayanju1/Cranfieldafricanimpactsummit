@@ -65,8 +65,10 @@ const Nav = () => {
         { label: "Blogs", href: "/blogs" },
         { label: "Sponsors", href: "/sponsors" },
         { label: "Events", href: "/events" },
+        { label: "CAIS2026 Recap", href: "/recap" },
       ],
     },
+    { label: "Pitch Competition", href: "/pitch-competition" },
   ];
 
   const isActive = (href: string, exact: boolean = false) => {
