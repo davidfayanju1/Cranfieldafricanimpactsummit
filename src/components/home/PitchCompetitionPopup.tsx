@@ -1,22 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, Lightbulb, ArrowRight } from "lucide-react";
-
-const SESSION_KEY = "pitchCompetitionPopupSeen";
+import { X, ArrowRight } from "lucide-react";
 
 const PitchCompetitionPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(SESSION_KEY)) return;
     const timer = setTimeout(() => setIsOpen(true), 1200);
     return () => clearTimeout(timer);
   }, []);
 
   const close = () => {
     setIsOpen(false);
-    sessionStorage.setItem(SESSION_KEY, "true");
   };
 
   return (
@@ -46,19 +42,25 @@ const PitchCompetitionPopup = () => {
               <X className="w-5 h-5 text-gray-700" />
             </button>
 
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-8 text-center">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-emerald-200" />
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src="/images/partnership-promotional-content/innopower-2.png"
+                alt="InnoPower x Cranfield Founder Pathway"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition: "center 20%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30"></div>
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-emerald-500 text-white text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full">
+                  Applications Open
+                </span>
               </div>
-              <span className="inline-block bg-white/15 text-white text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full mb-3">
-                Applications Open
-              </span>
-              <h2 className="text-2xl font-bold text-white">
-                Pitch Competition
-              </h2>
             </div>
 
             <div className="p-8 text-center">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                Pitch Competition
+              </h2>
               <p className="text-gray-600 mb-6">
                 Got a big idea for Africa's future? Pitch it to the
                 Cranfield Africa Impact Summit community and take your idea

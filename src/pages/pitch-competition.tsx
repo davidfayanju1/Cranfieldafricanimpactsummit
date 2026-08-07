@@ -1,21 +1,71 @@
 // PitchCompetition.tsx
+import { useState, useEffect, useCallback } from "react";
 import DefaultLayout from "../layout/DefaultLayout";
-import { CheckCircle, ExternalLink, Calendar } from "lucide-react";
+import {
+  CheckCircle,
+  ExternalLink,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
 
 const APPLICATION_FORM_URL = "https://forms.gle/XMUQJhW8MiZTyojd9";
 
-const flyers = [
+// Press release pages first, flyers last
+const promoImages = [
   {
-    src: "/images/partnership-promotional-content/innopower-1.jpeg",
+    src: "/images/partnership-promotional-content/1.jpg",
+    alt: "InnoPower x Cranfield Founder Pathway - Press Release, page 1",
+  },
+  {
+    src: "/images/partnership-promotional-content/2.jpg",
+    alt: "InnoPower x Cranfield Founder Pathway - Press Release, page 2",
+  },
+  {
+    src: "/images/partnership-promotional-content/innopower-1.png",
     alt: "InnoPower x Cranfield Founder Pathway - Are you a student or recent graduate with a bold idea?",
   },
   {
-    src: "/images/partnership-promotional-content/innopower-2.jpeg",
-    alt: "InnoPower x Cranfield Founder Pathway - Helping African university talent transform innovative ideas into scalable businesses",
+    src: "/images/partnership-promotional-content/innopower-2.png",
+    alt: "InnoPower x Cranfield Founder Pathway - A launchpad for African university entrepreneurs",
   },
 ];
 
 const PitchCompetition = () => {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+
+  const showPrev = useCallback(() => {
+    setLightboxIndex((current) =>
+      current === null
+        ? null
+        : (current - 1 + promoImages.length) % promoImages.length,
+    );
+  }, []);
+
+  const showNext = useCallback(() => {
+    setLightboxIndex((current) =>
+      current === null ? null : (current + 1) % promoImages.length,
+    );
+  }, []);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
+    };
+  }, [lightboxIndex, closeLightbox, showPrev, showNext]);
+
   return (
     <DefaultLayout>
       {/* Hero Section */}
@@ -45,7 +95,7 @@ const PitchCompetition = () => {
               </p>
               <div className="flex justify-center items-center gap-2 text-gray-300">
                 <Calendar className="w-5 h-5" />
-                <span>28th July, 2026 &ndash; 17th August, 2026</span>
+                <span>6th August, 2026 &ndash; 24th August, 2026</span>
               </div>
             </div>
           </div>
@@ -66,19 +116,20 @@ const PitchCompetition = () => {
           </p>
         </div>
 
-        {/* Flyers */}
+        {/* Promo Images: press release first, flyers last */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
-          {flyers.map((flyer) => (
-            <div
-              key={flyer.src}
-              className="rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          {promoImages.map((image, index) => (
+            <button
+              key={image.src}
+              onClick={() => setLightboxIndex(index)}
+              className="group rounded-2xl overflow-hidden shadow-lg border border-gray-100"
             >
               <img
-                src={flyer.src}
-                alt={flyer.alt}
-                className="w-full h-auto object-cover"
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
           ))}
         </div>
 
@@ -102,6 +153,49 @@ const PitchCompetition = () => {
           </a>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div className="fixed inset-0 z-[10000] flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/90"
+            onClick={closeLightbox}
+          ></div>
+
+          <button
+            onClick={closeLightbox}
+            aria-label="Close"
+            className="absolute top-4 right-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-colors"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={showPrev}
+            aria-label="Previous image"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+          <button
+            onClick={showNext}
+            aria-label="Next image"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-colors"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+
+          <img
+            src={promoImages[lightboxIndex].src}
+            alt={promoImages[lightboxIndex].alt}
+            className="relative max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
+          />
+
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 bg-black/50 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
+            {lightboxIndex + 1} / {promoImages.length}
+          </div>
+        </div>
+      )}
     </DefaultLayout>
   );
 };
