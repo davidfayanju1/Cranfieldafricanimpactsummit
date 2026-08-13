@@ -5,6 +5,20 @@ import DefaultLayout from "../layout/DefaultLayout";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const galleryImages = [
+  { src: "/images/summit-images/summit35.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit37.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit39.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit41.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit42.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit45.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit48.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit52.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit55.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit56.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit60.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit62.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit65.jpg", alt: "CAIS2026 Summit" },
+  { src: "/images/summit-images/summit71.jpg", alt: "CAIS2026 Summit" },
   { src: "/images/summit-images/summit-cover.jpg", alt: "CAIS2026 Summit" },
   { src: "/images/summit-images/summit-main.jpg", alt: "CAIS2026 Summit" },
   { src: "/images/summit-images/summit1.jpg", alt: "CAIS2026 Summit" },
