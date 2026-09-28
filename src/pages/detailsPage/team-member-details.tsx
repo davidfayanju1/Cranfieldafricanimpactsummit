@@ -165,6 +165,27 @@ Committed to advancing sustainable and inclusive water services, Gutema actively
         "Managed successful digital campaign reaching 50,000+ people",
       ],
     },
+
+    {
+      id: 8,
+      name: "Adebayo David Fayanju",
+      role: "Technical Lead",
+      bio: "Adebayo David Fayanju is the Technical Lead of the Cranfield Africa Impact Summit Society, where he designed, built and deployed the Summit's website and owns its digital presence. He is a frontend engineer and an MSc graduate in Renewable Energy Technology from Cranfield University.",
+      fullBio: `Adebayo David Fayanju is the Technical Lead of the Cranfield Africa Impact Summit Society. He designed, built and deployed the Summit's website end to end, and owns the architecture of its entire digital presence, from information architecture and content structure through to search visibility and deployment.
+
+He is a frontend engineer working in React, TypeScript, Next.js and React Native, with production experience across fintech, e commerce and B2B software. His work has spanned operations platforms for live trading and payments, mobile products shipped to the App Store and Google Play, and commerce platforms that moved businesses from manual, offline processes to working digital channels.
+
+Adebayo holds an MSc in Renewable Energy Technology from Cranfield University, where his research compared low carbon energy pathways for air and sea transport using levelised cost modelling and multi criteria decision analysis. That combination, engineering practice alongside energy systems research, shapes how he approaches the Summit's platform: technology is only useful when it reaches the people who need it.`,
+      image: "/images/adebayo.jpeg",
+      linkedin: "https://www.linkedin.com/in/fayanju-adebayo-6773a21b3/",
+      email: "davidfayanju01@gmail.com",
+      location: "Bedford, UK",
+      yearsAtCranfield: 1,
+      education: [
+        "MSc Renewable Energy Technology, Cranfield University (2026)",
+        "BSc Biochemistry, University of Ilorin",
+      ],
+    },
     {
       id: 5,
       name: "Chanda Karen Chalwe",

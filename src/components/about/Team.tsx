@@ -89,6 +89,17 @@ const Team = () => {
         linkedin: "#", // Add LinkedIn URL if available
       },
     },
+    {
+      id: 8,
+      name: "Adebayo David Fayanju",
+      role: "Technical Lead",
+      bio: "Adebayo David Fayanju is the Technical Lead of the Cranfield Africa Impact Summit Society, where he designed, built and deployed the Summit's website and owns its digital presence. He is a frontend engineer and an MSc graduate in Renewable Energy Technology from Cranfield University.",
+      image: "/images/adebayo.jpeg",
+      social: {
+        twitter: "#",
+        linkedin: "https://www.linkedin.com/in/fayanju-adebayo-6773a21b3/",
+      },
+    },
   ];
 
   const handleMemberClick = (id: number) => {
